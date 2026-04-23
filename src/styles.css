@@ -57,23 +57,23 @@
 
 :root {
   --radius: 0.75rem;
-  --background: oklch(0.98 0.002 240);
+  --background: oklch(0.96 0.015 145);
   --foreground: oklch(0.18 0.02 250);
-  --card: oklch(1 0 0);
+  --card: oklch(0.99 0.005 145);
   --card-foreground: oklch(0.18 0.02 250);
-  --popover: oklch(1 0 0);
+  --popover: oklch(0.99 0.005 145);
   --popover-foreground: oklch(0.18 0.02 250);
   --primary: oklch(0.35 0.08 245);
   --primary-foreground: oklch(0.98 0.002 240);
-  --secondary: oklch(0.95 0.01 240);
-  --secondary-foreground: oklch(0.35 0.08 245);
-  --muted: oklch(0.95 0.008 240);
-  --muted-foreground: oklch(0.50 0.03 250);
+  --secondary: oklch(0.93 0.02 145);
+  --secondary-foreground: oklch(0.30 0.06 160);
+  --muted: oklch(0.94 0.012 150);
+  --muted-foreground: oklch(0.45 0.03 200);
   --accent: oklch(0.62 0.20 25);
   --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.91 0.01 240);
+  --border: oklch(0.88 0.02 145);
   --input: oklch(0.91 0.01 240);
   --ring: oklch(0.35 0.08 245);
   --chart-1: oklch(0.35 0.08 245);
@@ -93,7 +93,7 @@
   --alpine-foreground: oklch(1 0 0);
   --warm: oklch(0.62 0.20 25);
   --warm-foreground: oklch(1 0 0);
-  --surface: oklch(0.97 0.005 220);
+  --surface: oklch(0.95 0.018 150);
   --surface-foreground: oklch(0.25 0.03 250);
   --font-heading: 'Inter', system-ui, sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;
@@ -104,9 +104,15 @@
     border-color: var(--color-border);
   }
   body {
-    background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-body);
+    background:
+      radial-gradient(ellipse 120% 80% at 20% 10%, oklch(0.92 0.04 145 / 0.6), transparent 50%),
+      radial-gradient(ellipse 100% 60% at 80% 30%, oklch(0.90 0.03 200 / 0.4), transparent 50%),
+      radial-gradient(ellipse 80% 50% at 50% 80%, oklch(0.93 0.025 160 / 0.3), transparent 50%),
+      linear-gradient(175deg, oklch(0.97 0.01 145), oklch(0.95 0.015 170) 40%, oklch(0.96 0.012 200) 70%, oklch(0.97 0.008 145));
+    background-attachment: fixed;
+    min-height: 100vh;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
