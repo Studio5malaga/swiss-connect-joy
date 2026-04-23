@@ -13,7 +13,7 @@ const accommodations = [
     type: "Casa completa · 3 noches",
     image: "/images/villa-beckmann.jpg",
     alt: "Villa Beckmann, casa tradicional de entramado de madera en Gengenbach, Selva Negra",
-    features: ["Casa completa para 7 personas", "Cocina con lavavajillas", "WiFi alta velocidad", "Terraza privada", "Sauna disponible", "Tarjeta KONUS incluida (transporte gratis)"],
+    features: ["Casa completa para 7 personas", "Cocina con lavavajillas", "WiFi alta velocidad", "Terraza privada", "¿Sauna disponible?", "Tarjeta KONUS incluida (transporte gratis)"],
   },
 ];
 
