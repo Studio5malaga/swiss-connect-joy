@@ -34,6 +34,12 @@ export const Route = createRootRoute({
       { name: "author", content: "Aventura Familiar" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Aventura Familiar Suiza & Selva Negra 2026" },
+      { name: "twitter:title", content: "Aventura Familiar Suiza & Selva Negra 2026" },
+      { property: "og:description", content: "Guía y recursos para tu viaje familiar a Suiza y la Selva Negra. eSIM, audioguías, plan de viaje, mapas offline." },
+      { name: "twitter:description", content: "Guía y recursos para tu viaje familiar a Suiza y la Selva Negra. eSIM, audioguías, plan de viaje, mapas offline." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/213770e3-29f6-4bbc-8237-b8e06d94d791/id-preview-72256cf7--728646c7-1312-4409-954d-a2f5aa88b6ab.lovable.app-1776967533073.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/213770e3-29f6-4bbc-8237-b8e06d94d791/id-preview-72256cf7--728646c7-1312-4409-954d-a2f5aa88b6ab.lovable.app-1776967533073.png" },
     ],
     links: [
       {
