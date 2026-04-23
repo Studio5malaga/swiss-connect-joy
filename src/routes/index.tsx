@@ -1,26 +1,55 @@
 import { createFileRoute } from "@tanstack/react-router";
+import Navbar from "../components/Navbar";
+import HeroSection from "../components/HeroSection";
+import ItinerarySection from "../components/ItinerarySection";
+import VideosSection from "../components/VideosSection";
+import AudioSection from "../components/AudioSection";
+import AccommodationSection from "../components/AccommodationSection";
+import BudgetSection from "../components/BudgetSection";
+import EsimSection from "../components/EsimSection";
+import TipsSection from "../components/TipsSection";
+import GallerySection from "../components/GallerySection";
+import LinksSection from "../components/LinksSection";
+import DownloadSection from "../components/DownloadSection";
+import FooterSection from "../components/FooterSection";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Aventura Familiar Suiza & Selva Negra 2026 — Guía Completa" },
+      { name: "description", content: "Guía completa de 8 días para 7 personas por los Alpes suizos y la Selva Negra alemana. Itinerario, presupuesto, eSIM, audioguías, mapas offline y plan de viaje descargable." },
+      { property: "og:title", content: "Aventura Familiar Suiza & Selva Negra 2026" },
+      { property: "og:description", content: "8 días de aventura por los Alpes suizos y la Selva Negra. Trenes históricos, lagos turquesa, castillos medievales. Guía completa con itinerario y presupuesto." },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "/images/hero-barco.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Aventura Familiar Suiza & Selva Negra 2026" },
+      { name: "twitter:description", content: "Guía completa de viaje familiar por Suiza y la Selva Negra." },
+      { name: "twitter:image", content: "/images/hero-barco.png" },
+      { name: "keywords", content: "viaje Suiza, Selva Negra, eSIM Suiza, Swiss Travel Pass, Kandersteg, Gengenbach, itinerario familiar, plan de viaje" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
+function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen">
+      <Navbar />
+      <main>
+        <HeroSection />
+        <ItinerarySection />
+        <VideosSection />
+        <AudioSection />
+        <AccommodationSection />
+        <BudgetSection />
+        <EsimSection />
+        <DownloadSection />
+        <TipsSection />
+        <GallerySection />
+        <LinksSection />
+      </main>
+      <FooterSection />
     </div>
   );
-}
-
-function Index() {
-  return <PlaceholderIndex />;
 }
