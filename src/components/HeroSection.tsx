@@ -16,7 +16,7 @@ export default function HeroSection() {
           Explora Suiza con confianza
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-alpine-foreground/90 sm:text-xl">
-          Guías, mapas y conectividad para tu viaje de 4 días. Descarga el plan y empieza a preparar tu ruta.
+          Guías, mapas y conectividad para tu viaje de 8 días. Descarga el plan y empieza a preparar tu ruta.
         </p>
         <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <a
