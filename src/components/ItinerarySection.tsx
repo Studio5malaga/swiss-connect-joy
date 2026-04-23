@@ -415,7 +415,7 @@ export default function ItinerarySection() {
                   <p className="text-sm text-muted-foreground leading-relaxed">{d.highlights}</p>
 
                   {d.savings && (
-                    <div className="mt-3 inline-flex items-center gap-2 rounded-lg bg-green-50 px-3 py-1.5 text-sm font-semibold text-green-700">
+                    <div className="mt-3 inline-flex items-center gap-2 rounded-lg bg-secondary px-3 py-1.5 text-sm font-semibold text-secondary-foreground">
                       💰 {d.savings.label}: {d.savings.amount} — {d.savings.detail}
                     </div>
                   )}
