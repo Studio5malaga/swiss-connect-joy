@@ -8,6 +8,7 @@ import VideosSection from "../components/VideosSection";
 import AudioSection from "../components/AudioSection";
 import AccommodationSection from "../components/AccommodationSection";
 import BudgetSection from "../components/BudgetSection";
+import ComparisonSection from "../components/ComparisonSection";
 import EsimSection from "../components/EsimSection";
 import TipsSection from "../components/TipsSection";
 import GallerySection from "../components/GallerySection";
@@ -47,6 +48,7 @@ function Index() {
         <AudioSection />
         <AccommodationSection />
         <BudgetSection />
+        <ComparisonSection />
         <EsimSection />
         <DownloadSection />
         <TipsSection />
