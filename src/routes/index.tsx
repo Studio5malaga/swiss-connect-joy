@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
+import PlanSelector from "../components/PlanSelector";
 import ItinerarySection from "../components/ItinerarySection";
 import SwissTravelPassSection from "../components/SwissTravelPassSection";
 import KonusCardSection from "../components/KonusCardSection";
@@ -15,6 +16,8 @@ import GallerySection from "../components/GallerySection";
 import LinksSection from "../components/LinksSection";
 import DownloadSection from "../components/DownloadSection";
 import FooterSection from "../components/FooterSection";
+import { PlanProvider } from "../context/PlanContext";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -37,25 +40,29 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <main>
-        <HeroSection />
-        <ItinerarySection />
-        <SwissTravelPassSection />
-        <KonusCardSection />
-        <VideosSection />
-        <AudioSection />
-        <AccommodationSection />
-        <BudgetSection />
-        <ComparisonSection />
-        <EsimSection />
-        <DownloadSection />
-        <TipsSection />
-        <GallerySection />
-        <LinksSection />
-      </main>
-      <FooterSection />
-    </div>
+    <PlanProvider>
+      <div className="min-h-screen">
+        <Navbar />
+        <main>
+          <HeroSection />
+          <PlanSelector />
+          <ItinerarySection />
+          <SwissTravelPassSection />
+          <KonusCardSection />
+          <VideosSection />
+          <AudioSection />
+          <AccommodationSection />
+          <BudgetSection />
+          <ComparisonSection />
+          <EsimSection />
+          <DownloadSection />
+          <TipsSection />
+          <GallerySection />
+          <LinksSection />
+        </main>
+        <FooterSection />
+      </div>
+    </PlanProvider>
   );
+
 }

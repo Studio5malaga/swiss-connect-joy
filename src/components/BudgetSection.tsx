@@ -1,44 +1,149 @@
-const items = [
-  { category: "Vuelos", amount: "210€", details: ["EasyJet Málaga-Ginebra (ida) — 133€", "EasyJet Basilea-Málaga (vuelta) — 77€"], pct: 15 },
-  { category: "Transporte", amount: "315€", details: ["Swiss Travel Pass (4 días flex) — 289€", "ICE Basilea-Offenburg + DB grupo — ~26€", "KONUS Card — GRATIS", "Bus aeropuerto Basilea — GRATIS"], pct: 23 },
-  { category: "Alojamiento", amount: "382,71€", details: ["Chalet-Hotel Adler (4 noches) — 202,71€", "Villa Beckmann (3 noches) — 180€"], pct: 28 },
-  { category: "Comidas", amount: "300€", details: ["Desayunos incluidos — GRATIS", "Súper + comidas y 3 cenas fuera — 300€"], pct: 22 },
-  { category: "Actividades", amount: "170€", details: ["Teleférico Grindelwald First — 34€", "Cascadas Triberg + Reloj — 10€", "Funicular Reichenbach — 12€", "Blausee — 12€", "Teleférico Schauinsland — 15€", "Funicular Monte Merkur — 7€", "Europa-Park (opcional) — 80€"], pct: 12 },
-];
+import { usePlan } from "../context/PlanContext";
+
+type Row = { concept: string; amount: number; note?: string };
+
+function buildBreakdown(plan: "A" | "B", profile: "senior" | "junior", pass: "4d" | "3d"): {
+  rows: Row[];
+  total: number;
+} {
+  const stp = pass === "4d" ? 338.28 : 278;
+
+  // Transporte ida + vuelta
+  let transport: Row[] = [];
+  if (plan === "A") {
+    transport = [
+      {
+        concept: "Vuelo Málaga → Ginebra (09:40 → 12:00)",
+        amount: profile === "senior" ? 189 : 150,
+        note: profile === "senior" ? "Maleta 23 kg facturada" : "Sin maleta facturada",
+      },
+      {
+        concept: "Vuelo Basilea → Málaga (21:30 → 00:20)",
+        amount: profile === "senior" ? 129 : 45,
+        note: profile === "senior" ? "Maleta 23 kg facturada" : "Sin maleta facturada",
+      },
+    ];
+  } else {
+    transport = [
+      { concept: "Tren Iryo Málaga → Barcelona (11:39 → 18:06)", amount: 65, note: "Maleta 23 kg incluida" },
+      { concept: "Tren SNCF Barcelona → Lyon (08:14 → 13:20)", amount: 79, note: "Maleta 23 kg incluida" },
+      { concept: "Tren Lyon → Ginebra (12:38 → 14:40)", amount: 35.1 },
+      {
+        concept: "Vuelo Basilea → Málaga (21:30 → 00:20)",
+        amount: profile === "senior" ? 129 : 45,
+        note: profile === "senior" ? "Maleta 23 kg facturada" : "Sin maleta facturada",
+      },
+    ];
+  }
+
+  // Seguro
+  const insurance: Row =
+    profile === "senior"
+      ? {
+          concept: "Seguro Intermundial TotalTravel Seniors",
+          amount: 49.86,
+          note: "Incluye Sala VIP en aeropuertos",
+        }
+      : {
+          concept: "Seguro IATI Estándar + Anulación + Reclamación Vuelos",
+          amount: 50.25,
+          note: "Alternativa: Intermundial TotalTravel Mini sin anulación · 26,29 €",
+        };
+
+  // Swiss Travel Pass
+  const stpRow: Row = {
+    concept: `Swiss Travel Pass (${pass === "4d" ? "4 días" : "3 días"})`,
+    amount: stp,
+    note: "Trenes, barcos, buses y +500 museos en Suiza",
+  };
+
+  // Alojamiento (precios por persona; basado en habitaciones grupo de 7)
+  let lodging: Row[] = [];
+  if (plan === "A") {
+    lodging = [
+      { concept: "Ginebra · Nonanteneuf Appart Hôtel (2 noches)", amount: 126 },
+      { concept: "Kandersteg · Alpen Chalet (3 noches)", amount: 121 },
+      { concept: "Gengenbach · Villa Beckmann (4 noches)", amount: 221 },
+    ];
+  } else {
+    lodging = [
+      { concept: "Barcelona · Classic Gracia Apartments (2 noches)", amount: 104 },
+      { concept: "Lyon · Appartement Vieux Lyon Terrasse (2 noches)", amount: 97 },
+      { concept: "Ginebra · Hôtel Astoria (1 noche)", amount: 95 },
+      { concept: "Kandersteg · Alpen Chalet (3 noches)", amount: 121 },
+      { concept: "Gengenbach · Villa Beckmann (4 noches)", amount: 221 },
+    ];
+  }
+
+  const rows = [...transport, insurance, stpRow, ...lodging];
+  const total = rows.reduce((s, r) => s + r.amount, 0);
+  return { rows, total };
+}
 
 export default function BudgetSection() {
+  const { plan, profile, pass } = usePlan();
+  const { rows, total } = buildBreakdown(plan, profile, pass);
+
   return (
     <section id="presupuesto" className="section-padding bg-background" aria-label="Presupuesto">
       <div className="mx-auto max-w-5xl">
-        <p className="text-center text-sm font-semibold uppercase tracking-widest text-accent">Presupuesto</p>
-        <h2 className="mt-2 text-center text-3xl font-bold text-foreground sm:text-4xl">Desglose de Gastos</h2>
-        <p className="mx-auto mt-3 max-w-2xl text-center text-muted-foreground">Presupuesto real por persona basado en reservas confirmadas.</p>
+        <p className="text-center text-sm font-semibold uppercase tracking-widest text-accent">
+          Presupuesto
+        </p>
+        <h2 className="mt-2 text-center text-3xl font-bold text-foreground sm:text-4xl">
+          Desglose · Plan {plan} · {profile === "senior" ? "Senior" : "Junior"}
+        </h2>
+        <p className="mx-auto mt-3 max-w-2xl text-center text-muted-foreground">
+          Precios por persona basados en cotizaciones reales del documento de viaje. El total no incluye
+          comidas y gastos varios.
+        </p>
 
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {items.map(it => (
-            <div key={it.category} className="rounded-2xl border border-border bg-card p-6 shadow-sm">
-              <div className="flex items-center justify-between">
-                <h3 className="font-bold text-foreground">{it.category}</h3>
-                <span className="text-xl font-extrabold text-primary">{it.amount}</span>
-              </div>
-              <div className="mt-2 h-2 rounded-full bg-secondary overflow-hidden">
-                <div className="h-full rounded-full bg-primary" style={{ width: `${it.pct}%` }} />
-              </div>
-              <ul className="mt-4 space-y-1">
-                {it.details.map(d => (
-                  <li key={d} className="text-xs text-muted-foreground">{d}</li>
+        <div className="mt-10 grid gap-8 lg:grid-cols-[2fr_1fr]">
+          <div className="rounded-2xl border border-border bg-card/90 backdrop-blur-sm p-6 shadow-sm">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-border">
+                  <th className="text-left py-2 font-bold text-foreground">Concepto</th>
+                  <th className="text-right py-2 font-bold text-foreground">€/persona</th>
+                </tr>
+              </thead>
+              <tbody>
+                {rows.map((r) => (
+                  <tr key={r.concept} className="border-b border-border/40">
+                    <td className="py-2.5">
+                      <p className="text-foreground">{r.concept}</p>
+                      {r.note && <p className="text-xs text-muted-foreground mt-0.5">{r.note}</p>}
+                    </td>
+                    <td className="py-2.5 text-right font-mono font-semibold text-foreground whitespace-nowrap">
+                      {r.amount.toFixed(2)} €
+                    </td>
+                  </tr>
                 ))}
-              </ul>
-            </div>
-          ))}
+                <tr>
+                  <td className="py-3 font-bold text-foreground">Subtotal por persona</td>
+                  <td className="py-3 text-right font-mono font-extrabold text-primary text-lg">
+                    {total.toFixed(2)} €
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-          <div className="flex flex-col items-center justify-center rounded-2xl bg-primary p-6 text-primary-foreground shadow-lg sm:col-span-2 lg:col-span-1">
-            <span className="text-sm font-semibold uppercase tracking-widest opacity-80">Total por persona</span>
-            <span className="mt-2 text-4xl font-extrabold">1.377,71€</span>
-            <span className="mt-1 text-sm opacity-80">Total grupo (7): 9.643,97€</span>
-            <div className="mt-4 rounded-lg bg-primary-foreground/10 px-4 py-2 text-center text-xs">
-              Ahorro de 38€/persona vs. propuesta original
+          <div className="flex flex-col items-center justify-center rounded-2xl bg-primary p-8 text-primary-foreground shadow-lg">
+            <span className="text-xs font-semibold uppercase tracking-widest opacity-80">
+              Total estimado
+            </span>
+            <span className="mt-2 text-5xl font-extrabold">{Math.round(total)}€</span>
+            <span className="mt-1 text-xs opacity-80">por persona (sin comidas)</span>
+            <div className="mt-5 w-full space-y-2 rounded-lg bg-primary-foreground/10 p-4 text-xs">
+              <p>👥 Grupo (7): ~{Math.round(total * 7).toLocaleString("es-ES")} €</p>
+              <p>🛫 Plan {plan === "A" ? "A · Directo" : "B · Gran Tour"}</p>
+              <p>🎫 {profile === "senior" ? "Senior premium" : "Junior estándar"}</p>
+              <p>🚄 Swiss Pass {pass === "4d" ? "4 días" : "3 días"}</p>
             </div>
+            <p className="mt-4 text-[11px] opacity-75 text-center leading-relaxed">
+              + comidas y gastos varios. Reservas con 2 meses de antelación recomendadas.
+            </p>
           </div>
         </div>
       </div>

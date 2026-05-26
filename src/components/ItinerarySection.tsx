@@ -1,6 +1,148 @@
 import { useState } from "react";
+import { usePlan } from "../context/PlanContext";
 
-const days = [
+// Días específicos del Plan B (Gran Tour Ferroviario): preceden a la base alpina
+const planBPrefix: any[] = [
+  {
+    day: 1,
+    date: "29 Sep (Lunes)",
+    route: "Málaga → Barcelona",
+    title: "Inicio del Gran Tour · Tren Iryo a Barcelona",
+    image: "/images/dia-barcelona.jpg",
+    alt: "Vista aérea de Barcelona con la Sagrada Familia",
+    tags: ["Tren Iryo", "Barrio de Gracia", "104 €/pers."],
+    highlights:
+      "Arranca la expedición en clave ferroviaria. Tren Iryo desde Málaga María Zambrano hasta Barcelona Sants — 6h 27min cómodos, con maleta facturada incluida. Llegada al apartamento en el barrio de Gracia para descansar antes del primer paseo nocturno.",
+    sections: [
+      {
+        title: "🚄 Tren Iryo Málaga → Barcelona",
+        content: [
+          "Salida: 11:39 desde Málaga María Zambrano",
+          "Llegada: 18:06 a Barcelona Sants",
+          "Duración: 6h 27min · maleta 23 kg incluida",
+          "Precio: 65 €/persona",
+        ],
+      },
+      {
+        title: "🏙️ Llegada a Barcelona",
+        content: [
+          "Check-in en Barcelona Classic Gracia Apartments",
+          "Cena ligera en el barrio de Gracia",
+          "Reservar lo justo para no madrugar al día siguiente",
+        ],
+      },
+    ],
+    tip: "💡 Comprobad los billetes Iryo con 2 meses de antelación: a esos precios se agotan rápido.",
+  },
+  {
+    day: 2,
+    date: "30 Sep (Martes)",
+    route: "Barcelona libre",
+    title: "Día completo en Barcelona",
+    image: "/images/dia-barcelona.jpg",
+    alt: "Calles del Barrio Gótico de Barcelona",
+    tags: ["Sagrada Familia", "Barrio Gótico", "Mediterráneo"],
+    highlights:
+      "Día completo para empaparse de Barcelona antes de subir a Francia. Mañana en la Sagrada Familia y Passeig de Gràcia (Gaudí), tarde por el Barrio Gótico y Born, y atardecer en la Barceloneta.",
+    sections: [
+      {
+        title: "🌅 Plan sugerido",
+        content: [
+          "10:00 · Sagrada Familia (entradas con antelación)",
+          "13:30 · Comida en el Mercat de la Boqueria",
+          "16:00 · Barrio Gótico y Catedral",
+          "20:00 · Atardecer en la Barceloneta",
+        ],
+      },
+    ],
+    tip: "💡 Reservad la Sagrada Familia con 3-4 semanas de antelación para asegurar horario y entrada con torres.",
+  },
+  {
+    day: 3,
+    date: "1 Oct (Miércoles)",
+    route: "Barcelona → Lyon",
+    title: "Tren SNCF a Lyon · Capital gastronómica",
+    image: "/images/dia-lyon.jpg",
+    alt: "Vista del Vieux Lyon con el río Saona",
+    tags: ["Tren SNCF", "Vieux Lyon UNESCO", "97 €/pers."],
+    highlights:
+      "Tren directo SNCF desde Barcelona Sants hasta Lyon Part-Dieu, cruzando el Mediterráneo francés y la Provenza. Llegada a primera hora de la tarde al apartamento con terraza en el Vieux Lyon.",
+    sections: [
+      {
+        title: "🚄 Tren SNCF Barcelona → Lyon",
+        content: [
+          "Salida: 08:14 desde Barcelona Sants",
+          "Llegada: 13:20 a Lyon Part-Dieu",
+          "Duración: 5h 06min · maleta 23 kg incluida",
+          "Precio: 79 €/persona",
+        ],
+      },
+      {
+        title: "🍷 Tarde en Lyon",
+        content: [
+          "Check-in en Appartement Vieux Lyon Terrasse",
+          "Paseo por el Vieux Lyon (Patrimonio UNESCO)",
+          "Cena en un bouchon lyonnais tradicional",
+        ],
+      },
+    ],
+  },
+  {
+    day: 4,
+    date: "2 Oct (Jueves)",
+    route: "Lyon libre",
+    title: "Día completo en Lyon",
+    image: "/images/dia-lyon.jpg",
+    alt: "Basílica de Fourvière en lo alto de Lyon",
+    tags: ["Fourvière", "Traboules", "Gastronomía"],
+    highlights:
+      "Día para descubrir la capital gastronómica de Francia. Subida a la Basílica de Fourvière, paseo por las traboules del Vieux Lyon y mercado de Les Halles Paul Bocuse.",
+    sections: [
+      {
+        title: "🌄 Plan sugerido",
+        content: [
+          "10:00 · Funicular a Fourvière y vistas panorámicas",
+          "12:30 · Comida en Les Halles Paul Bocuse",
+          "15:30 · Traboules y Vieux Lyon",
+          "19:00 · Place Bellecour y cena en bouchon",
+        ],
+      },
+    ],
+  },
+  {
+    day: 5,
+    date: "3 Oct (Viernes)",
+    route: "Lyon → Ginebra",
+    title: "Tren a Ginebra · Entrada en Suiza",
+    image: "/images/dia1-ginebra-kandersteg.jpg",
+    alt: "Lago Lemán y Jet d'Eau de Ginebra",
+    tags: ["Tren transfronterizo", "Lago Lemán", "Hôtel Astoria"],
+    highlights:
+      "Trayecto corto y cómodo de Lyon a Ginebra (2h). Tarde libre por el casco antiguo de Ginebra y el Lago Lemán antes de empezar el bloque alpino del viaje al día siguiente.",
+    sections: [
+      {
+        title: "🚂 Tren Lyon → Ginebra",
+        content: [
+          "Salida: 12:38 desde Lyon Part-Dieu",
+          "Llegada: 14:40 a Ginebra Cornavin",
+          "Duración: 2h 02min · 35,10 €/persona",
+        ],
+      },
+      {
+        title: "🌆 Tarde en Ginebra",
+        content: [
+          "Check-in en Hôtel Astoria (junto a Cornavin)",
+          "Paseo por el Jet d'Eau y la Vieille Ville",
+          "Cena ligera — al día siguiente empieza el Swiss Travel Pass",
+        ],
+      },
+    ],
+    tip: "💡 Activa el Swiss Travel Pass mañana, no hoy: el reloj de días no debe correr antes de tiempo.",
+  },
+];
+
+const days: any[] = [
+
   {
     day: 1,
     date: "29 Sep (Lunes)",
@@ -349,27 +491,65 @@ const days = [
   },
 ];
 
+// Fechas reasignadas por plan para los días base (existentes D1-D8)
+const planADates = [
+  "2 Oct (Vie)",
+  "3 Oct (Sáb)",
+  "4 Oct (Dom)",
+  "5 Oct (Lun)",
+  "6 Oct (Mar)",
+  "7 Oct (Mié)",
+  "8 Oct (Jue)",
+  "9 Oct (Vie)",
+];
+const planBBaseDates = [
+  "4 Oct (Dom)",
+  "5 Oct (Lun)",
+  "6 Oct (Mar)",
+  "7 Oct (Mié)",
+  "8 Oct (Jue)",
+  "9 Oct (Vie)",
+  "10 Oct (Sáb)",
+  "11 Oct (Dom)",
+];
+
 export default function ItinerarySection() {
   const [expandedDay, setExpandedDay] = useState<number | null>(null);
+  const { plan } = usePlan();
+
+  const baseDays: any[] = days.map((d: any, i: number) => ({
+    ...d,
+    date: plan === "A" ? planADates[i] : planBBaseDates[i],
+  }));
+  const displayDays: any[] =
+    plan === "B"
+      ? [...planBPrefix, ...baseDays].map((d: any, i: number) => ({ ...d, day: i + 1 }))
+      : baseDays;
+
+  const heading =
+    plan === "A"
+      ? `Plan A · 10 días · 2-11 Oct 2026`
+      : `Plan B · 13 días · 29 Sep-11 Oct 2026`;
 
   return (
     <section id="itinerario" className="section-padding" aria-label="Itinerario completo">
       <div className="mx-auto max-w-5xl">
         <p className="text-center text-sm font-semibold uppercase tracking-widest text-accent">
-          8 Días de Aventura
+          {heading}
         </p>
         <h2 className="mt-2 text-center text-3xl font-bold text-foreground sm:text-4xl">
           Itinerario Completo
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-center text-muted-foreground">
-          Cada día cuidadosamente planificado para disfrutar al máximo de Suiza y la Selva Negra.
-          Pulsa en cada día para ver todos los detalles, horarios y costes.
+          Los días 1 a {plan === "B" ? "5" : "3"} cambian según el plan elegido. Pulsa en cada día para
+          ver todos los detalles, horarios y costes.
         </p>
 
         <div className="mt-12 space-y-8">
-          {days.map((d) => {
+          {displayDays.map((d: any) => {
             const isExpanded = expandedDay === d.day;
             return (
+
               <div
                 key={d.day}
                 className="group overflow-hidden rounded-2xl border border-border bg-card/90 backdrop-blur-sm shadow-sm transition-shadow hover:shadow-lg"
@@ -402,7 +582,7 @@ export default function ItinerarySection() {
                 {/* Content */}
                 <div className="p-5">
                   <div className="flex flex-wrap gap-2 mb-3">
-                    {d.tags.map((t) => (
+                    {d.tags.map((t: string) => (
                       <span
                         key={t}
                         className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground"
@@ -430,11 +610,11 @@ export default function ItinerarySection() {
 
                   {isExpanded && (
                     <div className="mt-4 space-y-4 fade-in">
-                      {d.sections?.map((sec, i) => (
+                      {d.sections?.map((sec: any, i: number) => (
                         <div key={i} className="rounded-xl bg-surface/80 p-4">
                           <h4 className="text-sm font-bold text-foreground mb-2">{sec.title}</h4>
                           <ul className="space-y-1.5">
-                            {sec.content.map((line, j) => (
+                            {sec.content.map((line: string, j: number) => (
                               <li key={j} className="flex gap-2 text-sm text-foreground">
                                 <span className="text-accent shrink-0">•</span>
                                 <span>{line}</span>
@@ -457,7 +637,7 @@ export default function ItinerarySection() {
                                 </tr>
                               </thead>
                               <tbody>
-                                {d.costs.map((c, j) => (
+                                {d.costs.map((c: any, j: number) => (
                                   <tr key={j} className="border-b border-border/50">
                                     <td className="py-1.5 text-muted-foreground">{c.concept}</td>
                                     <td className="py-1.5 text-right font-mono text-foreground">{c.pp}</td>
@@ -476,7 +656,7 @@ export default function ItinerarySection() {
                             🌅 {d.afternoonOptions.title}
                           </h4>
                           <div className="grid gap-3 sm:grid-cols-3">
-                            {d.afternoonOptions.options.map((opt, j) => (
+                            {d.afternoonOptions.options.map((opt: any, j: number) => (
                               <div key={j} className="rounded-lg border border-border bg-card p-3">
                                 <p className="font-semibold text-sm text-primary mb-1">{opt.label}</p>
                                 <p className="text-xs text-muted-foreground">{opt.desc}</p>
