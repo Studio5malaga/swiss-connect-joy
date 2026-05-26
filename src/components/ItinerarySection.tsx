@@ -582,7 +582,7 @@ export default function ItinerarySection() {
                 {/* Content */}
                 <div className="p-5">
                   <div className="flex flex-wrap gap-2 mb-3">
-                    {d.tags.map((t) => (
+                    {d.tags.map((t: string) => (
                       <span
                         key={t}
                         className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground"
@@ -610,11 +610,11 @@ export default function ItinerarySection() {
 
                   {isExpanded && (
                     <div className="mt-4 space-y-4 fade-in">
-                      {d.sections?.map((sec, i) => (
+                      {d.sections?.map((sec: any, i: number) => (
                         <div key={i} className="rounded-xl bg-surface/80 p-4">
                           <h4 className="text-sm font-bold text-foreground mb-2">{sec.title}</h4>
                           <ul className="space-y-1.5">
-                            {sec.content.map((line, j) => (
+                            {sec.content.map((line: string, j: number) => (
                               <li key={j} className="flex gap-2 text-sm text-foreground">
                                 <span className="text-accent shrink-0">•</span>
                                 <span>{line}</span>
@@ -637,7 +637,7 @@ export default function ItinerarySection() {
                                 </tr>
                               </thead>
                               <tbody>
-                                {d.costs.map((c, j) => (
+                                {d.costs.map((c: any, j: number) => (
                                   <tr key={j} className="border-b border-border/50">
                                     <td className="py-1.5 text-muted-foreground">{c.concept}</td>
                                     <td className="py-1.5 text-right font-mono text-foreground">{c.pp}</td>
@@ -656,7 +656,7 @@ export default function ItinerarySection() {
                             🌅 {d.afternoonOptions.title}
                           </h4>
                           <div className="grid gap-3 sm:grid-cols-3">
-                            {d.afternoonOptions.options.map((opt, j) => (
+                            {d.afternoonOptions.options.map((opt: any, j: number) => (
                               <div key={j} className="rounded-lg border border-border bg-card p-3">
                                 <p className="font-semibold text-sm text-primary mb-1">{opt.label}</p>
                                 <p className="text-xs text-muted-foreground">{opt.desc}</p>
