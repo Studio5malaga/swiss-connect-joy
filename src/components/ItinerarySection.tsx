@@ -1,6 +1,148 @@
 import { useState } from "react";
+import { usePlan } from "../context/PlanContext";
 
-const days = [
+// Días específicos del Plan B (Gran Tour Ferroviario): preceden a la base alpina
+const planBPrefix: any[] = [
+  {
+    day: 1,
+    date: "29 Sep (Lunes)",
+    route: "Málaga → Barcelona",
+    title: "Inicio del Gran Tour · Tren Iryo a Barcelona",
+    image: "/images/dia-barcelona.jpg",
+    alt: "Vista aérea de Barcelona con la Sagrada Familia",
+    tags: ["Tren Iryo", "Barrio de Gracia", "104 €/pers."],
+    highlights:
+      "Arranca la expedición en clave ferroviaria. Tren Iryo desde Málaga María Zambrano hasta Barcelona Sants — 6h 27min cómodos, con maleta facturada incluida. Llegada al apartamento en el barrio de Gracia para descansar antes del primer paseo nocturno.",
+    sections: [
+      {
+        title: "🚄 Tren Iryo Málaga → Barcelona",
+        content: [
+          "Salida: 11:39 desde Málaga María Zambrano",
+          "Llegada: 18:06 a Barcelona Sants",
+          "Duración: 6h 27min · maleta 23 kg incluida",
+          "Precio: 65 €/persona",
+        ],
+      },
+      {
+        title: "🏙️ Llegada a Barcelona",
+        content: [
+          "Check-in en Barcelona Classic Gracia Apartments",
+          "Cena ligera en el barrio de Gracia",
+          "Reservar lo justo para no madrugar al día siguiente",
+        ],
+      },
+    ],
+    tip: "💡 Comprobad los billetes Iryo con 2 meses de antelación: a esos precios se agotan rápido.",
+  },
+  {
+    day: 2,
+    date: "30 Sep (Martes)",
+    route: "Barcelona libre",
+    title: "Día completo en Barcelona",
+    image: "/images/dia-barcelona.jpg",
+    alt: "Calles del Barrio Gótico de Barcelona",
+    tags: ["Sagrada Familia", "Barrio Gótico", "Mediterráneo"],
+    highlights:
+      "Día completo para empaparse de Barcelona antes de subir a Francia. Mañana en la Sagrada Familia y Passeig de Gràcia (Gaudí), tarde por el Barrio Gótico y Born, y atardecer en la Barceloneta.",
+    sections: [
+      {
+        title: "🌅 Plan sugerido",
+        content: [
+          "10:00 · Sagrada Familia (entradas con antelación)",
+          "13:30 · Comida en el Mercat de la Boqueria",
+          "16:00 · Barrio Gótico y Catedral",
+          "20:00 · Atardecer en la Barceloneta",
+        ],
+      },
+    ],
+    tip: "💡 Reservad la Sagrada Familia con 3-4 semanas de antelación para asegurar horario y entrada con torres.",
+  },
+  {
+    day: 3,
+    date: "1 Oct (Miércoles)",
+    route: "Barcelona → Lyon",
+    title: "Tren SNCF a Lyon · Capital gastronómica",
+    image: "/images/dia-lyon.jpg",
+    alt: "Vista del Vieux Lyon con el río Saona",
+    tags: ["Tren SNCF", "Vieux Lyon UNESCO", "97 €/pers."],
+    highlights:
+      "Tren directo SNCF desde Barcelona Sants hasta Lyon Part-Dieu, cruzando el Mediterráneo francés y la Provenza. Llegada a primera hora de la tarde al apartamento con terraza en el Vieux Lyon.",
+    sections: [
+      {
+        title: "🚄 Tren SNCF Barcelona → Lyon",
+        content: [
+          "Salida: 08:14 desde Barcelona Sants",
+          "Llegada: 13:20 a Lyon Part-Dieu",
+          "Duración: 5h 06min · maleta 23 kg incluida",
+          "Precio: 79 €/persona",
+        ],
+      },
+      {
+        title: "🍷 Tarde en Lyon",
+        content: [
+          "Check-in en Appartement Vieux Lyon Terrasse",
+          "Paseo por el Vieux Lyon (Patrimonio UNESCO)",
+          "Cena en un bouchon lyonnais tradicional",
+        ],
+      },
+    ],
+  },
+  {
+    day: 4,
+    date: "2 Oct (Jueves)",
+    route: "Lyon libre",
+    title: "Día completo en Lyon",
+    image: "/images/dia-lyon.jpg",
+    alt: "Basílica de Fourvière en lo alto de Lyon",
+    tags: ["Fourvière", "Traboules", "Gastronomía"],
+    highlights:
+      "Día para descubrir la capital gastronómica de Francia. Subida a la Basílica de Fourvière, paseo por las traboules del Vieux Lyon y mercado de Les Halles Paul Bocuse.",
+    sections: [
+      {
+        title: "🌄 Plan sugerido",
+        content: [
+          "10:00 · Funicular a Fourvière y vistas panorámicas",
+          "12:30 · Comida en Les Halles Paul Bocuse",
+          "15:30 · Traboules y Vieux Lyon",
+          "19:00 · Place Bellecour y cena en bouchon",
+        ],
+      },
+    ],
+  },
+  {
+    day: 5,
+    date: "3 Oct (Viernes)",
+    route: "Lyon → Ginebra",
+    title: "Tren a Ginebra · Entrada en Suiza",
+    image: "/images/dia1-ginebra-kandersteg.jpg",
+    alt: "Lago Lemán y Jet d'Eau de Ginebra",
+    tags: ["Tren transfronterizo", "Lago Lemán", "Hôtel Astoria"],
+    highlights:
+      "Trayecto corto y cómodo de Lyon a Ginebra (2h). Tarde libre por el casco antiguo de Ginebra y el Lago Lemán antes de empezar el bloque alpino del viaje al día siguiente.",
+    sections: [
+      {
+        title: "🚂 Tren Lyon → Ginebra",
+        content: [
+          "Salida: 12:38 desde Lyon Part-Dieu",
+          "Llegada: 14:40 a Ginebra Cornavin",
+          "Duración: 2h 02min · 35,10 €/persona",
+        ],
+      },
+      {
+        title: "🌆 Tarde en Ginebra",
+        content: [
+          "Check-in en Hôtel Astoria (junto a Cornavin)",
+          "Paseo por el Jet d'Eau y la Vieille Ville",
+          "Cena ligera — al día siguiente empieza el Swiss Travel Pass",
+        ],
+      },
+    ],
+    tip: "💡 Activa el Swiss Travel Pass mañana, no hoy: el reloj de días no debe correr antes de tiempo.",
+  },
+];
+
+const days: any[] = [
+
   {
     day: 1,
     date: "29 Sep (Lunes)",
