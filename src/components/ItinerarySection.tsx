@@ -491,27 +491,65 @@ const days: any[] = [
   },
 ];
 
+// Fechas reasignadas por plan para los días base (existentes D1-D8)
+const planADates = [
+  "2 Oct (Vie)",
+  "3 Oct (Sáb)",
+  "4 Oct (Dom)",
+  "5 Oct (Lun)",
+  "6 Oct (Mar)",
+  "7 Oct (Mié)",
+  "8 Oct (Jue)",
+  "9 Oct (Vie)",
+];
+const planBBaseDates = [
+  "4 Oct (Dom)",
+  "5 Oct (Lun)",
+  "6 Oct (Mar)",
+  "7 Oct (Mié)",
+  "8 Oct (Jue)",
+  "9 Oct (Vie)",
+  "10 Oct (Sáb)",
+  "11 Oct (Dom)",
+];
+
 export default function ItinerarySection() {
   const [expandedDay, setExpandedDay] = useState<number | null>(null);
+  const { plan } = usePlan();
+
+  const baseDays: any[] = days.map((d: any, i: number) => ({
+    ...d,
+    date: plan === "A" ? planADates[i] : planBBaseDates[i],
+  }));
+  const displayDays: any[] =
+    plan === "B"
+      ? [...planBPrefix, ...baseDays].map((d: any, i: number) => ({ ...d, day: i + 1 }))
+      : baseDays;
+
+  const heading =
+    plan === "A"
+      ? `Plan A · 10 días · 2-11 Oct 2026`
+      : `Plan B · 13 días · 29 Sep-11 Oct 2026`;
 
   return (
     <section id="itinerario" className="section-padding" aria-label="Itinerario completo">
       <div className="mx-auto max-w-5xl">
         <p className="text-center text-sm font-semibold uppercase tracking-widest text-accent">
-          8 Días de Aventura
+          {heading}
         </p>
         <h2 className="mt-2 text-center text-3xl font-bold text-foreground sm:text-4xl">
           Itinerario Completo
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-center text-muted-foreground">
-          Cada día cuidadosamente planificado para disfrutar al máximo de Suiza y la Selva Negra.
-          Pulsa en cada día para ver todos los detalles, horarios y costes.
+          Los días 1 a {plan === "B" ? "5" : "3"} cambian según el plan elegido. Pulsa en cada día para
+          ver todos los detalles, horarios y costes.
         </p>
 
         <div className="mt-12 space-y-8">
-          {days.map((d) => {
+          {displayDays.map((d: any) => {
             const isExpanded = expandedDay === d.day;
             return (
+
               <div
                 key={d.day}
                 className="group overflow-hidden rounded-2xl border border-border bg-card/90 backdrop-blur-sm shadow-sm transition-shadow hover:shadow-lg"
