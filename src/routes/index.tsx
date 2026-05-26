@@ -40,25 +40,29 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <main>
-        <HeroSection />
-        <ItinerarySection />
-        <SwissTravelPassSection />
-        <KonusCardSection />
-        <VideosSection />
-        <AudioSection />
-        <AccommodationSection />
-        <BudgetSection />
-        <ComparisonSection />
-        <EsimSection />
-        <DownloadSection />
-        <TipsSection />
-        <GallerySection />
-        <LinksSection />
-      </main>
-      <FooterSection />
-    </div>
+    <PlanProvider>
+      <div className="min-h-screen">
+        <Navbar />
+        <main>
+          <HeroSection />
+          <PlanSelector />
+          <ItinerarySection />
+          <SwissTravelPassSection />
+          <KonusCardSection />
+          <VideosSection />
+          <AudioSection />
+          <AccommodationSection />
+          <BudgetSection />
+          <ComparisonSection />
+          <EsimSection />
+          <DownloadSection />
+          <TipsSection />
+          <GallerySection />
+          <LinksSection />
+        </main>
+        <FooterSection />
+      </div>
+    </PlanProvider>
   );
+
 }
