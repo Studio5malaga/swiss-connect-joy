@@ -549,22 +549,23 @@ const days: any[] = [
   },
   {
     day: 8,
-    date: "6 Oct (Lunes)",
+    date: "11 Oct (Dom)",
     route: "Gengenbach → Basilea → Málaga",
-    title: "Regreso a Málaga",
+    title: "Regreso a Málaga · Vuelo nocturno easyJet",
     image: "/images/dia8-regreso.jpg",
     alt: "Aeropuerto de Basilea con avión despegando al atardecer",
-    tags: ["Vuelo directo", "Llegada ~17:30"],
+    tags: ["easyJet 21:30", "Llegada 00:20", "Día completo libre"],
     highlights:
-      "El último día es sencillo y bien organizado. Desayuno tranquilo, cierre de maletas y un trayecto cómodo hasta el aeropuerto de Basilea.",
+      "Último día sin agobios. El vuelo de regreso es por la noche, así que hay tiempo para una mañana relajada en Gengenbach, almuerzo tranquilo y traslado cómodo a Basilea EuroAirport por la tarde.",
     sections: [
       {
         title: "🕐 Horarios Clave del Día",
         content: [
-          "Desayuno y cierre de maletas en Villa Beckmann",
-          "Tren regional Gengenbach → Basilea: 09:30-10:30",
-          "Autobús Línea 50 a EuroAirport: cada 7-10 min",
-          "Vuelo Basilea → Málaga: salida 15:00 — llegada ~17:30",
+          "Mañana libre en Gengenbach · desayuno y últimas compras",
+          "Check-out de Villa Beckmann y consigna de maletas si es necesario",
+          "Tren regional Gengenbach → Basilea SBB a media tarde (~17:00)",
+          "Autobús Línea 50 a EuroAirport BSL: cada 7-10 min · ~20 min de trayecto",
+          "Vuelo easyJet BSL → AGP: salida 21:30 · llegada Málaga 00:20 · 2h 50min",
         ],
       },
       {
@@ -572,22 +573,26 @@ const days: any[] = [
         content: [
           "Tren Gengenbach → Basilea: 0 € (tarjeta KONUS)",
           "Bus Línea 50 al Aeropuerto: 5 € (4,70 CHF)",
-          "Vuelo Basilea → Málaga: 77 €",
-          "Total aproximado: ~82 € por persona",
+          "Vuelo Basilea → Málaga: 129 € (Senior · maleta facturada) · 45 € (Junior · sin maleta)",
         ],
       },
     ],
-    tip: "⚠️ Cuidado con la estación en Basilea: Al venir de Alemania, el tren suele parar primero en Basel Bad Bf. Para coger el bus 50 al aeropuerto más fácilmente, aseguraos de llegar hasta la estación principal Basel SBB. Haced el check-in online el día 7 para evitar colas.",
+    tip: "⚠️ Cuidado con la estación en Basilea: al venir de Alemania, el tren suele parar primero en Basel Bad Bf. Para coger el bus 50 al aeropuerto más fácilmente, aseguraos de llegar hasta la estación principal Basel SBB. Haced el check-in online el día anterior para evitar colas.",
   },
 ];
 
-// Fechas reasignadas por plan para los días base (existentes D1-D8)
+// Fechas reasignadas por plan para los días base (D1-D8): empiezan el 4 Oct
 const planADates = [
-  "2 Oct (Vie)",
-  "3 Oct (Sáb)",
   "4 Oct (Dom)",
   "5 Oct (Lun)",
   "6 Oct (Mar)",
+  "7 Oct (Mié)",
+  "8 Oct (Jue)",
+  "9 Oct (Vie)",
+  "10 Oct (Sáb)",
+  "11 Oct (Dom)",
+];
+
   "7 Oct (Mié)",
   "8 Oct (Jue)",
   "9 Oct (Vie)",
