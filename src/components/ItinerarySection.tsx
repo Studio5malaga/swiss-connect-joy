@@ -517,14 +517,41 @@ export default function ItinerarySection() {
   const [expandedDay, setExpandedDay] = useState<number | null>(null);
   const { plan } = usePlan();
 
-  const baseDays: any[] = days.map((d: any, i: number) => ({
-    ...d,
-    date: plan === "A" ? planADates[i] : planBBaseDates[i],
-  }));
+  const lodgingSection =
+    plan === "A"
+      ? {
+          title: "🏨 Alojamiento en Ginebra (2 noches · 2-4 Oct)",
+          content: [
+            "Hotel: Nonanteneuf Appart Hôtel Genève Étang · Airport",
+            "Precio: 126 €/persona (2 noches)",
+            "Apartamentos con cocina · junto al aeropuerto y transporte público directo al centro",
+            "Ventaja: descanso tras el vuelo antes de subir a los Alpes el día 3",
+            "🔗 Reserva: https://www.booking.com/hotel/ch/nonanteneuf-geneve-etang-airport-contactless-check-in.es.html",
+          ],
+        }
+      : {
+          title: "🏨 Alojamiento en Ginebra (1 noche · 3-4 Oct)",
+          content: [
+            "Hotel: Hôtel Astoria — junto a la estación Cornavin",
+            "Precio: 95 €/persona (1 noche)",
+            "Llegada en tren desde Lyon (14:40) · ideal para una sola noche antes de Kandersteg",
+            "Desayuno incluido · check-in cómodo a pie desde la estación",
+            "🔗 Reserva: https://www.booking.com/hotel/ch/astoria-geneve.es.html",
+          ],
+        };
+
+  const baseDays: any[] = days.map((d: any, i: number) => {
+    const next: any = { ...d, date: plan === "A" ? planADates[i] : planBBaseDates[i] };
+    if (i === 0) {
+      next.sections = [...(d.sections || []), lodgingSection];
+    }
+    return next;
+  });
   const displayDays: any[] =
     plan === "B"
       ? [...planBPrefix, ...baseDays].map((d: any, i: number) => ({ ...d, day: i + 1 }))
       : baseDays;
+
 
   const heading =
     plan === "A"
