@@ -593,10 +593,6 @@ const planADates = [
   "11 Oct (Dom)",
 ];
 
-  "7 Oct (Mié)",
-  "8 Oct (Jue)",
-  "9 Oct (Vie)",
-];
 const planBBaseDates = [
   "4 Oct (Dom)",
   "5 Oct (Lun)",
@@ -612,70 +608,17 @@ export default function ItinerarySection() {
   const [expandedDay, setExpandedDay] = useState<number | null>(null);
   const { plan } = usePlan();
 
-  const lodgingSection =
-    plan === "A"
-      ? {
-          title: "🏨 Alojamiento en Ginebra (2 noches · 2-4 Oct)",
-          content: [
-            "Hotel: Nonanteneuf Appart Hôtel Genève Étang · Airport",
-            "Precio: 126 €/persona (2 noches)",
-            "Apartamentos con cocina · junto al aeropuerto y transporte público directo al centro",
-            "Ventaja: descanso tras el vuelo antes de subir a los Alpes el día 3",
-            "🔗 Reserva: https://www.booking.com/hotel/ch/nonanteneuf-geneve-etang-airport-contactless-check-in.es.html",
-          ],
-        }
-      : {
-          title: "🏨 Alojamiento en Ginebra (1 noche · 3-4 Oct)",
-          content: [
-            "Hotel: Hôtel Astoria — junto a la estación Cornavin",
-            "Precio: 95 €/persona (1 noche)",
-            "Llegada en tren desde Lyon (14:40) · ideal para una sola noche antes de Kandersteg",
-            "Desayuno incluido · check-in cómodo a pie desde la estación",
-            "🔗 Reserva: https://www.booking.com/hotel/ch/astoria-geneve.es.html",
-          ],
-        };
+  const baseDays: any[] = days.map((d: any, i: number) => ({
+    ...d,
+    date: plan === "A" ? planADates[i] : planBBaseDates[i],
+  }));
 
-  const baseDays: any[] = days.map((d: any, i: number) => {
-    const next: any = { ...d, date: plan === "A" ? planADates[i] : planBBaseDates[i] };
-    if (i === 0) {
-      if (plan === "B") {
-        next.title = "Ginebra a Kandersteg · Tren panorámico a los Alpes";
-        next.route = "Ginebra → Visp → Kandersteg";
-        next.tags = [
-          "Casco antiguo de Ginebra",
-          "Jet d'Eau",
-          "Tren panorámico",
-          "Chalet-Hotel Adler",
-        ];
-        next.highlights =
-          "Mañana relajada en Ginebra antes de empezar el bloque alpino. Paseo por la Vieille Ville y el Jet d'Eau, comida ligera y tren panorámico a media tarde hasta Kandersteg sin prisas. Al llegar, check-in a pie en el Chalet-Hotel Adler (valle plano, sin cuestas).";
-        next.sections = [
-          {
-            title: "🌅 Mañana en Ginebra",
-            content: [
-              "Salida del Hôtel Astoria con maletas (consigna en recepción si hace falta)",
-              "Paseo por la Vieille Ville y la Catedral de Saint-Pierre",
-              "Foto en el Jet d'Eau (el chorro de 140 m del Lago Lemán)",
-              "Comida ligera junto al lago antes de coger el tren",
-            ],
-          },
-          {
-            title: "🚂 Logística: Ginebra → Kandersteg",
-            content: [
-              "1️⃣ Llegada a la estación Ginebra Cornavin con tiempo",
-              "2️⃣ Validar el Swiss Travel Pass en la estación ferroviaria",
-              "3️⃣ Tren panorámico Ginebra → Visp → Kandersteg (~2h 45min)",
-              "4️⃣ Llegada a pie al Chalet-Hotel Adler (5-7 min en llano, sin cuestas)",
-            ],
-          },
-        ];
-        next.tip =
-          "💡 ¿Por qué Kandersteg es perfecto? A diferencia de Wengen (con muchas cuestas), Kandersteg es un pueblo en un valle plano. El Lago Oeschinen tiene un microbús eléctrico que lleva hasta la orilla. El hotel tiene piscina y spa para descansar las piernas cada noche (15 €/día).";
-      }
-      next.sections = [...(next.sections || []), lodgingSection];
-    }
-    return next;
-  });
+  const displayDays: any[] =
+    plan === "A"
+      ? [...planAGenevaPrefix, ...baseDays].map((d: any, i: number) => ({ ...d, day: i + 1 }))
+      : [...planBPrefix, ...baseDays].map((d: any, i: number) => ({ ...d, day: i + 1 }));
+
+
   const displayDays: any[] =
     plan === "B"
       ? [...planBPrefix, ...baseDays].map((d: any, i: number) => ({ ...d, day: i + 1 }))
