@@ -136,9 +136,19 @@ const planBPrefix: any[] = [
           "Cena ligera — al día siguiente empieza el Swiss Travel Pass",
         ],
       },
+      {
+        title: "🏨 Alojamiento en Ginebra (1 noche · 3-4 Oct)",
+        content: [
+          "Hotel: Hôtel Astoria — junto a la estación Cornavin",
+          "Precio: 95 €/persona (1 noche)",
+          "Desayuno incluido · check-in cómodo a pie desde la estación",
+          "🔗 Reserva: https://www.booking.com/hotel/ch/astoria-geneve.es.html",
+        ],
+      },
     ],
     tip: "💡 Activa el Swiss Travel Pass mañana, no hoy: el reloj de días no debe correr antes de tiempo.",
   },
+
 ];
 
 // Días específicos del Plan A: 2 noches en Ginebra antes de subir a los Alpes
