@@ -23,7 +23,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Aventura Familiar Suiza & Selva Negra 2026 — Guía Completa de 8 Días" },
-      { name: "description", content: "Guía completa de 8 días para 7 personas por los Alpes suizos y la Selva Negra alemana. Itinerario detallado, presupuesto, eSIM, audioguías, Swiss Travel Pass, tarjeta KONUS y plan de viaje descargable." },
+      { name: "description", content: "Guía completa de 8 días para 6 personas por los Alpes suizos y la Selva Negra alemana. Itinerario detallado, presupuesto, eSIM, audioguías, Swiss Travel Pass, tarjeta KONUS y plan de viaje descargable." },
       { property: "og:title", content: "Aventura Familiar Suiza & Selva Negra 2026" },
       { property: "og:description", content: "8 días de aventura por los Alpes suizos y la Selva Negra. Trenes históricos, lagos turquesa, castillos medievales. Guía completa con itinerario y presupuesto." },
       { property: "og:type", content: "website" },

@@ -136,7 +136,7 @@ export default function BudgetSection() {
             <span className="mt-2 text-5xl font-extrabold">{Math.round(total)}€</span>
             <span className="mt-1 text-xs opacity-80">por persona (sin comidas)</span>
             <div className="mt-5 w-full space-y-2 rounded-lg bg-primary-foreground/10 p-4 text-xs">
-              <p>👥 Grupo (7): ~{Math.round(total * 7).toLocaleString("es-ES")} €</p>
+              <p>👥 Grupo (6): ~{Math.round(total * 6).toLocaleString("es-ES")} €</p>
               <p>🛫 Plan {plan === "A" ? "A · Directo" : "B · Gran Tour"}</p>
               <p>🎫 {profile === "senior" ? "Senior premium" : "Junior estándar"}</p>
               <p>🚄 Swiss Pass {pass === "4d" ? "4 días" : "3 días"}</p>

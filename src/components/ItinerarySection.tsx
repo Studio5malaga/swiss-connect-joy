@@ -303,7 +303,7 @@ const days: any[] = [
           "Salida: 12:02 desde Zweisimmen",
           "Llegada a Montreux: 14:11",
           "Coste billete: 0 € (Swiss Travel Pass)",
-          "Reserva asientos: ~10 €/persona (recomendado para ir los 7 juntos)",
+          "Reserva asientos: ~10 €/persona (recomendado para ir los 6 juntos)",
         ],
       },
       {
@@ -739,7 +739,7 @@ export default function ItinerarySection() {
                                 <tr className="border-b border-border">
                                   <th className="text-left py-1.5 font-semibold text-foreground">Concepto</th>
                                   <th className="text-right py-1.5 font-semibold text-foreground">Por persona</th>
-                                  <th className="text-right py-1.5 font-semibold text-foreground">Grupo (7)</th>
+                                  <th className="text-right py-1.5 font-semibold text-foreground">Grupo (6)</th>
                                 </tr>
                               </thead>
                               <tbody>
