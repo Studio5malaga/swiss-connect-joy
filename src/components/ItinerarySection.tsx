@@ -141,51 +141,141 @@ const planBPrefix: any[] = [
   },
 ];
 
-const days: any[] = [
-
+// Días específicos del Plan A: 2 noches en Ginebra antes de subir a los Alpes
+const planAGenevaPrefix: any[] = [
   {
     day: 1,
-    date: "29 Sep (Lunes)",
-    route: "Málaga → Ginebra → Kandersteg",
-    title: "Llegada y el Dilema del Vuelo",
+    date: "2 Oct (Vie)",
+    route: "Málaga → Ginebra",
+    title: "Vuelo SWISS a Ginebra y tarde libre",
     image: "/images/dia1-ginebra-kandersteg.jpg",
-    alt: "Tren panorámico junto al Lago Lemán con Alpes al fondo",
-    tags: ["Lago Lemán", "Valle plano", "Chalet-Hotel Adler"],
+    alt: "Jet d'Eau de Ginebra al atardecer con el Lago Lemán",
+    tags: ["Vuelo SWISS directo", "Llegada mediodía", "Nonanteneuf · 2 noches"],
     highlights:
-      "El primer día marca el tono de toda la aventura. Tenéis dos opciones reales de vuelo, cada una con sus ventajas. La clave está en decidir si preferís el madrugón para ganar un día completo en Ginebra o ir más descansados. El tren bordea todo el Lago Lemán — es un viaje panorámico en sí mismo.",
+      "Arranca la expedición sin madrugones. Vuelo directo de SWISS desde Málaga a Ginebra en 2h 20min, llegada a mediodía y tarde libre para descubrir la ciudad sin prisas antes de descansar en el apart-hotel junto al aeropuerto.",
     sections: [
       {
-        title: "✈️ Opción A — Vuelo Relajado (12:15)",
+        title: "✈️ Vuelo SWISS AGP → GVA",
         content: [
-          "Llegada: 15:00 a Ginebra",
-          "No hay que madrugar",
-          "Llegada cómoda al hotel",
-          "Ginebra solo se ve «de pasada»",
-          "Check-in límite 21:00h (Suiza es muy estricta)",
+          "Salida: 09:40 desde Málaga (AGP)",
+          "Llegada: 12:00 a Ginebra (GVA) · 2h 20min",
+          "Maleta facturada 23 kg incluida (perfil Senior · 189 €)",
+          "Sin maleta (perfil Junior · 150 €)",
         ],
       },
       {
-        title: "🌅 Opción B — Vuelo Explorador (06:00 AM) — solo 27 €",
+        title: "🚆 Traslado aeropuerto → hotel",
         content: [
-          "Llegada: 08:30 aprox.",
-          "Todo el día en Ginebra",
-          "Paseo por el casco antiguo y el Jet d'Eau",
-          "Tren a Kandersteg sin prisas a media tarde",
-          "Hay que estar en el aeropuerto de Málaga a las 04:30 AM",
+          "El billete gratuito de transporte público (Geneva Transport Card) se recoge en la zona de llegadas",
+          "Tren / tranvía directo hasta la zona de Étang (~15 min)",
+          "Check-in en Nonanteneuf Appart Hôtel y descanso",
+        ],
+      },
+      {
+        title: "🌆 Tarde libre en Ginebra",
+        content: [
+          "Paseo por la Vieille Ville y Catedral de Saint-Pierre",
+          "Foto en el Jet d'Eau (chorro de 140 m sobre el Lago Lemán)",
+          "Reloj de las Flores en el Jardin Anglais",
+          "Cena ligera junto al lago",
+        ],
+      },
+      {
+        title: "🏨 Alojamiento en Ginebra (2 noches · 2-4 Oct)",
+        content: [
+          "Hotel: Nonanteneuf Appart Hôtel Genève Étang · Airport",
+          "Precio: 126 €/persona (2 noches)",
+          "Apartamentos con cocina · junto al aeropuerto y transporte público directo al centro",
+          "🔗 Reserva: https://www.booking.com/hotel/ch/nonanteneuf-geneve-etang-airport-contactless-check-in.es.html",
+        ],
+      },
+    ],
+    tip: "💡 La Geneva Transport Card es gratuita para todos los huéspedes de hoteles en Ginebra y cubre tranvía, bus y tren urbanos durante toda la estancia.",
+  },
+  {
+    day: 2,
+    date: "3 Oct (Sáb)",
+    route: "Ginebra (día completo)",
+    title: "Día completo en Ginebra · Lago Lemán y diplomacia",
+    image: "/images/dia1-ginebra-kandersteg.jpg",
+    alt: "Vista panorámica del Lago Lemán y la ciudad de Ginebra",
+    tags: ["Vieille Ville", "Lago Lemán", "Naciones Unidas", "Museos"],
+    highlights:
+      "Día completo para descubrir Ginebra a fondo antes del bloque alpino. Mañana cultural en el casco histórico, mediodía junto al lago y tarde a elegir entre los museos del barrio internacional o un crucero corto por el Lemán.",
+    sections: [
+      {
+        title: "🌅 Mañana — Vieille Ville",
+        content: [
+          "09:30 · Subida a la Catedral de Saint-Pierre (torre con vistas)",
+          "10:30 · Muro de los Reformadores en el Parc des Bastions",
+          "11:30 · Place du Bourg-de-Four (la plaza más antigua)",
+          "13:00 · Comida en una brasserie del casco antiguo",
+        ],
+      },
+      {
+        title: "🚢 Mediodía — Lago Lemán",
+        content: [
+          "Mini-crucero CGN por la rada (1h, gratis con Swiss Travel Pass si ya activado)",
+          "Paseo por el Quai du Mont-Blanc",
+          "Reloj de las Flores y Jardin Anglais",
+        ],
+      },
+      {
+        title: "🌍 Tarde — Barrio internacional (a elegir)",
+        content: [
+          "Opción A: Palacio de las Naciones (ONU) · visita guiada con reserva previa",
+          "Opción B: Museo Internacional de la Cruz Roja (CICR) · muy didáctico",
+          "Opción C: Museo Patek Philippe · relojería suiza de lujo",
+          "Cierre del día: cena junto al lago al atardecer",
+        ],
+      },
+    ],
+    tip: "💡 Reservad la visita al Palacio de la ONU con varios días de antelación: las plazas son limitadas y hay que llevar el pasaporte.",
+  },
+];
+
+const days: any[] = [
+  {
+    day: 1,
+    date: "4 Oct (Dom)",
+    route: "Ginebra → Visp → Kandersteg",
+    title: "Ginebra → Kandersteg · Tren panorámico a los Alpes",
+    image: "/images/dia1-ginebra-kandersteg.jpg",
+    alt: "Tren panorámico junto al Lago Lemán con los Alpes al fondo",
+    tags: ["Mañana en Ginebra", "Tren panorámico", "Valle plano", "Chalet-Hotel Adler"],
+    highlights:
+      "Día de transición sin prisas. Mañana relajada en Ginebra, comida ligera y tren panorámico a media tarde hasta Kandersteg, donde empieza el bloque alpino. Llegada a pie al Chalet-Hotel Adler en un valle completamente llano.",
+    sections: [
+      {
+        title: "🌅 Mañana en Ginebra",
+        content: [
+          "Desayuno y salida del hotel con maletas",
+          "Último paseo por la Vieille Ville o el Jet d'Eau",
+          "Comida ligera antes de coger el tren",
         ],
       },
       {
         title: "🚂 Logística: Ginebra → Kandersteg",
         content: [
-          "1️⃣ Llegada al aeropuerto de Ginebra",
+          "1️⃣ Llegada a la estación de Ginebra Cornavin con tiempo",
           "2️⃣ Validar el Swiss Travel Pass en la estación ferroviaria",
-          "3️⃣ Tren panorámico Ginebra → Visp → Kandersteg (2h 45min)",
+          "3️⃣ Tren panorámico Ginebra → Visp → Kandersteg (~2h 45min)",
           "4️⃣ Llegada a pie al Chalet-Hotel Adler (5-7 min en llano, sin cuestas)",
+        ],
+      },
+      {
+        title: "🏨 Alojamiento en Kandersteg (3 noches · 4-7 Oct)",
+        content: [
+          "Hotel: Chalet-Hotel Adler (Alpen Chalet)",
+          "Precio: 121 €/persona (3 noches)",
+          "Piscina y spa (15 €/día) · cocina disponible · WiFi gratuito",
+          "A 5-7 min andando de la estación, sin cuestas",
         ],
       },
     ],
     tip: "💡 ¿Por qué Kandersteg es perfecto? A diferencia de Wengen (con muchas cuestas), Kandersteg es un pueblo en un valle plano. El Lago Oeschinen tiene un microbús eléctrico que lleva hasta la orilla. El hotel tiene piscina y spa para descansar las piernas cada noche (15 €/día).",
   },
+
   {
     day: 2,
     date: "30 Sep (Martes)",
