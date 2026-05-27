@@ -619,10 +619,7 @@ export default function ItinerarySection() {
       : [...planBPrefix, ...baseDays].map((d: any, i: number) => ({ ...d, day: i + 1 }));
 
 
-  const displayDays: any[] =
-    plan === "B"
-      ? [...planBPrefix, ...baseDays].map((d: any, i: number) => ({ ...d, day: i + 1 }))
-      : baseDays;
+
 
 
   const heading =
