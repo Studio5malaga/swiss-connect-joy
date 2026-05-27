@@ -59,7 +59,7 @@ const accommodations: Lodging[] = [
     image: "/images/chalet-alpino.png",
     alt: "Chalet-Hotel Adler en Kandersteg rodeado de prados alpinos verdes y montañas",
     features: [
-      "Habitaciones para 7 personas",
+      "Habitaciones para 6 personas",
       "121 €/persona",
       "Cocina disponible · WiFi gratuito",
       "Piscina y zona de spa",
@@ -75,7 +75,7 @@ const accommodations: Lodging[] = [
     image: "/images/villa-beckmann.jpg",
     alt: "Villa Beckmann, casa tradicional de entramado de madera en Gengenbach, Selva Negra",
     features: [
-      "Casa completa para 7 personas",
+      "Casa completa para 6 personas",
       "221 €/persona",
       "Cocina con lavavajillas",
       "WiFi alta velocidad · Terraza privada",

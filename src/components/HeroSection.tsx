@@ -21,7 +21,7 @@ export default function HeroSection() {
       </div>
       <div className="relative z-10 mx-auto max-w-4xl px-4 text-center fade-in">
         <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-alpine-foreground/80">
-          Expedición 2026 · {dates} · 7 personas · {duration}
+          Expedición 2026 · {dates} · 6 personas · {duration}
         </p>
         <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-alpine-foreground sm:text-5xl md:text-6xl lg:text-7xl">
           {plan === "A" ? "Plan A · Ruta Directa" : "Plan B · Gran Tour Ferroviario"}
@@ -48,7 +48,7 @@ export default function HeroSection() {
           </a>
         </div>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-alpine-foreground/80">
-          <span>👥 7 personas</span>
+          <span>👥 6 personas</span>
           <span>📅 {duration}</span>
           <span>🛫 {plan === "A" ? "Vuelo directo" : "Tren + tren + vuelo"}</span>
         </div>
