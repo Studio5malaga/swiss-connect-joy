@@ -543,7 +543,41 @@ export default function ItinerarySection() {
   const baseDays: any[] = days.map((d: any, i: number) => {
     const next: any = { ...d, date: plan === "A" ? planADates[i] : planBBaseDates[i] };
     if (i === 0) {
-      next.sections = [...(d.sections || []), lodgingSection];
+      if (plan === "B") {
+        next.title = "Ginebra a Kandersteg · Tren panorámico a los Alpes";
+        next.route = "Ginebra → Visp → Kandersteg";
+        next.tags = [
+          "Casco antiguo de Ginebra",
+          "Jet d'Eau",
+          "Tren panorámico",
+          "Chalet-Hotel Adler",
+        ];
+        next.highlights =
+          "Mañana relajada en Ginebra antes de empezar el bloque alpino. Paseo por la Vieille Ville y el Jet d'Eau, comida ligera y tren panorámico a media tarde hasta Kandersteg sin prisas. Al llegar, check-in a pie en el Chalet-Hotel Adler (valle plano, sin cuestas).";
+        next.sections = [
+          {
+            title: "🌅 Mañana en Ginebra",
+            content: [
+              "Salida del Hôtel Astoria con maletas (consigna en recepción si hace falta)",
+              "Paseo por la Vieille Ville y la Catedral de Saint-Pierre",
+              "Foto en el Jet d'Eau (el chorro de 140 m del Lago Lemán)",
+              "Comida ligera junto al lago antes de coger el tren",
+            ],
+          },
+          {
+            title: "🚂 Logística: Ginebra → Kandersteg",
+            content: [
+              "1️⃣ Llegada a la estación Ginebra Cornavin con tiempo",
+              "2️⃣ Validar el Swiss Travel Pass en la estación ferroviaria",
+              "3️⃣ Tren panorámico Ginebra → Visp → Kandersteg (~2h 45min)",
+              "4️⃣ Llegada a pie al Chalet-Hotel Adler (5-7 min en llano, sin cuestas)",
+            ],
+          },
+        ];
+        next.tip =
+          "💡 ¿Por qué Kandersteg es perfecto? A diferencia de Wengen (con muchas cuestas), Kandersteg es un pueblo en un valle plano. El Lago Oeschinen tiene un microbús eléctrico que lleva hasta la orilla. El hotel tiene piscina y spa para descansar las piernas cada noche (15 €/día).";
+      }
+      next.sections = [...(next.sections || []), lodgingSection];
     }
     return next;
   });
