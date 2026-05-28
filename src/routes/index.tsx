@@ -9,6 +9,10 @@ import VideosSection from "../components/VideosSection";
 import AudioSection from "../components/AudioSection";
 import AccommodationSection from "../components/AccommodationSection";
 import BudgetSection from "../components/BudgetSection";
+import PlanComparisonVideoSection from "../components/PlanComparisonVideoSection";
+import InsuranceSection from "../components/InsuranceSection";
+import EuropeanHealthCardSection from "../components/EuropeanHealthCardSection";
+import PrivateInsuranceSection from "../components/PrivateInsuranceSection";
 import ComparisonSection from "../components/ComparisonSection";
 import EsimSection from "../components/EsimSection";
 import TipsSection from "../components/TipsSection";
@@ -53,6 +57,10 @@ function Index() {
           <AudioSection />
           <AccommodationSection />
           <BudgetSection />
+          <PlanComparisonVideoSection />
+          <InsuranceSection />
+          <EuropeanHealthCardSection />
+          <PrivateInsuranceSection />
           <ComparisonSection />
           <EsimSection />
           <DownloadSection />
