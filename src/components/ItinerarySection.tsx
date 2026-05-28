@@ -26,13 +26,23 @@ const planBPrefix: any[] = [
       {
         title: "🏙️ Llegada a Barcelona",
         content: [
-          "Check-in en Barcelona Classic Gracia Apartments",
-          "Cena ligera en el barrio de Gracia",
+          "Check-in en Barcelona Classic Gracia Apartments (calle de l'Or, parada Fontana L3)",
+          "20:30 · Cena local en Gràcia: Plaça del Sol o Plaça de la Virreina, a 5 min andando — terrazas auténticas y precios mucho mejores que en el centro turístico",
           "Reservar lo justo para no madrugar al día siguiente",
+        ],
+      },
+      {
+        title: "🚆 Coche + Cercanías Málaga (recomendado)",
+        content: [
+          "Deja el coche en la zona del aeropuerto de Málaga (parking económico de larga estancia)",
+          "Toma Cercanías Málaga línea C-1 dirección María Zambrano para conectar con el tren Iryo",
+          "🔗 Cercanías Málaga: https://www.renfe.com/es/es/cercanias/cercanias-malaga",
+          "Ventaja: a la vuelta, el coche está disponible a la salida del aeropuerto el 11 Oct a las 00:20 h, sin depender de taxis nocturnos",
         ],
       },
     ],
     tip: "💡 Comprobad los billetes Iryo con 2 meses de antelación: a esos precios se agotan rápido.",
+
   },
   {
     day: 2,
@@ -46,16 +56,35 @@ const planBPrefix: any[] = [
       "Día completo para empaparse de Barcelona antes de subir a Francia. Mañana en la Sagrada Familia y Passeig de Gràcia (Gaudí), tarde por el Barrio Gótico y Born, y atardecer en la Barceloneta.",
     sections: [
       {
-        title: "🌅 Plan sugerido",
+        title: "🌅 Mañana · Modernismo y Barrio Gótico",
         content: [
-          "10:00 · Sagrada Familia (entradas con antelación)",
-          "13:30 · Comida en el Mercat de la Boqueria",
-          "16:00 · Barrio Gótico y Catedral",
-          "20:00 · Atardecer en la Barceloneta",
+          "09:00 · Paseo de Gracia a pie (La Pedrera y Casa Batlló desde la acera) hasta Plaza de Cataluña",
+          "10:15 · Las Ramblas y Mercado de La Boqueria (gratis)",
+          "11:15 · Barrio Gótico, Pont del Bisbe y Basílica de Santa Maria del Pi (entrada 4 €)",
+          "12:45 · Almuerzo rápido (menú del día o porciones de pizza)",
+        ],
+      },
+      {
+        title: "🌳 Tarde · Laberinto + Sagrada Familia",
+        content: [
+          "13:30 · Metro L3 (Liceu/Catalunya) hasta Mundet (~15-20 min)",
+          "14:00 · Parque del Laberinto de Horta (entrada 2,23 €)",
+          "15:45 · Transbordo a L5 en Diagonal hasta Sagrada Família",
+          "16:30 · Sagrada Familia por fuera (gratis): rodea las fachadas del Nacimiento y la Pasión",
+        ],
+      },
+      {
+        title: "🌇 Atardecer · Bunkers del Carmel",
+        content: [
+          "17:45 · Bus V21 o metro L5 hasta Alfons X y subida al Turó de la Rovira",
+          "18:30-19:30 · Bunkers del Carmel (gratis) · panorámica 360° de Barcelona al atardecer (~19:35 h)",
+          "Importante: el recinto cierra puntualmente a las 19:30 h",
+          "19:40 · Bus V17 de bajada directa hasta Gràcia, prácticamente en la puerta del apartamento",
         ],
       },
     ],
-    tip: "💡 Reservad la Sagrada Familia con 3-4 semanas de antelación para asegurar horario y entrada con torres.",
+    tip: "💡 Reservad la Sagrada Familia con 3-4 semanas de antelación para asegurar horario y entrada con torres. La parada Fontana (L3) está al lado del apartamento — moveros siempre por metro.",
+
   },
   {
     day: 3,
@@ -99,15 +128,45 @@ const planBPrefix: any[] = [
       "Día para descubrir la capital gastronómica de Francia. Subida a la Basílica de Fourvière, paseo por las traboules del Vieux Lyon y mercado de Les Halles Paul Bocuse.",
     sections: [
       {
-        title: "🌄 Plan sugerido",
+        title: "☕ Mañana · Desayuno y Traboules",
         content: [
-          "10:00 · Funicular a Fourvière y vistas panorámicas",
-          "12:30 · Comida en Les Halles Paul Bocuse",
-          "15:30 · Traboules y Vieux Lyon",
-          "19:00 · Place Bellecour y cena en bouchon",
+          "Billete TCL 24 h (~6,50-7 €): vale para metro, bus y funicular",
+          "09:00 · Desayuno en Pralus, Quai Saint-Antoine — prueba la Tarte aux Pralines o un brioche de pralines",
+          "🔗 Pralus: https://maps.app.goo.gl/VpoqL3UQjx2JZyJk7",
+          "10:00 · Traboules ocultos del Vieux Lyon (Rue Saint-Jean) — pasadizos medievales que cruzan edificios",
+          "11:00 · Catedral de Saint-Jean (gratis) con su reloj astronómico del siglo XIV",
+        ],
+      },
+      {
+        title: "⛪ Mediodía · Fourvière y zona romana",
+        content: [
+          "12:00 · Funicular F2 desde Vieux Lyon hasta Fourvière (incluido en el billete TCL)",
+          "12:15 · Basílica de Notre-Dame de Fourvière (gratis): mosaicos dorados y mejor mirador de Lyon",
+          "13:30 · Théâtres Romains de Fourvière (gratis · año 15 a.C.) y Odéon",
+          "15:00 · Bajada caminando por el Jardin du Rosaire",
+        ],
+      },
+      {
+        title: "🌳 Tarde · Parc de la Tête d'Or",
+        content: [
+          "16:30 · Metro D + transbordo en Sax-Gambetta a línea B hasta Charpennes",
+          "Parque urbano gratuito · jardín botánico en invernaderos antiguos · zoo de acceso libre",
+        ],
+      },
+      {
+        title: "🍷 Cena · Bouchons lyonnais auténticos",
+        content: [
+          "Busca la pegatina amarilla «Authentique Bouchon Lyonnais» (Gnafron con vaso de vino)",
+          "Les Fine Gueules (Rue Lainerie · Vieux Lyon): andouillette y quenelle, ambiente con vigas de madera",
+          "Le Musée (Rue de Forces · Presqu'île): joya local con traboule privado del restaurante",
+          "Le Garet (cerca de la Ópera): decoración años 50, raciones gigantescas, llena de lioneses",
+          "⚠️ Reservar online 2 días antes o presentarse a las 19:30-20:00 h máximo",
+          "Menú completo de 3 platos: 25-32 € por persona",
         ],
       },
     ],
+    tip: "💡 Huye de los menús masivos en diez idiomas de la calle Saint-Jean — postureo para turistas. Los bouchons auténticos son familiares, ruidosos y con manteles de cuadros rojos.",
+
   },
   {
     day: 5,
@@ -129,11 +188,16 @@ const planBPrefix: any[] = [
         ],
       },
       {
-        title: "🌆 Tarde en Ginebra",
+        title: "🌆 Tarde en Ginebra · Lago Lemán",
         content: [
-          "Check-in en Hôtel Astoria (junto a Cornavin)",
-          "Paseo por el Jet d'Eau y la Vieille Ville",
-          "Cena ligera — al día siguiente empieza el Swiss Travel Pass",
+          "Check-in en Hôtel Astoria: literalmente enfrente de la estación Cornavin — cruzas la calle y dejas las maletas",
+          "Geneva Transport Card GRATIS al hacer check-in: tranvías, buses y barcos Mouettes ilimitados",
+          "🔗 Geneva Transport Card: https://www.geneve.com/en/plan-stay/getting-around/free-geneva-transport-card",
+          "WiFi urbano gratis: conéctate a «((o)) city-geneva» (registro válido 6 meses)",
+          "16:30 · Bajada por Rue du Mont-Blanc hasta el Lago Lemán (~10 min)",
+          "17:00 · Puente del Mont-Blanc → Jet d'Eau (140 m) y Jardin Anglais con el Reloj de Flores",
+          "18:15 · Crucero en las Mouettes Genevoises (gratis con la tarjeta): barquitos amarillos públicos",
+          "19:00 · Bains des Pâquis (~2 CHF): espigón sobre el lago, ambiente local y cantina barata",
         ],
       },
       {
@@ -146,7 +210,8 @@ const planBPrefix: any[] = [
         ],
       },
     ],
-    tip: "💡 Activa el Swiss Travel Pass mañana, no hoy: el reloj de días no debe correr antes de tiempo.",
+    tip: "💡 La Geneva Transport Card te llegará por email 3 días antes de la llegada con un formulario online. Una vez rellenado, recibes la tarjeta digital al instante. ¡No pagues cruceros turísticos cuando las Mouettes son gratis!",
+
   },
 
 ];
