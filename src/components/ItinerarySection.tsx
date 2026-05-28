@@ -683,10 +683,28 @@ export default function ItinerarySection() {
   const [expandedDay, setExpandedDay] = useState<number | null>(null);
   const { plan } = usePlan();
 
-  const baseDays: any[] = days.map((d: any, i: number) => ({
-    ...d,
-    date: plan === "A" ? planADates[i] : planBBaseDates[i],
-  }));
+  const planBDay1Extra = [
+    {
+      title: "🏛️ Mañana ampliada en Ginebra (Plan B)",
+      content: [
+        "09:30 · Casco Antiguo (Vieille Ville) en tranvía desde Cornavin (gratis con la Geneva Transport Card)",
+        "Calles adoquinadas y Place du Bourg-de-Four — la plaza más antigua de la ciudad",
+        "10:15 · Catedral de Saint-Pierre (entrada libre). Torres con la mejor vista 360° de Ginebra: 5 CHF",
+        "11:30 · Parc des Bastions y Muro de los Reformadores (gratis) · tableros de ajedrez gigantes",
+        "12:30 · Barrio de Les Grottes — los «Edificios Pitufo» justo detrás del Hôtel Astoria",
+        "Arquitectura orgánica y colorida estilo Gaudí · gratis · pegado al hotel para recoger maletas",
+      ],
+    },
+  ];
+
+  const baseDays: any[] = days.map((d: any, i: number) => {
+    const next: any = { ...d, date: plan === "A" ? planADates[i] : planBBaseDates[i] };
+    if (i === 0 && plan === "B") {
+      next.sections = [...planBDay1Extra, ...(d.sections ?? [])];
+    }
+    return next;
+  });
+
 
   const displayDays: any[] =
     plan === "A"
