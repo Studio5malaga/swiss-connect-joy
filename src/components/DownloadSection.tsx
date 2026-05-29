@@ -5,7 +5,7 @@ export default function DownloadSection() {
         <h2 className="text-3xl font-bold text-primary-foreground sm:text-4xl">Plan de Viaje Completo</h2>
         <p className="mt-3 text-primary-foreground/80">Descarga el PDF con el itinerario detallado, presupuestos y toda la información que necesitas.</p>
         <a
-          href="/docs/plan-de-viaje-alpes-2026.pdf"
+          href="/docs/power.pdf"
           download
           className="mt-8 inline-flex items-center gap-3 rounded-xl bg-primary-foreground px-10 py-5 text-lg font-bold text-primary shadow-lg hover:opacity-90 transition-all hover:scale-105"
         >
