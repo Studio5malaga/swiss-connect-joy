@@ -84,6 +84,8 @@ const planBPrefix: any[] = [
       },
     ],
     tip: "💡 Reservad la Sagrada Familia con 3-4 semanas de antelación para asegurar horario y entrada con torres. La parada Fontana (L3) está al lado del apartamento — moveros siempre por metro.",
+    closingImage: "/images/barcelona2.png",
+    closingAlt: "Atardecer en el Parque Güell con vistas a la Sagrada Familia y al mar",
 
   },
   {
@@ -166,6 +168,8 @@ const planBPrefix: any[] = [
       },
     ],
     tip: "💡 Huye de los menús masivos en diez idiomas de la calle Saint-Jean — postureo para turistas. Los bouchons auténticos son familiares, ruidosos y con manteles de cuadros rojos.",
+    closingImage: "/images/lyon2.png",
+    closingAlt: "Cena en un Bouchon Lyonnais tradicional del Vieux Lyon con Fourvière al fondo",
 
   },
   {
@@ -858,6 +862,17 @@ export default function ItinerarySection() {
                       {d.tip && (
                         <div className="rounded-xl border border-accent/30 bg-accent/5 p-4">
                           <p className="text-sm text-foreground leading-relaxed">{d.tip}</p>
+                        </div>
+                      )}
+
+                      {d.closingImage && (
+                        <div className="overflow-hidden rounded-xl border border-border">
+                          <img
+                            src={d.closingImage}
+                            alt={d.closingAlt || ""}
+                            className="w-full h-auto"
+                            loading="lazy"
+                          />
                         </div>
                       )}
                     </div>
