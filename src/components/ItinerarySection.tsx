@@ -32,18 +32,42 @@ const planBPrefix: any[] = [
         ],
       },
       {
+        title: "🚇 Transporte en Barcelona · Tarjeta T-familiar",
+        content: [
+          "🔗 TMB: https://www.tmb.cat/es/tarifas-metro-bus-barcelona/t-familiar",
+          "La ganadora: T-familiar (multipersonal). Se pasa la misma tarjeta hasta 6 veces seguidas por el torno para que fiche todo el grupo",
+          "Cada T-familiar incluye 8 viajes. Para los 36 viajes totales del grupo: 5 tarjetas (5×8 = 40 viajes)",
+          "Coste total grupo: 5 × 10,70 € = 53,50 € (~9,58 €/persona) — sobran 4 viajes de recuerdo",
+        ],
+      },
+      {
         title: "🚆 Coche + Cercanías Málaga (recomendado)",
         content: [
-          "Deja el coche en la zona del aeropuerto de Málaga (parking económico de larga estancia)",
-          "Toma Cercanías Málaga línea C-1 dirección María Zambrano para conectar con el tren Iryo",
-          "🔗 Cercanías Málaga: https://www.renfe.com/es/es/cercanias/cercanias-malaga",
-          "Ventaja: a la vuelta, el coche está disponible a la salida del aeropuerto el 11 Oct a las 00:20 h, sin depender de taxis nocturnos",
+          "Opción A: dejar el coche en la zona del aeropuerto de Málaga (parking económico larga estancia)",
+          "Opción Eva: dejar el coche por casa de Eva. A la vuelta, Uber de 6 hasta su casa (~35-40 €) y desde allí los demás en coche",
+          "Opción B: dejar el coche cerca del Hospital Quirón o Martín Carpena, metro hasta Vialia (parada El Perchel). A la vuelta Uber de 4 (~18 €) y Eva y yo otro Uber",
+          "🔗 Cercanías Málaga: https://www.renfe.com/es/es/cercanias/cercanias-malaga (dirección María Zambrano)",
+          "Ventaja: el coche disponible a la vuelta del aeropuerto el 11 Oct a las 00:20 h",
+        ],
+      },
+      {
+        title: "🚗 Opciones de Parking en el Aeropuerto de Málaga (AGP)",
+        content: [
+          "1️⃣ Low-Cost con traslado (más barato): recintos vigilados a 2 min en minibús 24h. Requiere dejar las llaves",
+          "🔗 Picasso Parking (~94 €): https://www.parkingairportpicasso.com/reservas.php",
+          "🔗 Costa Golf Parking (~54 €): https://www.parkingcostagolf.com/",
+          "2️⃣ Aena Larga Estancia P3 (más bueno): dentro del recinto, lanzadera 24h gratuita, te quedas con las llaves, apertura por matrícula",
+          "🔗 Aena: https://www.aena.es/es/landing/aparcamiento-aeropuerto-malaga-costa-del-sol",
+          "3️⃣ Valet / Aparcacoches (más cómodo): chófer recoge en T3 Salidas y entrega en Llegadas a las 00:20 h",
+          "4️⃣ Uber directo: coche 4 plazas (~18 €/trayecto) · coche 6 plazas (~51 €/trayecto)",
+          "💡 Al reservar parking o chófer, indica siempre el número de vuelo de regreso por si hay retrasos",
         ],
       },
     ],
     tip: "💡 Comprobad los billetes Iryo con 2 meses de antelación: a esos precios se agotan rápido.",
 
   },
+
   {
     day: 2,
     date: "30 Sep (Martes)",
@@ -78,12 +102,14 @@ const planBPrefix: any[] = [
         content: [
           "17:45 · Bus V21 o metro L5 hasta Alfons X y subida al Turó de la Rovira",
           "18:30-19:30 · Bunkers del Carmel (gratis) · panorámica 360° de Barcelona al atardecer (~19:35 h)",
-          "Importante: el recinto cierra puntualmente a las 19:30 h",
+          "Importante: el recinto cierra puntualmente a las 19:30 h en horario de verano/septiembre",
+          "⚠️ Aviso logístico: el último tramo a la cima es una subida peatonal empinada con escaleras. Si se prefieren paseos llanos, cambiar Bunkers por una terraza con vistas en la parte alta de la ciudad",
           "19:40 · Bus V17 de bajada directa hasta Gràcia, prácticamente en la puerta del apartamento",
         ],
       },
     ],
     tip: "💡 Reservad la Sagrada Familia con 3-4 semanas de antelación para asegurar horario y entrada con torres. La parada Fontana (L3) está al lado del apartamento — moveros siempre por metro.",
+
     closingImage: "/images/barcelona2.png",
     closingAlt: "Atardecer en el Parque Güell con vistas a la Sagrada Familia y al mar",
 
@@ -130,11 +156,20 @@ const planBPrefix: any[] = [
       "Día para descubrir la capital gastronómica de Francia. Subida a la Basílica de Fourvière, paseo por las traboules del Vieux Lyon y mercado de Les Halles Paul Bocuse.",
     sections: [
       {
+        title: "🚇 Transporte en Lyon · 3 Carnets de 10 viajes",
+        content: [
+          "🔗 TCL: https://www.tcl.fr/",
+          "Billete físico recargable (0,20 €) que permite multi-validación (pasar la misma tarjeta 6 veces seguidas)",
+          "Carnet de 10 viajes: 20,00 € (2,00 €/viaje). Para los 30 viajes del grupo: 3 carnets",
+          "Coste total grupo: 60,00 € (~10,00 €/persona)",
+        ],
+      },
+      {
         title: "☕ Mañana · Desayuno y Traboules",
         content: [
-          "Billete TCL 24 h (~6,50-7 €): vale para metro, bus y funicular",
-          "09:00 · Desayuno en Pralus, Quai Saint-Antoine — prueba la Tarte aux Pralines o un brioche de pralines",
-          "🔗 Pralus: https://maps.app.goo.gl/VpoqL3UQjx2JZyJk7",
+          "09:00 · Desayuno en Pralus, Quai Saint-Antoine — Tarte aux Pralines o brioche de pralines, mermeladas premiadas",
+          "🔗 Pastelería Pralus: https://www.boulangerie-pralus.com/",
+          "🔗 Ubicación: https://maps.app.goo.gl/VpoqL3UQjx2JZyJk7",
           "10:00 · Traboules ocultos del Vieux Lyon (Rue Saint-Jean) — pasadizos medievales que cruzan edificios",
           "11:00 · Catedral de Saint-Jean (gratis) con su reloj astronómico del siglo XIV",
         ],
@@ -142,7 +177,7 @@ const planBPrefix: any[] = [
       {
         title: "⛪ Mediodía · Fourvière y zona romana",
         content: [
-          "12:00 · Funicular F2 desde Vieux Lyon hasta Fourvière (incluido en el billete TCL)",
+          "12:00 · Funicular F2 desde Vieux Lyon hasta Fourvière (incluido en los carnets TCL)",
           "12:15 · Basílica de Notre-Dame de Fourvière (gratis): mosaicos dorados y mejor mirador de Lyon",
           "13:30 · Théâtres Romains de Fourvière (gratis · año 15 a.C.) y Odéon",
           "15:00 · Bajada caminando por el Jardin du Rosaire",
@@ -152,20 +187,22 @@ const planBPrefix: any[] = [
         title: "🌳 Tarde · Parc de la Tête d'Or",
         content: [
           "16:30 · Metro D + transbordo en Sax-Gambetta a línea B hasta Charpennes",
-          "Parque urbano gratuito · jardín botánico en invernaderos antiguos · zoo de acceso libre",
+          "🔗 Parc de la Tête d'Or: https://www.lyon.es/parque-tete-dor",
+          "Parque urbano gratuito · invernaderos de hierro y cristal · jardín botánico · zoo de acceso libre",
         ],
       },
       {
         title: "🍷 Cena · Bouchons lyonnais auténticos",
         content: [
           "Busca la pegatina amarilla «Authentique Bouchon Lyonnais» (Gnafron con vaso de vino)",
-          "Les Fine Gueules (Rue Lainerie · Vieux Lyon): andouillette y quenelle, ambiente con vigas de madera",
-          "Le Musée (Rue de Forces · Presqu'île): joya local con traboule privado del restaurante",
-          "Le Garet (cerca de la Ópera): decoración años 50, raciones gigantescas, llena de lioneses",
-          "⚠️ Reservar online 2 días antes o presentarse a las 19:30-20:00 h máximo",
-          "Menú completo de 3 platos: 25-32 € por persona",
+          "🔗 Les Fine Gueules (Rue Lainerie · Vieux Lyon): https://fines-gueules.fr/ — andouillette y quenelle, vigas de madera",
+          "🔗 Le Musée (Presqu'île): https://www.bouchonlemusee.fr/ — el dueño Luc canta el menú, traboule privado dentro del local",
+          "🔗 Le Garet (cerca de la Ópera): https://lacarte.menu/restaurants/lyon/le-garet — años 50, raciones gigantescas, tarta de praliné rosa",
+          "⚠️ Reservar online con antelación · llegada 19:30-20:00 h",
+          "Menú completo de 3 platos: 25-32 €/persona",
         ],
       },
+
     ],
     tip: "💡 Huye de los menús masivos en diez idiomas de la calle Saint-Jean — postureo para turistas. Los bouchons auténticos son familiares, ruidosos y con manteles de cuadros rojos.",
     closingImage: "/images/lyon2.png",
@@ -194,16 +231,20 @@ const planBPrefix: any[] = [
       {
         title: "🌆 Tarde en Ginebra · Lago Lemán",
         content: [
-          "Check-in en Hôtel Astoria: literalmente enfrente de la estación Cornavin — cruzas la calle y dejas las maletas",
-          "Geneva Transport Card GRATIS al hacer check-in: tranvías, buses y barcos Mouettes ilimitados",
-          "🔗 Geneva Transport Card: https://www.geneve.com/en/plan-stay/getting-around/free-geneva-transport-card",
-          "WiFi urbano gratis: conéctate a «((o)) city-geneva» (registro válido 6 meses)",
+          "Check-in en Hôtel Astoria: enfrente de la estación Cornavin — cruzas la calle y dejas las maletas",
+          "ℹ️ Desayuno no incluido (17 CHF/persona/día, 7:00-10:30 h)",
+          "🔗 Geneva Transport Card GRATIS: https://www.geneve.com/en/plan-stay/getting-around/free-geneva-transport-card — tranvías, buses y barcos Mouettes ilimitados (llega por email 3 días antes)",
+          "WiFi urbano gratis: conéctate a «((o)) city-geneva»",
           "16:30 · Bajada por Rue du Mont-Blanc hasta el Lago Lemán (~10 min)",
-          "17:00 · Puente del Mont-Blanc → Jet d'Eau (140 m) y Jardin Anglais con el Reloj de Flores",
-          "18:15 · Crucero en las Mouettes Genevoises (gratis con la tarjeta): barquitos amarillos públicos",
-          "19:00 · Bains des Pâquis (~2 CHF): espigón sobre el lago, ambiente local y cantina barata",
+          "🔗 17:00 · Jet d'Eau (140 m): https://www.myswitzerland.com/es-es/descubrir-suiza/jet-deau-chorro-de-agua/",
+          "🔗 Reloj de Flores (Jardin Anglais): https://www.geneva.info/flower-clock/",
+          "🔗 18:15 · Crucero Mouettes Genevoises (gratis con la tarjeta): https://www.mouettesgenevoises.com/",
+          "🔗 Barrio de Les Grottes / «Edificios Pitufo» detrás del hotel: https://www.enelmundoperdido.com/les-grottes-el-barrio-pitufo-de-ginebra/",
+          "🔗 Opcional · Bains des Pâquis (~2 CHF): https://www.myswitzerland.com/es-es/descubrir-suiza/bains-des-paquis-1/ — espigón sobre el lago, cantina barata",
+          "🔗 Opcional · Catedral de Saint-Pierre (entrada libre, torres 5 CHF): https://www.cathedrale-geneve.ch/en/visit/",
         ],
       },
+
       {
         title: "🏨 Alojamiento en Ginebra (1 noche · 3-4 Oct)",
         content: [
@@ -317,29 +358,26 @@ const days: any[] = [
   {
     day: 1,
     date: "4 Oct (Dom)",
-    route: "Ginebra → Visp → Kandersteg",
-    title: "Ginebra → Kandersteg · Tren panorámico a los Alpes",
+    route: "Ginebra → Meiringen → Kandersteg",
+    title: "Ginebra → Kandersteg con parada en Meiringen · Tren panorámico",
     image: "/images/dia1-ginebra-kandersteg.jpg",
     alt: "Tren panorámico junto al Lago Lemán con los Alpes al fondo",
-    tags: ["Mañana en Ginebra", "Tren panorámico", "Valle plano", "Chalet-Hotel Adler"],
+    tags: ["Mañana en Ginebra", "Parada Meiringen", "Cataratas Reichenbach", "Chalet-Hotel Adler"],
     highlights:
-      "Día de transición sin prisas. Mañana relajada en Ginebra, comida ligera y tren panorámico a media tarde hasta Kandersteg, donde empieza el bloque alpino. Llegada a pie al Chalet-Hotel Adler en un valle completamente llano.",
+      "Día de transición aprovechado al máximo. Tren a media mañana desde Ginebra con parada larga en Meiringen para conocer las Cataratas Reichenbach, el funicular de madera de 1899 y el museo de Sherlock Holmes. Llegada por la tarde al Chalet-Hotel Adler en un valle completamente llano.",
     sections: [
       {
-        title: "🌅 Mañana en Ginebra",
+        title: "🚂 Ruta del día",
         content: [
-          "Desayuno y salida del hotel con maletas",
-          "Último paseo por la Vieille Ville o el Jet d'Eau",
-          "Comida ligera antes de coger el tren",
-        ],
-      },
-      {
-        title: "🚂 Logística: Ginebra → Kandersteg",
-        content: [
-          "1️⃣ Llegada a la estación de Ginebra Cornavin con tiempo",
-          "2️⃣ Validar el Swiss Travel Pass en la estación ferroviaria",
-          "3️⃣ Tren panorámico Ginebra → Visp → Kandersteg (~2h 45min)",
-          "4️⃣ Llegada a pie al Chalet-Hotel Adler (5-7 min en llano, sin cuestas)",
+          "10:00 · Salida de Ginebra Cornavin (tren hacia Meiringen vía Berna e Interlaken Ost)",
+          "13:15 · Llegada a Meiringen — dejar maletas en consignas automáticas (6-10 CHF/maleta)",
+          "🔗 SBB Meiringen · taquillas/equipamiento: https://www.sbb.ch/en/travel-information/stations/find-station/station.16965.meiringen.html#equipment_lockers",
+          "🔗 SBB Meiringen · ficha de la estación: https://www.sbb.ch/en/travel-information/stations/find-station/station.16965.meiringen.html",
+          "13:30 · Almuerzo ligero en el pueblo o sándwiches suizos tradicionales",
+          "14:15 · Funicular histórico de madera a las Cataratas Reichenbach (escenario del enfrentamiento final de Sherlock Holmes)",
+          "15:45 · Museo de Sherlock Holmes (gratis con el pase, abre hasta 17:30/18:00 h) · merengue local en pastelería tradicional",
+          "17:30 · Recoger maletas y tren de enlace a Kandersteg",
+          "19:15 · Llegada al Chalet-Hotel Adler · cena y opcional piscina/spa (15 €)",
         ],
       },
       {
@@ -354,6 +392,7 @@ const days: any[] = [
     ],
     tip: "💡 ¿Por qué Kandersteg es perfecto? A diferencia de Wengen (con muchas cuestas), Kandersteg es un pueblo en un valle plano. El Lago Oeschinen tiene un microbús eléctrico que lleva hasta la orilla. El hotel tiene piscina y spa para descansar las piernas cada noche (15 €/día).",
   },
+
 
   {
     day: 2,
@@ -392,47 +431,54 @@ const days: any[] = [
   {
     day: 3,
     date: "1 Oct (Miércoles)",
-    route: "Kandersteg → Meiringen → Brienz → Blausee → Kandersteg",
-    title: "Sherlock Holmes, Lago de Brienz & Blausee",
+    route: "Kandersteg → Interlaken → Brienz → Giessbach → Blausee → Kandersteg",
+    title: "Lago de Brienz, Funicular del Giessbach & Blausee",
     image: "/images/dia3-sherlock-blausee.jpg",
-    alt: "Cataratas de Reichenbach y Blausee, lago turquesa en Suiza",
-    tags: ["Funicular 1899", "Museo gratis", "Lago turquesa", "Barco Lago Brienz"],
+    alt: "Lago de Brienz turquesa, cascadas de Giessbach y Blausee en Suiza",
+    tags: ["Crucero Brienz", "Funicular Giessbach", "Lago turquesa", "Día relajado"],
     highlights:
-      "Meiringen, el pueblo de Sherlock Holmes. El funicular de madera de 1899 sube a las Cataratas Reichenbach, donde Holmes tuvo su «enfrentamiento final». Luego, crucero por el turquesa Lago de Brienz y visita al mágico Blausee.",
+      "Al haber adelantado la parada de Meiringen al Día 1, queda un día mucho más relajado dedicado a los lagos azules. Crucero por el majestuoso Lago de Brienz, parada en el histórico Grand Hotel Giessbach y broche de oro en el Blausee.",
     sections: [
       {
-        title: "🔍 Meiringen & Cataratas Reichenbach",
+        title: "🌅 Mañana · Crucero por el Lago de Brienz",
         content: [
-          "Tren Kandersteg → Meiringen (~1h)",
-          "Funicular histórico de 1899 a las Cataratas Reichenbach (~11,50 CHF con descuento del pase)",
-          "Museo Sherlock Holmes: GRATIS (ahorro de 7 CHF/persona)",
+          "Tren Kandersteg → Interlaken Ost (GRATIS con el pase)",
+          "Barco de línea por el Lago de Brienz: GRATIS con Swiss Travel Pass",
+          "Agua azul turquesa brillante (partículas de glaciar) · vistas a pueblos como Iseltwald",
         ],
       },
       {
-        title: "🚢 Barco por el Lago de Brienz",
+        title: "🚠 Extra recomendado · Grand Hotel Giessbach",
         content: [
-          "Barco Lago de Brienz: GRATIS — ahorro de +200 € para el grupo",
-          "El agua tiene un tono azul turquesa brillante (partículas de glaciar)",
-          "Veréis las Cataratas de Giessbach y pueblitos típicos como Iseltwald",
-          "Logística: Trayecto Brienz → Interlaken Ost, ~1h 15min. Frecuencia cada hora",
-          "Sin reservas: solo enseñar el Swiss Travel Pass al subir. Totalmente accesible",
+          "Bajada en la parada intermedia «Giessbach See»",
+          "🔗 Funicular histórico del Grand Hotel Giessbach (100% gratis con Swiss Travel Pass): https://giessbach.ch/en/giessbach-bahn-1",
+          "Subida cómoda con vistas a las cascadas",
+          "🔗 Café/refresco en la Terraza Kehrli con vistas al lago: https://giessbach.ch/en/restaurant-bar/kehrli-terrasse",
         ],
       },
       {
-        title: "💎 El Blausee (Lago Azul) — El Broche de Oro",
+        title: "🏘️ Mediodía · Pueblo de Brienz y regreso",
         content: [
-          "Azul eléctrico increíble — se ven troncos hundidos y truchas a varios metros",
-          "Estatua hundida: leyenda de una joven cuyas lágrimas volvieron azul el lago",
-          "Paseo en barca con fondo de cristal incluido con la entrada",
-          "Bus 230 desde Kandersteg: solo 8-10 min. GRATIS con el pase",
-          "Camino 100% llano desde la entrada al lago (200 metros)",
-          "Tarifas: L-V adultos 11 CHF (~11,50 €) | Fines de semana 13 CHF (~13,50 €) | Niños 7-9 CHF",
+          "Tomar de nuevo el barco hasta el pueblo de Brienz · famoso por sus casas de madera tallada tradicionales",
+          "Tren de Brienz de vuelta hacia la zona de Kandersteg",
+          "Almuerzo tranquilo en Interlaken o junto al lago en Spiez",
+        ],
+      },
+      {
+        title: "💎 Tarde · El Blausee (Lago Azul) — Broche de Oro",
+        content: [
+          "Bus 230 desde Kandersteg (8-10 min · GRATIS con la Swiss Travel Pass)",
+          "Sendero 100% llano y accesible hasta el lago",
+          "Barca con fondo de cristal incluida en el acceso · truchas y estatua hundida visibles",
+          "Tarifas: L-V adultos 11 CHF · fines de semana 13 CHF · niños 7-9 CHF",
+          "Regreso rápido al hotel a descansar",
         ],
       },
     ],
-    tip: "💡 Dato curioso: Meiringen es famoso por sus merengues — ¡dicen que se inventaron allí! Con lo que ahorramos en transporte, podemos permitirnos una buena merienda en la pastelería local.",
-    savings: { label: "Ahorro Total Día 3", amount: "~80 €", detail: "Transporte + museos cubiertos" },
+    tip: "💡 Día pensado para disfrutar del agua y los paisajes de postal sin prisas, tras el intenso Día 1 con la parada en Meiringen.",
+    savings: { label: "Ahorro Total Día 3", amount: "~80 €", detail: "Transporte + funicular Giessbach cubiertos" },
   },
+
   {
     day: 4,
     date: "2 Oct (Jueves)",
