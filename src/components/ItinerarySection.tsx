@@ -358,29 +358,26 @@ const days: any[] = [
   {
     day: 1,
     date: "4 Oct (Dom)",
-    route: "Ginebra → Visp → Kandersteg",
-    title: "Ginebra → Kandersteg · Tren panorámico a los Alpes",
+    route: "Ginebra → Meiringen → Kandersteg",
+    title: "Ginebra → Kandersteg con parada en Meiringen · Tren panorámico",
     image: "/images/dia1-ginebra-kandersteg.jpg",
     alt: "Tren panorámico junto al Lago Lemán con los Alpes al fondo",
-    tags: ["Mañana en Ginebra", "Tren panorámico", "Valle plano", "Chalet-Hotel Adler"],
+    tags: ["Mañana en Ginebra", "Parada Meiringen", "Cataratas Reichenbach", "Chalet-Hotel Adler"],
     highlights:
-      "Día de transición sin prisas. Mañana relajada en Ginebra, comida ligera y tren panorámico a media tarde hasta Kandersteg, donde empieza el bloque alpino. Llegada a pie al Chalet-Hotel Adler en un valle completamente llano.",
+      "Día de transición aprovechado al máximo. Tren a media mañana desde Ginebra con parada larga en Meiringen para conocer las Cataratas Reichenbach, el funicular de madera de 1899 y el museo de Sherlock Holmes. Llegada por la tarde al Chalet-Hotel Adler en un valle completamente llano.",
     sections: [
       {
-        title: "🌅 Mañana en Ginebra",
+        title: "🚂 Ruta del día",
         content: [
-          "Desayuno y salida del hotel con maletas",
-          "Último paseo por la Vieille Ville o el Jet d'Eau",
-          "Comida ligera antes de coger el tren",
-        ],
-      },
-      {
-        title: "🚂 Logística: Ginebra → Kandersteg",
-        content: [
-          "1️⃣ Llegada a la estación de Ginebra Cornavin con tiempo",
-          "2️⃣ Validar el Swiss Travel Pass en la estación ferroviaria",
-          "3️⃣ Tren panorámico Ginebra → Visp → Kandersteg (~2h 45min)",
-          "4️⃣ Llegada a pie al Chalet-Hotel Adler (5-7 min en llano, sin cuestas)",
+          "10:00 · Salida de Ginebra Cornavin (tren hacia Meiringen vía Berna e Interlaken Ost)",
+          "13:15 · Llegada a Meiringen — dejar maletas en consignas automáticas (6-10 CHF/maleta)",
+          "🔗 SBB Meiringen · taquillas/equipamiento: https://www.sbb.ch/en/travel-information/stations/find-station/station.16965.meiringen.html#equipment_lockers",
+          "🔗 SBB Meiringen · ficha de la estación: https://www.sbb.ch/en/travel-information/stations/find-station/station.16965.meiringen.html",
+          "13:30 · Almuerzo ligero en el pueblo o sándwiches suizos tradicionales",
+          "14:15 · Funicular histórico de madera a las Cataratas Reichenbach (escenario del enfrentamiento final de Sherlock Holmes)",
+          "15:45 · Museo de Sherlock Holmes (gratis con el pase, abre hasta 17:30/18:00 h) · merengue local en pastelería tradicional",
+          "17:30 · Recoger maletas y tren de enlace a Kandersteg",
+          "19:15 · Llegada al Chalet-Hotel Adler · cena y opcional piscina/spa (15 €)",
         ],
       },
       {
@@ -395,6 +392,7 @@ const days: any[] = [
     ],
     tip: "💡 ¿Por qué Kandersteg es perfecto? A diferencia de Wengen (con muchas cuestas), Kandersteg es un pueblo en un valle plano. El Lago Oeschinen tiene un microbús eléctrico que lleva hasta la orilla. El hotel tiene piscina y spa para descansar las piernas cada noche (15 €/día).",
   },
+
 
   {
     day: 2,
