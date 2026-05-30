@@ -32,18 +32,42 @@ const planBPrefix: any[] = [
         ],
       },
       {
+        title: "🚇 Transporte en Barcelona · Tarjeta T-familiar",
+        content: [
+          "🔗 TMB: https://www.tmb.cat/es/tarifas-metro-bus-barcelona/t-familiar",
+          "La ganadora: T-familiar (multipersonal). Se pasa la misma tarjeta hasta 6 veces seguidas por el torno para que fiche todo el grupo",
+          "Cada T-familiar incluye 8 viajes. Para los 36 viajes totales del grupo: 5 tarjetas (5×8 = 40 viajes)",
+          "Coste total grupo: 5 × 10,70 € = 53,50 € (~9,58 €/persona) — sobran 4 viajes de recuerdo",
+        ],
+      },
+      {
         title: "🚆 Coche + Cercanías Málaga (recomendado)",
         content: [
-          "Deja el coche en la zona del aeropuerto de Málaga (parking económico de larga estancia)",
-          "Toma Cercanías Málaga línea C-1 dirección María Zambrano para conectar con el tren Iryo",
-          "🔗 Cercanías Málaga: https://www.renfe.com/es/es/cercanias/cercanias-malaga",
-          "Ventaja: a la vuelta, el coche está disponible a la salida del aeropuerto el 11 Oct a las 00:20 h, sin depender de taxis nocturnos",
+          "Opción A: dejar el coche en la zona del aeropuerto de Málaga (parking económico larga estancia)",
+          "Opción Eva: dejar el coche por casa de Eva. A la vuelta, Uber de 6 hasta su casa (~35-40 €) y desde allí los demás en coche",
+          "Opción B: dejar el coche cerca del Hospital Quirón o Martín Carpena, metro hasta Vialia (parada El Perchel). A la vuelta Uber de 4 (~18 €) y Eva y yo otro Uber",
+          "🔗 Cercanías Málaga: https://www.renfe.com/es/es/cercanias/cercanias-malaga (dirección María Zambrano)",
+          "Ventaja: el coche disponible a la vuelta del aeropuerto el 11 Oct a las 00:20 h",
+        ],
+      },
+      {
+        title: "🚗 Opciones de Parking en el Aeropuerto de Málaga (AGP)",
+        content: [
+          "1️⃣ Low-Cost con traslado (más barato): recintos vigilados a 2 min en minibús 24h. Requiere dejar las llaves",
+          "🔗 Picasso Parking (~94 €): https://www.parkingairportpicasso.com/reservas.php",
+          "🔗 Costa Golf Parking (~54 €): https://www.parkingcostagolf.com/",
+          "2️⃣ Aena Larga Estancia P3 (más bueno): dentro del recinto, lanzadera 24h gratuita, te quedas con las llaves, apertura por matrícula",
+          "🔗 Aena: https://www.aena.es/es/landing/aparcamiento-aeropuerto-malaga-costa-del-sol",
+          "3️⃣ Valet / Aparcacoches (más cómodo): chófer recoge en T3 Salidas y entrega en Llegadas a las 00:20 h",
+          "4️⃣ Uber directo: coche 4 plazas (~18 €/trayecto) · coche 6 plazas (~51 €/trayecto)",
+          "💡 Al reservar parking o chófer, indica siempre el número de vuelo de regreso por si hay retrasos",
         ],
       },
     ],
     tip: "💡 Comprobad los billetes Iryo con 2 meses de antelación: a esos precios se agotan rápido.",
 
   },
+
   {
     day: 2,
     date: "30 Sep (Martes)",
@@ -78,12 +102,14 @@ const planBPrefix: any[] = [
         content: [
           "17:45 · Bus V21 o metro L5 hasta Alfons X y subida al Turó de la Rovira",
           "18:30-19:30 · Bunkers del Carmel (gratis) · panorámica 360° de Barcelona al atardecer (~19:35 h)",
-          "Importante: el recinto cierra puntualmente a las 19:30 h",
+          "Importante: el recinto cierra puntualmente a las 19:30 h en horario de verano/septiembre",
+          "⚠️ Aviso logístico: el último tramo a la cima es una subida peatonal empinada con escaleras. Si se prefieren paseos llanos, cambiar Bunkers por una terraza con vistas en la parte alta de la ciudad",
           "19:40 · Bus V17 de bajada directa hasta Gràcia, prácticamente en la puerta del apartamento",
         ],
       },
     ],
     tip: "💡 Reservad la Sagrada Familia con 3-4 semanas de antelación para asegurar horario y entrada con torres. La parada Fontana (L3) está al lado del apartamento — moveros siempre por metro.",
+
     closingImage: "/images/barcelona2.png",
     closingAlt: "Atardecer en el Parque Güell con vistas a la Sagrada Familia y al mar",
 
@@ -130,11 +156,20 @@ const planBPrefix: any[] = [
       "Día para descubrir la capital gastronómica de Francia. Subida a la Basílica de Fourvière, paseo por las traboules del Vieux Lyon y mercado de Les Halles Paul Bocuse.",
     sections: [
       {
+        title: "🚇 Transporte en Lyon · 3 Carnets de 10 viajes",
+        content: [
+          "🔗 TCL: https://www.tcl.fr/",
+          "Billete físico recargable (0,20 €) que permite multi-validación (pasar la misma tarjeta 6 veces seguidas)",
+          "Carnet de 10 viajes: 20,00 € (2,00 €/viaje). Para los 30 viajes del grupo: 3 carnets",
+          "Coste total grupo: 60,00 € (~10,00 €/persona)",
+        ],
+      },
+      {
         title: "☕ Mañana · Desayuno y Traboules",
         content: [
-          "Billete TCL 24 h (~6,50-7 €): vale para metro, bus y funicular",
-          "09:00 · Desayuno en Pralus, Quai Saint-Antoine — prueba la Tarte aux Pralines o un brioche de pralines",
-          "🔗 Pralus: https://maps.app.goo.gl/VpoqL3UQjx2JZyJk7",
+          "09:00 · Desayuno en Pralus, Quai Saint-Antoine — Tarte aux Pralines o brioche de pralines, mermeladas premiadas",
+          "🔗 Pastelería Pralus: https://www.boulangerie-pralus.com/",
+          "🔗 Ubicación: https://maps.app.goo.gl/VpoqL3UQjx2JZyJk7",
           "10:00 · Traboules ocultos del Vieux Lyon (Rue Saint-Jean) — pasadizos medievales que cruzan edificios",
           "11:00 · Catedral de Saint-Jean (gratis) con su reloj astronómico del siglo XIV",
         ],
@@ -142,7 +177,7 @@ const planBPrefix: any[] = [
       {
         title: "⛪ Mediodía · Fourvière y zona romana",
         content: [
-          "12:00 · Funicular F2 desde Vieux Lyon hasta Fourvière (incluido en el billete TCL)",
+          "12:00 · Funicular F2 desde Vieux Lyon hasta Fourvière (incluido en los carnets TCL)",
           "12:15 · Basílica de Notre-Dame de Fourvière (gratis): mosaicos dorados y mejor mirador de Lyon",
           "13:30 · Théâtres Romains de Fourvière (gratis · año 15 a.C.) y Odéon",
           "15:00 · Bajada caminando por el Jardin du Rosaire",
@@ -152,20 +187,22 @@ const planBPrefix: any[] = [
         title: "🌳 Tarde · Parc de la Tête d'Or",
         content: [
           "16:30 · Metro D + transbordo en Sax-Gambetta a línea B hasta Charpennes",
-          "Parque urbano gratuito · jardín botánico en invernaderos antiguos · zoo de acceso libre",
+          "🔗 Parc de la Tête d'Or: https://www.lyon.es/parque-tete-dor",
+          "Parque urbano gratuito · invernaderos de hierro y cristal · jardín botánico · zoo de acceso libre",
         ],
       },
       {
         title: "🍷 Cena · Bouchons lyonnais auténticos",
         content: [
           "Busca la pegatina amarilla «Authentique Bouchon Lyonnais» (Gnafron con vaso de vino)",
-          "Les Fine Gueules (Rue Lainerie · Vieux Lyon): andouillette y quenelle, ambiente con vigas de madera",
-          "Le Musée (Rue de Forces · Presqu'île): joya local con traboule privado del restaurante",
-          "Le Garet (cerca de la Ópera): decoración años 50, raciones gigantescas, llena de lioneses",
-          "⚠️ Reservar online 2 días antes o presentarse a las 19:30-20:00 h máximo",
-          "Menú completo de 3 platos: 25-32 € por persona",
+          "🔗 Les Fine Gueules (Rue Lainerie · Vieux Lyon): https://fines-gueules.fr/ — andouillette y quenelle, vigas de madera",
+          "🔗 Le Musée (Presqu'île): https://www.bouchonlemusee.fr/ — el dueño Luc canta el menú, traboule privado dentro del local",
+          "🔗 Le Garet (cerca de la Ópera): https://lacarte.menu/restaurants/lyon/le-garet — años 50, raciones gigantescas, tarta de praliné rosa",
+          "⚠️ Reservar online con antelación · llegada 19:30-20:00 h",
+          "Menú completo de 3 platos: 25-32 €/persona",
         ],
       },
+
     ],
     tip: "💡 Huye de los menús masivos en diez idiomas de la calle Saint-Jean — postureo para turistas. Los bouchons auténticos son familiares, ruidosos y con manteles de cuadros rojos.",
     closingImage: "/images/lyon2.png",
@@ -194,16 +231,20 @@ const planBPrefix: any[] = [
       {
         title: "🌆 Tarde en Ginebra · Lago Lemán",
         content: [
-          "Check-in en Hôtel Astoria: literalmente enfrente de la estación Cornavin — cruzas la calle y dejas las maletas",
-          "Geneva Transport Card GRATIS al hacer check-in: tranvías, buses y barcos Mouettes ilimitados",
-          "🔗 Geneva Transport Card: https://www.geneve.com/en/plan-stay/getting-around/free-geneva-transport-card",
-          "WiFi urbano gratis: conéctate a «((o)) city-geneva» (registro válido 6 meses)",
+          "Check-in en Hôtel Astoria: enfrente de la estación Cornavin — cruzas la calle y dejas las maletas",
+          "ℹ️ Desayuno no incluido (17 CHF/persona/día, 7:00-10:30 h)",
+          "🔗 Geneva Transport Card GRATIS: https://www.geneve.com/en/plan-stay/getting-around/free-geneva-transport-card — tranvías, buses y barcos Mouettes ilimitados (llega por email 3 días antes)",
+          "WiFi urbano gratis: conéctate a «((o)) city-geneva»",
           "16:30 · Bajada por Rue du Mont-Blanc hasta el Lago Lemán (~10 min)",
-          "17:00 · Puente del Mont-Blanc → Jet d'Eau (140 m) y Jardin Anglais con el Reloj de Flores",
-          "18:15 · Crucero en las Mouettes Genevoises (gratis con la tarjeta): barquitos amarillos públicos",
-          "19:00 · Bains des Pâquis (~2 CHF): espigón sobre el lago, ambiente local y cantina barata",
+          "🔗 17:00 · Jet d'Eau (140 m): https://www.myswitzerland.com/es-es/descubrir-suiza/jet-deau-chorro-de-agua/",
+          "🔗 Reloj de Flores (Jardin Anglais): https://www.geneva.info/flower-clock/",
+          "🔗 18:15 · Crucero Mouettes Genevoises (gratis con la tarjeta): https://www.mouettesgenevoises.com/",
+          "🔗 Barrio de Les Grottes / «Edificios Pitufo» detrás del hotel: https://www.enelmundoperdido.com/les-grottes-el-barrio-pitufo-de-ginebra/",
+          "🔗 Opcional · Bains des Pâquis (~2 CHF): https://www.myswitzerland.com/es-es/descubrir-suiza/bains-des-paquis-1/ — espigón sobre el lago, cantina barata",
+          "🔗 Opcional · Catedral de Saint-Pierre (entrada libre, torres 5 CHF): https://www.cathedrale-geneve.ch/en/visit/",
         ],
       },
+
       {
         title: "🏨 Alojamiento en Ginebra (1 noche · 3-4 Oct)",
         content: [
