@@ -8,6 +8,7 @@ const navLinks = [
   { label: "Presupuesto", href: "#presupuesto" },
   { label: "eSIM", href: "#esim" },
   { label: "Consejos", href: "#consejos" },
+  { label: "Tiempo", href: "#tiempo" },
 ];
 
 export default function Navbar() {
