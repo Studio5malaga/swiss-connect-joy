@@ -3,6 +3,7 @@ import { useState } from "react";
 
 const navLinks = [
   { label: "Itinerario", href: "#itinerario" },
+  { label: "Reservas", href: "#reservas" },
   { label: "Vídeos", href: "#videos" },
   { label: "Alojamientos", href: "#alojamientos" },
   { label: "Presupuesto", href: "#presupuesto" },

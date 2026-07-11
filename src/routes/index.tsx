@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import PlanSelector from "../components/PlanSelector";
 import ItinerarySection from "../components/ItinerarySection";
+import RemindersSection from "../components/RemindersSection";
 import SwissTravelPassSection from "../components/SwissTravelPassSection";
 import KonusCardSection from "../components/KonusCardSection";
 import VideosSection from "../components/VideosSection";
@@ -51,6 +52,7 @@ function Index() {
           <HeroSection />
           <PlanSelector />
           <ItinerarySection />
+          <RemindersSection />
           <SwissTravelPassSection />
           <KonusCardSection />
           <VideosSection />
