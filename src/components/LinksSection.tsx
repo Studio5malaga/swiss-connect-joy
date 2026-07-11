@@ -147,7 +147,7 @@ const weatherCards = [
 
 export default function LinksSection() {
   return (
-    <section className="section-padding bg-background" aria-label="Enlaces útiles">
+    <section id="tiempo" className="section-padding bg-background" aria-label="Enlaces útiles">
       <div className="mx-auto max-w-5xl">
         <p className="text-center text-sm font-semibold uppercase tracking-widest text-accent">Logística</p>
         <h2 className="mt-2 text-center text-3xl font-bold text-foreground sm:text-4xl">Enlaces Útiles</h2>
