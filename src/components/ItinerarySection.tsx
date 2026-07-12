@@ -1,5 +1,22 @@
 import { useState } from "react";
 import { usePlan } from "../context/PlanContext";
+import audioLogo1 from "../assets/audio-logo-1.png.asset.json";
+import audioLogo2 from "../assets/audio-logo-2.png.asset.json";
+import audioLogo3 from "../assets/audio-logo-3.png.asset.json";
+import audioLogo4 from "../assets/audio-logo-4.png.asset.json";
+import audioLogo5 from "../assets/audio-logo-5.png.asset.json";
+import audioLogo6 from "../assets/audio-logo-6.png.asset.json";
+
+const AUDIO = {
+  mytoursBcn: { img: audioLogo1.url, label: "AUDIOGUÍA", url: "https://mytours.city/es-barcelona/", alt: "mytours.city" },
+  mytoursLyon: { img: audioLogo1.url, label: "AUDIOGUÍA", url: "https://mytours.city/es-lyon/", alt: "mytours.city" },
+  mytoursGva: { img: audioLogo1.url, label: "AUDIOGUÍA", url: "https://mytours.city/es-ginebra/", alt: "mytours.city" },
+  sherlock: { img: audioLogo2.url, label: "AUDIOGUÍA", url: "https://sherlockholmes.ch/en/Info/Museum/Audio_guide", alt: "Sherlock Holmes Meiringen" },
+  suiza2026: { img: audioLogo3.url, label: "AUDIOGUÍA", url: "https://suiza2026proyecto.netlify.app/", alt: "Flexiguía Audioguías" },
+  rtve: { img: audioLogo4.url, label: "AUDIOGUÍA", url: "https://www.rtve.es/play/audios/nomadas/nomadas-friburgo-alta-selva-negra-270316/1833547/", alt: "RNE Nómadas" },
+  spotify: { img: audioLogo5.url, label: "AUDIOGUÍA", url: "https://open.spotify.com/episode/6WTvT819txJzEpMSLfsmy2", alt: "Spotify" },
+  maptour: { img: audioLogo6.url, label: "AUDIOGUÍA", url: "https://maptour.info/strasbourg.php?lang=es", alt: "Maptour Strasbourg" },
+};
 
 // Días específicos del Plan B (Gran Tour Ferroviario): preceden a la base alpina
 const planBPrefix: any[] = [
@@ -112,6 +129,7 @@ const planBPrefix: any[] = [
 
     closingImage: "/images/barcelona2.png",
     closingAlt: "Atardecer en el Parque Güell con vistas a la Sagrada Familia y al mar",
+    audioButtons: [AUDIO.mytoursBcn],
 
   },
   {
@@ -143,6 +161,7 @@ const planBPrefix: any[] = [
         ],
       },
     ],
+    audioButtons: [AUDIO.mytoursLyon],
   },
   {
     day: 4,
@@ -256,6 +275,7 @@ const planBPrefix: any[] = [
       },
     ],
     tip: "💡 La Geneva Transport Card te llegará por email 3 días antes de la llegada con un formulario online. Una vez rellenado, recibes la tarjeta digital al instante. ¡No pagues cruceros turísticos cuando las Mouettes son gratis!",
+    audioButtons: [AUDIO.mytoursGva],
 
   },
 
@@ -391,6 +411,7 @@ const days: any[] = [
       },
     ],
     tip: "💡 ¿Por qué Kandersteg es perfecto? A diferencia de Wengen (con muchas cuestas), Kandersteg es un pueblo en un valle plano. El Lago Oeschinen tiene un microbús eléctrico que lleva hasta la orilla. El hotel tiene piscina y spa para descansar las piernas cada noche (15 €/día).",
+    audioButtons: [AUDIO.mytoursGva, AUDIO.sherlock, AUDIO.suiza2026],
   },
 
 
@@ -427,6 +448,7 @@ const days: any[] = [
       },
     ],
     savings: { label: "Ahorro Total Día 2", amount: "~90 €", detail: "Solo gastaréis en comida" },
+    audioButtons: [AUDIO.suiza2026],
   },
   {
     day: 3,
@@ -477,6 +499,7 @@ const days: any[] = [
     ],
     tip: "💡 Día pensado para disfrutar del agua y los paisajes de postal sin prisas, tras el intenso Día 1 con la parada en Meiringen.",
     savings: { label: "Ahorro Total Día 3", amount: "~80 €", detail: "Transporte + funicular Giessbach cubiertos" },
+    audioButtons: [AUDIO.suiza2026],
   },
 
   {
@@ -532,6 +555,7 @@ const days: any[] = [
       { concept: "Tramo suizo (Interlaken → Basilea)", pp: "0 € (Swiss Pass)", group: "0 €" },
     ],
     tip: '💡 Truco para grupos: Buscad la "Sparpreis Gruppe" (Tarifa reducida para grupos) en la web de Deutsche Bahn. Suele salir por unos 9,99 €/persona si se reserva con tiempo.',
+    audioButtons: [AUDIO.suiza2026],
   },
   {
     day: 5,
@@ -589,6 +613,7 @@ const days: any[] = [
         },
       ],
     },
+    audioButtons: [AUDIO.suiza2026],
   },
   {
     day: 6,
@@ -627,6 +652,7 @@ const days: any[] = [
         ],
       },
     ],
+    audioButtons: [AUDIO.suiza2026, AUDIO.rtve, AUDIO.spotify],
   },
   {
     day: 7,
@@ -671,6 +697,7 @@ const days: any[] = [
       },
     ],
     tip: "En todas las opciones, el gasto principal será la comida. El transporte está cubierto total o parcialmente por la tarjeta KONUS.",
+    audioButtons: [AUDIO.maptour, AUDIO.suiza2026],
   },
   {
     day: 8,
@@ -832,6 +859,28 @@ export default function ItinerarySection() {
                   </div>
 
                   <p className="text-sm text-muted-foreground leading-relaxed">{d.highlights}</p>
+
+                  {d.audioButtons && d.audioButtons.length > 0 && (
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {d.audioButtons.map((btn: any, i: number) => (
+                        <a
+                          key={i}
+                          href={btn.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-3 py-2 shadow-sm hover:shadow-md hover:border-accent transition-all"
+                        >
+                          <img
+                            src={btn.img}
+                            alt={btn.alt}
+                            className="h-8 w-8 object-contain"
+                            loading="lazy"
+                          />
+                          <span className="text-sm font-bold text-foreground tracking-wide">{btn.label}</span>
+                        </a>
+                      ))}
+                    </div>
+                  )}
 
                   {d.savings && (
                     <div className="mt-3 inline-flex items-center gap-2 rounded-lg bg-secondary px-3 py-1.5 text-sm font-semibold text-secondary-foreground">
