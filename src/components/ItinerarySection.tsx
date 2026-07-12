@@ -129,6 +129,7 @@ const planBPrefix: any[] = [
 
     closingImage: "/images/barcelona2.png",
     closingAlt: "Atardecer en el Parque Güell con vistas a la Sagrada Familia y al mar",
+    audioButtons: [AUDIO.mytoursBcn],
 
   },
   {
