@@ -1,5 +1,22 @@
 import { useState } from "react";
 import { usePlan } from "../context/PlanContext";
+import audioLogo1 from "../assets/audio-logo-1.png.asset.json";
+import audioLogo2 from "../assets/audio-logo-2.png.asset.json";
+import audioLogo3 from "../assets/audio-logo-3.png.asset.json";
+import audioLogo4 from "../assets/audio-logo-4.png.asset.json";
+import audioLogo5 from "../assets/audio-logo-5.png.asset.json";
+import audioLogo6 from "../assets/audio-logo-6.png.asset.json";
+
+const AUDIO = {
+  mytoursBcn: { img: audioLogo1.url, label: "AUDIOGUÍA", url: "https://mytours.city/es-barcelona/", alt: "mytours.city" },
+  mytoursLyon: { img: audioLogo1.url, label: "AUDIOGUÍA", url: "https://mytours.city/es-lyon/", alt: "mytours.city" },
+  mytoursGva: { img: audioLogo1.url, label: "AUDIOGUÍA", url: "https://mytours.city/es-ginebra/", alt: "mytours.city" },
+  sherlock: { img: audioLogo2.url, label: "AUDIOGUÍA", url: "https://sherlockholmes.ch/en/Info/Museum/Audio_guide", alt: "Sherlock Holmes Meiringen" },
+  suiza2026: { img: audioLogo3.url, label: "AUDIOGUÍA", url: "https://suiza2026proyecto.netlify.app/", alt: "Flexiguía Audioguías" },
+  rtve: { img: audioLogo4.url, label: "AUDIOGUÍA", url: "https://www.rtve.es/play/audios/nomadas/nomadas-friburgo-alta-selva-negra-270316/1833547/", alt: "RNE Nómadas" },
+  spotify: { img: audioLogo5.url, label: "AUDIOGUÍA", url: "https://open.spotify.com/episode/6WTvT819txJzEpMSLfsmy2", alt: "Spotify" },
+  maptour: { img: audioLogo6.url, label: "AUDIOGUÍA", url: "https://maptour.info/strasbourg.php?lang=es", alt: "Maptour Strasbourg" },
+};
 
 // Días específicos del Plan B (Gran Tour Ferroviario): preceden a la base alpina
 const planBPrefix: any[] = [
