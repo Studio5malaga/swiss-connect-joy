@@ -652,6 +652,7 @@ const days: any[] = [
         ],
       },
     ],
+    audioButtons: [AUDIO.suiza2026, AUDIO.rtve, AUDIO.spotify],
   },
   {
     day: 7,
