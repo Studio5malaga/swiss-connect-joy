@@ -411,6 +411,7 @@ const days: any[] = [
       },
     ],
     tip: "💡 ¿Por qué Kandersteg es perfecto? A diferencia de Wengen (con muchas cuestas), Kandersteg es un pueblo en un valle plano. El Lago Oeschinen tiene un microbús eléctrico que lleva hasta la orilla. El hotel tiene piscina y spa para descansar las piernas cada noche (15 €/día).",
+    audioButtons: [AUDIO.mytoursGva, AUDIO.sherlock, AUDIO.suiza2026],
   },
 
 
