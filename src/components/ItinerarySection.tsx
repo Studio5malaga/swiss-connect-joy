@@ -159,10 +159,17 @@ const planBPrefix: any[] = [
           "Paseo por el Vieux Lyon (Patrimonio UNESCO)",
           "Cena en un bouchon lyonnais tradicional",
         ],
+      {
+        title: "🍷 Tarde en Lyon",
+        content: [
+          "Check-in en Appartement Vieux Lyon Terrasse",
+          "Paseo por el Vieux Lyon (Patrimonio UNESCO)",
+          "Cena en un bouchon lyonnais tradicional",
+        ],
       },
     ],
+    audioButtons: [AUDIO.mytoursLyon],
   },
-  {
     day: 4,
     date: "2 Oct (Jueves)",
     route: "Lyon libre",
