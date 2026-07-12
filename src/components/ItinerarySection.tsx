@@ -613,6 +613,7 @@ const days: any[] = [
         },
       ],
     },
+    audioButtons: [AUDIO.suiza2026],
   },
   {
     day: 6,
