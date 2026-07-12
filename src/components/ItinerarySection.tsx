@@ -555,6 +555,7 @@ const days: any[] = [
       { concept: "Tramo suizo (Interlaken → Basilea)", pp: "0 € (Swiss Pass)", group: "0 €" },
     ],
     tip: '💡 Truco para grupos: Buscad la "Sparpreis Gruppe" (Tarifa reducida para grupos) en la web de Deutsche Bahn. Suele salir por unos 9,99 €/persona si se reserva con tiempo.',
+    audioButtons: [AUDIO.suiza2026],
   },
   {
     day: 5,
