@@ -499,6 +499,7 @@ const days: any[] = [
     ],
     tip: "💡 Día pensado para disfrutar del agua y los paisajes de postal sin prisas, tras el intenso Día 1 con la parada en Meiringen.",
     savings: { label: "Ahorro Total Día 3", amount: "~80 €", detail: "Transporte + funicular Giessbach cubiertos" },
+    audioButtons: [AUDIO.suiza2026],
   },
 
   {
