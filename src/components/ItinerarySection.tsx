@@ -448,6 +448,7 @@ const days: any[] = [
       },
     ],
     savings: { label: "Ahorro Total Día 2", amount: "~90 €", detail: "Solo gastaréis en comida" },
+    audioButtons: [AUDIO.suiza2026],
   },
   {
     day: 3,
