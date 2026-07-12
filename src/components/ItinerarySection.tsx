@@ -697,6 +697,7 @@ const days: any[] = [
       },
     ],
     tip: "En todas las opciones, el gasto principal será la comida. El transporte está cubierto total o parcialmente por la tarjeta KONUS.",
+    audioButtons: [AUDIO.maptour, AUDIO.suiza2026],
   },
   {
     day: 8,
