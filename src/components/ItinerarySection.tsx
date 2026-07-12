@@ -860,6 +860,28 @@ export default function ItinerarySection() {
 
                   <p className="text-sm text-muted-foreground leading-relaxed">{d.highlights}</p>
 
+                  {d.audioButtons && d.audioButtons.length > 0 && (
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {d.audioButtons.map((btn: any, i: number) => (
+                        <a
+                          key={i}
+                          href={btn.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-3 py-2 shadow-sm hover:shadow-md hover:border-accent transition-all"
+                        >
+                          <img
+                            src={btn.img}
+                            alt={btn.alt}
+                            className="h-8 w-8 object-contain"
+                            loading="lazy"
+                          />
+                          <span className="text-sm font-bold text-foreground tracking-wide">{btn.label}</span>
+                        </a>
+                      ))}
+                    </div>
+                  )}
+
                   {d.savings && (
                     <div className="mt-3 inline-flex items-center gap-2 rounded-lg bg-secondary px-3 py-1.5 text-sm font-semibold text-secondary-foreground">
                       💰 {d.savings.label}: {d.savings.amount} — {d.savings.detail}
