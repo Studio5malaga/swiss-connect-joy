@@ -22,7 +22,7 @@ const AUDIO = {
 const planBPrefix: any[] = [
   {
     day: 1,
-    date: "29 Sep (Lunes)",
+    date: "29 Sep (Martes)",
     route: "Málaga → Barcelona",
     title: "Inicio del Gran Tour · Tren Iryo a Barcelona",
     image: "/images/dia-barcelona.jpg",
@@ -87,7 +87,7 @@ const planBPrefix: any[] = [
 
   {
     day: 2,
-    date: "30 Sep (Martes)",
+    date: "30 Sep (Miércoles)",
     route: "Barcelona libre",
     title: "Día completo en Barcelona",
     image: "/images/dia-barcelona.jpg",
@@ -134,7 +134,7 @@ const planBPrefix: any[] = [
   },
   {
     day: 3,
-    date: "1 Oct (Miércoles)",
+    date: "1 Oct (Jueves)",
     route: "Barcelona → Lyon",
     title: "Tren SNCF a Lyon · Capital gastronómica",
     image: "/images/dia-lyon.jpg",
@@ -165,7 +165,7 @@ const planBPrefix: any[] = [
   },
   {
     day: 4,
-    date: "2 Oct (Jueves)",
+    date: "2 Oct (Viernes)",
     route: "Lyon libre",
     title: "Día completo en Lyon",
     image: "/images/dia-lyon.jpg",
@@ -230,7 +230,7 @@ const planBPrefix: any[] = [
   },
   {
     day: 5,
-    date: "3 Oct (Viernes)",
+    date: "3 Oct (Sábado)",
     route: "Lyon → Ginebra",
     title: "Tren a Ginebra · Entrada en Suiza",
     image: "/images/dia1-ginebra-kandersteg.jpg",
