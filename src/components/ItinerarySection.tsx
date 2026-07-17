@@ -37,7 +37,7 @@ const planBPrefix: any[] = [
           "Salida: 11:39 desde Málaga María Zambrano",
           "Llegada: 18:06 a Barcelona Sants",
           "Duración: 6h 27min · maleta 23 kg incluida",
-          "Precio: 65 €/persona",
+          "Precio: 65 €/persona (tarifa cotizada; reconfirmar condiciones de equipaje al comprar)",
         ],
       },
       {
@@ -149,7 +149,7 @@ const planBPrefix: any[] = [
           "Salida: 08:14 desde Barcelona Sants",
           "Llegada: 13:20 a Lyon Part-Dieu",
           "Duración: 5h 06min · maleta 23 kg incluida",
-          "Precio: 79 €/persona",
+          "Precio: 79 €/persona (tarifa cotizada; reconfirmar horario/precio en SNCF Connect/Renfe)",
         ],
       },
       {
@@ -244,7 +244,7 @@ const planBPrefix: any[] = [
         content: [
           "Salida: 12:38 desde Lyon Part-Dieu",
           "Llegada: 14:40 a Ginebra Cornavin",
-          "Duración: 2h 02min · 35,10 €/persona",
+          "Duración: ~2h · 35,10 €/persona (horario 12:38 suele llegar 14:35-14:40; reconfirmar en SNCF)",
         ],
       },
       {
@@ -269,7 +269,7 @@ const planBPrefix: any[] = [
         content: [
           "Hotel: Hôtel Astoria — junto a la estación Cornavin",
           "Precio: 95 €/persona (1 noche)",
-          "Desayuno incluido · check-in cómodo a pie desde la estación",
+          "Desayuno no incluido (17 CHF/persona/día) · check-in cómodo a pie desde la estación",
           "🔗 Reserva: https://www.booking.com/hotel/ch/astoria-geneve.es.html",
         ],
       },
@@ -306,8 +306,8 @@ const planAGenevaPrefix: any[] = [
       {
         title: "🚆 Traslado aeropuerto → hotel",
         content: [
-          "El billete gratuito de transporte público (Geneva Transport Card) se recoge en la zona de llegadas",
-          "Tren / tranvía directo hasta la zona de Étang (~15 min)",
+          "Geneva Transport Card: debería llegar digital por email hasta 3 días antes; si no llega, pedirla al hotel antes de pagar transporte",
+          "Tren / tranvía directo hasta la zona de Étang (~15-20 min)",
           "Check-in en Nonanteneuf Appart Hôtel y descanso",
         ],
       },
@@ -355,7 +355,7 @@ const planAGenevaPrefix: any[] = [
       {
         title: "🚢 Mediodía — Lago Lemán",
         content: [
-          "Mini-crucero CGN por la rada (1h, gratis con Swiss Travel Pass si ya activado)",
+          "Mini-crucero CGN por la rada (1h) solo si activamos el Swiss Travel Pass ese día; si no, mejor Mouettes con Geneva Transport Card o pagar aparte",
           "Paseo por el Quai du Mont-Blanc",
           "Reloj de las Flores y Jardin Anglais",
         ],
@@ -432,7 +432,8 @@ const days: any[] = [
           "Salida: 12:02 desde Zweisimmen",
           "Llegada a Montreux: 14:11",
           "Coste billete: 0 € (Swiss Travel Pass)",
-          "Reserva asientos: ~10 €/persona (recomendado para ir los 6 juntos)",
+          "⚠️ Horarios GoldenPass/CGN de octubre: reconfirmar en SBB/MOB/CGN 30-60 días antes",
+          "Reserva de asientos: opcional · CHF 10/persona (~65 € grupo). Recomendable si queréis garantizar 6 plazas juntas, pero no imprescindible",
         ],
       },
       {
@@ -441,13 +442,19 @@ const days: any[] = [
           "El monumento histórico más visitado de Suiza",
           "Prisiones, salas de banquetes y torres con vistas al lago",
           "Entrada castillo: GRATIS (Swiss Travel Pass = Pase de Museos)",
-          "Barco de vapor CGN: GRATIS (incluido en el pase) — ruedas de madera laterales",
+          "Barco de línea CGN: GRATIS con el pase; barco de vapor histórico sujeto a calendario de octubre",
           "Tarde: Paseo por el muelle — estatua de Freddie Mercury",
           "Final del día: Piscina y spa en el hotel Adler",
         ],
       },
     ],
-    savings: { label: "Ahorro Total Día 2", amount: "~90 €", detail: "Solo gastaréis en comida" },
+    costs: [
+      { concept: "Reserva asientos GoldenPass Belle Époque (opcional)", pp: "CHF 10 (~10,85 €)", group: "CHF 60 (~65 €)" },
+      { concept: "Billete GoldenPass / tramo MOB", pp: "0 € (Swiss Pass)", group: "0 €" },
+      { concept: "Entrada Castillo de Chillon", pp: "0 € (Swiss Pass)", group: "0 €" },
+      { concept: "Barco de línea CGN", pp: "0 € (Swiss Pass)", group: "0 €" },
+    ],
+    savings: { label: "Ahorro Total Día 2", amount: "~90 €", detail: "Transporte y entradas cubiertos; reserva de asiento opcional" },
     audioButtons: [AUDIO.suiza2026],
   },
   {
@@ -473,7 +480,7 @@ const days: any[] = [
         title: "🚠 Extra recomendado · Grand Hotel Giessbach",
         content: [
           "Bajada en la parada intermedia «Giessbach See»",
-          "🔗 Funicular histórico del Grand Hotel Giessbach (100% gratis con Swiss Travel Pass): https://giessbach.ch/en/giessbach-bahn-1",
+          "🔗 Funicular histórico del Grand Hotel Giessbach: NO está cubierto por Swiss Travel Pass; calcular ~14 CHF i/v adulto (hotel guests gratis): https://giessbach.ch/en/giessbach-bahn-1",
           "Subida cómoda con vistas a las cascadas",
           "🔗 Café/refresco en la Terraza Kehrli con vistas al lago: https://giessbach.ch/en/restaurant-bar/kehrli-terrasse",
         ],
@@ -492,69 +499,73 @@ const days: any[] = [
           "Bus 230 desde Kandersteg (8-10 min · GRATIS con la Swiss Travel Pass)",
           "Sendero 100% llano y accesible hasta el lago",
           "Barca con fondo de cristal incluida en el acceso · truchas y estatua hundida visibles",
-          "Tarifas: L-V adultos 11 CHF · fines de semana 13 CHF · niños 7-9 CHF",
+          "Tarifas orientativas: L-V adultos 11 CHF · fines de semana 13 CHF · niños 7-9 CHF (reconfirmar en 2026)",
           "Regreso rápido al hotel a descansar",
         ],
       },
     ],
     tip: "💡 Día pensado para disfrutar del agua y los paisajes de postal sin prisas, tras el intenso Día 1 con la parada en Meiringen.",
-    savings: { label: "Ahorro Total Día 3", amount: "~80 €", detail: "Transporte + funicular Giessbach cubiertos" },
+    savings: { label: "Ahorro Total Día 3", amount: "~65 €", detail: "Transporte y barco cubiertos; funicular Giessbach aparte" },
     audioButtons: [AUDIO.suiza2026],
   },
 
   {
     day: 4,
     date: "2 Oct (Jueves)",
-    route: "Kandersteg → Interlaken → Grindelwald → Basilea → Gengenbach",
-    title: "De los Glaciares Suizos a la Selva Negra",
+    route: "Kandersteg → Interlaken → Grindelwald First → Basilea → Gengenbach",
+    title: "Grindelwald First indispensable + salto a la Selva Negra",
     image: "/images/dia4-grindelwald-first.jpg",
     alt: "First Cliff Walk en Grindelwald, pasarela suspendida sobre los Alpes suizos",
-    tags: ["Cliff Walk", "ICE alemán", "Pueblo de cuento", "Consigna maletas"],
+    tags: ["First indispensable", "Cliff Walk", "Día intenso", "Plan prudente opcional"],
     highlights:
-      "El día más intenso del viaje: despedida épica de Suiza con el Cliff Walk del Eiger y luego el gran salto a Alemania en el tren ICE más rápido del país.",
+      "Grindelwald First vuelve a ser parte indispensable del viaje. La clave para que sea factible es tratarlo como visita de mañana, con hora límite estricta de bajada y trenes hacia Alemania elegidos con transbordos amplios. La variante de traslado directo queda como opción prudente solo si el tiempo es malo o el grupo prefiere descansar.",
     sections: [
       {
-        title: "🏔️ Mañana: Grindelwald First",
+        title: "🏔️ Plan base · Grindelwald First sí o sí",
         content: [
-          "Salida temprana hacia Grindelwald (2h de tren)",
-          "Teleférico con 50% de descuento con Swiss Travel Pass (~34 €/persona)",
-          "Cliff Walk: pasarela metálica pegada al acantilado con vistas a la pared norte del Eiger",
-          "GRATIS una vez arriba",
+          "06:45-07:15 · Salida temprana de Kandersteg hacia Interlaken Ost / Grindelwald",
+          "Dejar maletas en consignas de Interlaken Ost para subir ligeros a First",
+          "09:00-09:30 · Teleférico Grindelwald → First (50% dto. con Swiss Travel Pass)",
+          "First Cliff Walk: pasarela del Eiger y fotos panorámicas. Prioridad absoluta del día",
+          "Hora límite: 12:15-12:30 iniciar bajada. No alargar comida ni actividades extra arriba",
         ],
       },
       {
-        title: "🧳 Mediodía: Logística de Maletas",
+        title: "🚄 Tarde · Traslado a Gengenbach con colchón",
         content: [
-          "Dejar maletas en consignas de Interlaken Ost por la mañana (ir ligeros a Grindelwald)",
-          "Recogerlas antes de subir al tren hacia Alemania",
-          "Coste: ~7-10 € por taquilla grande",
+          "13:30 aprox. · Recoger maletas en Interlaken Ost",
+          "Objetivo: tomar un tren Interlaken/Berna/Basel con margen, evitando enlaces de 5 min",
+          "Regla de oro: elegir conexión SBB/DB con transbordos mínimos de 15-20 min, aunque llegue algo más tarde",
+          "Llegada objetivo realista a Gengenbach: 20:30-21:30. Si hay retrasos, sigue siendo asumible",
+          "Comprar tramo alemán con DB y reservar asientos si el precio de grupo compensa",
         ],
       },
       {
-        title: "🚄 Tarde: El Gran Tren Alemán (ICE 276)",
+        title: "🟡 Opción prudente · Traslado directo sin First",
         content: [
-          "Ruta: Interlaken → Basilea (GRATIS con Swiss Pass) → Offenburg → Gengenbach",
-          "El ICE 276 cruza la frontera a 250 km/h",
-          "Asientos amplios, Wi-Fi gratis y vagón restaurante",
-          "Precio tramo alemán: ~20 €/persona",
+          "Esta es la variante opcional que propuse: solo usarla si hay mal tiempo, cierres por viento o cansancio del grupo",
+          "09:30 · Check-out tranquilo en Kandersteg",
+          "10:13-11:13 aprox. · Salida hacia Basel SBB vía Spiez/Berna",
+          "18:30-19:30 aprox. · Llegada a Villa Beckmann con compra y cena sin estrés",
+          "No sustituye al plan base: es el plan de seguridad, no el plan principal",
         ],
       },
       {
-        title: "🏡 Noche: Llegada a Gengenbach",
+        title: "🏡 Noche: llegada a Gengenbach",
         content: [
           "Pueblo de cuento de hadas con calles empedradas y casas de madera",
-          "Check-in en Villa Beckmann a partir de las 16:00h",
-          "Cena típica alemana: codillo, salchichas y cerveza local",
+          "Check-in en Villa Beckmann a partir de las 16:00 h",
+          "Cena sencilla o compra rápida si llegamos cansados: este día no conviene reservar restaurante tarde",
         ],
       },
     ],
     costs: [
-      { concept: "Teleférico Grindelwald First (50% dto.)", pp: "~34 €", group: "~238 €" },
-      { concept: "Tren a Alemania (Basilea → Gengenbach)", pp: "~20-30 €", group: "~140-210 €" },
+      { concept: "Teleférico Grindelwald First (50% dto.)", pp: "~36 CHF (~40 €)", group: "~216 CHF (~240 €)" },
       { concept: "Consigna maletas Interlaken Ost", pp: "~7-10 €", group: "~21-30 €" },
-      { concept: "Tramo suizo (Interlaken → Basilea)", pp: "0 € (Swiss Pass)", group: "0 €" },
+      { concept: "Tramo suizo hasta Basel SBB", pp: "0 € (Swiss Pass)", group: "0 €" },
+      { concept: "Tren Alemania/Selva Negra (Basel/Offenburg → Gengenbach)", pp: "~20-30 €", group: "~120-180 €" },
     ],
-    tip: '💡 Truco para grupos: Buscad la "Sparpreis Gruppe" (Tarifa reducida para grupos) en la web de Deutsche Bahn. Suele salir por unos 9,99 €/persona si se reserva con tiempo.',
+    tip: '💡 Para que First sea viable: madrugar, subir solo a lo esencial, bajar antes de las 12:30 y elegir trenes SBB/DB con transbordos amplios. La opción de traslado directo queda como plan B por meteorología o cansancio.',
     audioButtons: [AUDIO.suiza2026],
   },
   {
@@ -619,10 +630,10 @@ const days: any[] = [
     day: 6,
     date: "4 Oct (Sábado)",
     route: "Gengenbach → Friburgo → Gengenbach",
-    title: "Friburgo de Brisgovia: Canales, Catedral & Schauinsland",
+    title: "Friburgo de Brisgovia: Canales, Catedral & Mercado",
     image: "/images/dia6-friburgo-canales.jpg",
     alt: "Bächle (canales medievales) de Friburgo con catedral gótica al fondo",
-    tags: ["Bächle medievales", "Catedral gótica", "KONUS gratis", "Mercado sábado"],
+    tags: ["Bächle medievales", "Catedral gótica", "KONUS gratis", "Mercado Catedral"],
     highlights:
       "La capital ecológica de Alemania. Ciudad universitaria llena de vida, con canales que corren por las aceras y un casco antiguo precioso. Tren desde Gengenbach: ~1 hora, GRATIS con la tarjeta KONUS.",
     sections: [
@@ -644,9 +655,9 @@ const days: any[] = [
         ],
       },
       {
-        title: "🛒 Mercado de Sábado en Gengenbach",
+        title: "🛒 Mercado y plan B si el tiempo falla",
         content: [
-          "De 8:00 a 12:00 en la plaza del ayuntamiento",
+          "Friburgo tiene mercado de la Catedral de lunes a sábado por la mañana; el mercado de Gengenbach, si coincide en sábado, mejor dejarlo para el día 10 antes de la excursión",
           "Productos frescos de la zona: quesos, embutidos y pan artesano",
           "Ideal para comprar desayunos o cenas para la Villa",
         ],
@@ -679,10 +690,12 @@ const days: any[] = [
         title: "🏘️ Opción 1-B: Esplendor Alsaciano — Solo Estrasburgo",
         content: [
           "Todo el día: Petite France, Catedral de Notre-Dame y su reloj astronómico",
+          "Reloj astronómico de la Catedral: 2 € por adulto (12 € grupo de 6) — corregido, no 4 €",
           "Opcional: Paseo en barco por los canales (Batorama, 15 €/persona)",
           "Transporte: ~5-7 €/persona",
           "Muy relajado, sin prisas por horarios",
-          "Coste total estimado: ~7 €/persona",
+          "Resumen de coste del día corregido: 61,80 € grupo (antes 73,80 €, estaba duplicado el reloj astronómico)",
+          "Coste base estimado: ~7 €/persona + 2 € si se entra al reloj",
         ],
       },
       {
@@ -715,7 +728,7 @@ const days: any[] = [
         content: [
           "Mañana libre en Gengenbach · desayuno y últimas compras",
           "Check-out de Villa Beckmann y consigna de maletas si es necesario",
-          "Tren regional Gengenbach → Basilea SBB a media tarde (~17:00)",
+          "Tren regional Gengenbach → Basel SBB a media tarde (~17:00). Usar solo RE/RB/S-Bahn con KONUS; evitar ICE/IC/EC",
           "Autobús Línea 50 a EuroAirport BSL: cada 7-10 min · ~20 min de trayecto",
           "Vuelo easyJet BSL → AGP: salida 21:30 · llegada Málaga 00:20 · 2h 50min",
         ],
@@ -723,13 +736,13 @@ const days: any[] = [
       {
         title: "💰 Costes del Último Día",
         content: [
-          "Tren Gengenbach → Basilea: 0 € (tarjeta KONUS)",
-          "Bus Línea 50 al Aeropuerto: 5 € (4,70 CHF)",
+          "Tren regional Gengenbach → Basel SBB: 0 € con KONUS si se usan trenes regionales válidos (no ICE/IC/EC)",
+          "Bus Línea 50 Basel SBB → EuroAirport: ~6 CHF por adulto (reconfirmar tarifa TNW 2026)",
           "Vuelo Basilea → Málaga: 129 € (Senior · maleta facturada) · 45 € (Junior · sin maleta)",
         ],
       },
     ],
-    tip: "⚠️ Cuidado con la estación en Basilea: al venir de Alemania, el tren suele parar primero en Basel Bad Bf. Para coger el bus 50 al aeropuerto más fácilmente, aseguraos de llegar hasta la estación principal Basel SBB. Haced el check-in online el día anterior para evitar colas.",
+    tip: "⚠️ Cuidado con la estación en Basilea: al venir de Alemania, algunos regionales paran primero en Basel Bad Bf. Para coger el bus 50 al aeropuerto más fácilmente, aseguraos de llegar hasta Basel SBB (o haced transbordo S-Bahn/regional válido, no ICE/IC). Haced el check-in online el día anterior para evitar colas.",
   },
 ];
 
@@ -807,7 +820,7 @@ export default function ItinerarySection() {
           Itinerario Completo
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-center text-muted-foreground">
-          Los días 1 a {plan === "B" ? "5" : "3"} cambian según el plan elegido. Pulsa en cada día para
+          Los días 1 a {plan === "B" ? "5" : "2"} cambian según el plan elegido. Pulsa en cada día para
           ver todos los detalles, horarios y costes.
         </p>
 

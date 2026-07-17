@@ -6,7 +6,7 @@ function buildBreakdown(plan: "A" | "B", profile: "senior" | "junior", pass: "4d
   rows: Row[];
   total: number;
 } {
-  const stp = pass === "4d" ? 338.28 : 278;
+  const stp = pass === "4d" ? 344 : 283;
 
   // Transporte ida + vuelta
   let transport: Row[] = [];
@@ -54,10 +54,10 @@ function buildBreakdown(plan: "A" | "B", profile: "senior" | "junior", pass: "4d
   const stpRow: Row = {
     concept: `Swiss Travel Pass (${pass === "4d" ? "4 días" : "3 días"})`,
     amount: stp,
-    note: "Trenes, barcos, buses y +500 museos en Suiza",
+    note: pass === "4d" ? "Precio oficial 2026: CHF 309 (2ª clase adulto) · aprox. 344 €" : "Precio oficial 2026: CHF 254 (2ª clase adulto) · aprox. 283 €",
   };
 
-  // Alojamiento (precios por persona; basado en habitaciones grupo de 7)
+  // Alojamiento (precios por persona; basado en grupo de 6)
   let lodging: Row[] = [];
   if (plan === "A") {
     lodging = [
@@ -94,8 +94,8 @@ export default function BudgetSection() {
           Desglose · Plan {plan} · {profile === "senior" ? "Senior" : "Junior"}
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-center text-muted-foreground">
-          Precios por persona basados en cotizaciones reales del documento de viaje. El total no incluye
-          comidas y gastos varios.
+          Precios por persona basados en cotizaciones reales y tarifas oficiales revisadas. El total no incluye
+          comidas, tasa turística local ni gastos varios.
         </p>
 
         <div className="mt-10 grid gap-8 lg:grid-cols-[2fr_1fr]">
@@ -142,7 +142,7 @@ export default function BudgetSection() {
               <p>🚄 Swiss Pass {pass === "4d" ? "4 días" : "3 días"}</p>
             </div>
             <p className="mt-4 text-[11px] opacity-75 text-center leading-relaxed">
-              + comidas y gastos varios. Reservas con 2 meses de antelación recomendadas.
+              + comidas, tasa turística local y gastos varios. Transportes 2026: reconfirmar horarios 30-60 días antes.
             </p>
           </div>
         </div>

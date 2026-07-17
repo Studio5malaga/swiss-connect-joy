@@ -27,7 +27,7 @@ export default function SwissTravelPassSection() {
               durante los días contratados. Incluye trenes, autobuses, barcos y tranvías en las principales ciudades.
             </p>
 
-            <h4 className="mt-5 text-sm font-bold text-foreground">✅ Qué incluye nuestro pase (4 días flex):</h4>
+            <h4 className="mt-5 text-sm font-bold text-foreground">✅ Qué incluye nuestro pase (4 días consecutivos):</h4>
             <ul className="mt-3 space-y-2">
               {[
                 "Trenes ilimitados en toda Suiza (SBB, BLS, MOB, etc.)",
@@ -35,7 +35,7 @@ export default function SwissTravelPassSection() {
                 "Buses y tranvías urbanos (Ginebra, Berna, Basilea…)",
                 "Entrada GRATUITA a más de 500 museos (incluido Sherlock Holmes)",
                 "25-50% descuento en teleféricos y funiculares",
-                "Precio por persona: ~289€ (reservar con 2 meses de antelación)",
+                "Precio oficial 2026 adulto 2ª clase: 4 días CHF 309 (~344€) · 3 días CHF 254 (~283€)",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2 text-sm text-foreground">
                   <span className="text-accent shrink-0">✓</span> {item}
@@ -63,8 +63,7 @@ export default function SwissTravelPassSection() {
             </div>
 
             <p className="mt-4 rounded-lg bg-accent/10 p-3 text-xs text-muted-foreground">
-              💡 <strong>Consejo:</strong> Reserva con 2 meses de antelación para asegurar disponibilidad. 
-              El pase se activa en la app SBB Mobile — descárgala antes de viajar.
+              💡 <strong>Consejo:</strong> No suele tener precio dinámico, así que no hace falta comprarlo con mucha antelación; sí conviene dejarlo comprado antes de salir. Para este itinerario recomiendo 4 días consecutivos (4–7 Oct): el de 3 días solo compensa si se recalculan y se pagan aparte algunos trayectos suizos.
             </p>
           </div>
         </div>

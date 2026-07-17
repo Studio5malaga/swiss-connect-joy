@@ -26,7 +26,7 @@ const rows = [
     icon: Ticket,
     title: "Excursiones y visitas",
     agencia: "Itinerario rígido. Castillo de Chillon, Interlaken y Lucerna requieren pago extra de 100€.",
-    familiar: "Castillo de Chillon, Sherlock Holmes y museos GRATIS con Swiss Travel Pass. Tren histórico GoldenPass Belle Époque, crucero Lago de Brienz, Cliff Walk Grindelwald.",
+    familiar: "Castillo de Chillon, Sherlock Holmes y museos GRATIS con Swiss Travel Pass. Tren histórico GoldenPass Belle Époque, crucero Lago de Brienz y Grindelwald First como visita indispensable del bloque alpino.",
     highlight: "Experiencias premium incluidas",
   },
   {

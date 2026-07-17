@@ -91,7 +91,7 @@ export default function PlanSelector() {
               ))}
             </div>
             <p className="mt-2 text-xs text-muted-foreground">
-              {pass === "4d" ? "338,28 € · máxima flexibilidad" : "278 € · ahorra ~60 €"}
+              {pass === "4d" ? "344 € aprox. · recomendado" : "283 € aprox. · solo si optimizamos días"}
             </p>
           </div>
         </div>
