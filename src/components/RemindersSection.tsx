@@ -16,10 +16,10 @@ const STORAGE_KEY = "expedicion2026_reservas_v1";
 const DEFAULT_ITEMS: Item[] = [
   {
     id: "ave-bcn-lyon",
-    title: "Comprar AVE internacional Barcelona → Lyon",
+    title: "Comprar tren internacional Barcelona → Lyon",
     category: "Transporte",
     date: "2026-08-01",
-    note: "⚠️ Prioritario: solo hay un tren útil ese día (viaje previsto 1 Oct). Ya está a la venta, no conviene esperar.",
+    note: "⚠️ Prioritario: solo hay un tren útil ese día (viaje previsto 1 Oct). Revisar SNCF Connect/Renfe: horarios y tarifas pueden variar.",
     done: false,
   },
   {
@@ -55,11 +55,19 @@ const DEFAULT_ITEMS: Item[] = [
     done: false,
   },
   {
+    id: "nonanteneuf",
+    title: "Nonanteneuf Appart Hôtel (Plan A) — cancelación gratuita hasta",
+    category: "Alojamiento",
+    date: "2026-09-30",
+    note: "Check-in 2 Oct. Confirmar condiciones exactas en Booking.",
+    done: false,
+  },
+  {
     id: "hotel-astoria",
-    title: "Hôtel Astoria (Ginebra) — cancelación gratuita hasta",
+    title: "Hôtel Astoria (Plan B) — cancelación gratuita hasta",
     category: "Alojamiento",
     date: "2026-10-02",
-    note: "Check-in 3 Oct — cancelación gratis hasta 1 día antes.",
+    note: "Check-in 3 Oct — desayuno no incluido (17 CHF/persona).",
     done: false,
   },
   {
@@ -94,12 +102,21 @@ const DEFAULT_ITEMS: Item[] = [
     note: "Como muy tarde 1 mes antes del viaje.",
     done: false,
   },
+
+  {
+    id: "goldenpass-seats",
+    title: "Valorar reserva de 6 asientos juntos en GoldenPass Belle Époque",
+    category: "Suiza",
+    date: "2026-08-15",
+    note: "Opcional: CHF 10/persona (CHF 60 grupo, aprox. 65 €). Recomendable para ir juntos, pero no imprescindible.",
+    done: false,
+  },
   {
     id: "swiss-pass",
     title: "Reservar Swiss Travel Pass",
     category: "Suiza",
     date: "2026-07-29",
-    note: "Recomendado con 2 meses de antelación (≈289 €/persona).",
+    note: "Precio oficial 2026 adulto 2ª clase: 4 días CHF 309 (~344 €) / 3 días CHF 254 (~283 €). No suele tener precio dinámico; comprar antes de salir.",
     done: false,
   },
   {
@@ -107,7 +124,7 @@ const DEFAULT_ITEMS: Item[] = [
     title: "Comprobar entrega de la Geneva Transport Card",
     category: "Suiza",
     date: "2026-10-03",
-    note: "Gratis con el hotel — revisar que os la den al hacer check-in en Ginebra (Hôtel Astoria).",
+    note: "Gratis con alojamiento registrado en Ginebra. Debe llegar digital hasta 3 días antes; si no, pedirla al hotel antes de pagar transporte.",
     done: false,
   },
   {
