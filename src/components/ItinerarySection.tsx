@@ -762,6 +762,55 @@ const days: any[] = [
   },
 ];
 
+// Plan B por lluvia fuerte — Bern (se inserta después del día del Lago de Brienz solo en Plan B)
+const planBBernRainy: any = {
+  day: 0,
+  date: "6 Oct (Mar) · Plan B por lluvia",
+  route: "Kandersteg → Bern → Kandersteg",
+  title: "Plan B por mal tiempo · Bern bajo los soportales & Museo Einstein",
+  image: "/images/dia3-sherlock-blausee.jpg",
+  alt: "Casco antiguo de Bern con soportales y reloj Zytglogge",
+  tags: ["PLAN B por mal tiempo", "Soportales cubiertos", "Museo Einstein", "Swiss Pass"],
+  highlights:
+    "Alternativa al día de lagos si llueve fuerte en Kandersteg. Bern ofrece ~6 km de soportales cubiertos, el reloj astronómico Zytglogge y el Museo Einstein (dentro del Museo Histórico, gratis con Swiss Travel Pass).",
+  sections: [
+    {
+      title: "🚂 Ida directa Kandersteg → Bern",
+      content: [
+        "10:14 · Kandersteg (vía 1) — RE1 sin cambios",
+        "11:22 · Llegada a Bern (vía 9)",
+      ],
+    },
+    {
+      title: "🏛️ Mañana · Casco antiguo bajo los soportales",
+      content: [
+        "11:30-12:45 · Spitalgasse → Marktgasse → Kramgasse (~6 km totalmente cubiertos)",
+        "12:55-13:05 · Zytglogge (reloj astronómico) · carrillón antes de las 13:00",
+        "13:05-13:50 · Almuerzo bajo los soportales",
+      ],
+    },
+    {
+      title: "🧠 Tarde · Museo Histórico + Museo Einstein",
+      content: [
+        "≈13:55 · Tranvía 6 u 8 hasta Helvetiaplatz",
+        "14:00-16:30 · Museo Histórico + Museo Einstein (mismo edificio · martes 10:00-17:00 · GRATIS con Swiss Travel Pass)",
+        "Alternativa si no apetece Einstein: Museo de la Comunicación, Museo de Historia Natural, Bundeshaus, Catedral, o las fuentes bajo los soportales",
+        "16:30-17:25 · Regreso a la estación en tranvía",
+      ],
+    },
+    {
+      title: "🚂 Vuelta directa Bern → Kandersteg",
+      content: [
+        "17:39 · Bern (vía 9) — RE1 directo",
+        "18:40 · Llegada a Kandersteg",
+      ],
+    },
+  ],
+  tip: "💡 Activar solo si el pronóstico marca lluvia intensa todo el día en el valle. Todo el itinerario está bajo cubierto o en interiores.",
+  audioButtons: [AUDIO.einstein, AUDIO.suiza2026],
+};
+
+
 // Fechas reasignadas por plan para los días base (D1-D8): empiezan el 4 Oct
 const planADates = [
   "4 Oct (Dom)",
@@ -812,10 +861,16 @@ export default function ItinerarySection() {
   });
 
 
+  const planBDays = [...baseDays];
+  if (plan === "B") {
+    // Insertar módulo Bern (Plan B por lluvia) justo después del día del Lago de Brienz (base day index 2)
+    planBDays.splice(3, 0, planBBernRainy);
+  }
+
   const displayDays: any[] =
     plan === "A"
       ? [...planAGenevaPrefix, ...baseDays].map((d: any, i: number) => ({ ...d, day: i + 1 }))
-      : [...planBPrefix, ...baseDays].map((d: any, i: number) => ({ ...d, day: i + 1 }));
+      : [...planBPrefix, ...planBDays].map((d: any, i: number) => ({ ...d, day: i + 1 }));
 
 
 
