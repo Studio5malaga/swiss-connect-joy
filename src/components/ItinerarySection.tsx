@@ -6,6 +6,8 @@ import audioLogo3 from "../assets/audio-logo-3.png.asset.json";
 import audioLogo4 from "../assets/audio-logo-4.png.asset.json";
 import audioLogo5 from "../assets/audio-logo-5.png.asset.json";
 import audioLogo6 from "../assets/audio-logo-6.png.asset.json";
+import einsteinLogo from "../assets/einstein.jpg.asset.json";
+import spanishMapPdf from "../assets/spanish.pdf.asset.json";
 
 const AUDIO = {
   mytoursBcn: { img: audioLogo1.url, label: "AUDIOGUÍA", url: "https://mytours.city/es-barcelona/", alt: "mytours.city" },
@@ -16,7 +18,10 @@ const AUDIO = {
   rtve: { img: audioLogo4.url, label: "AUDIOGUÍA", url: "https://www.rtve.es/play/audios/nomadas/nomadas-friburgo-alta-selva-negra-270316/1833547/", alt: "RNE Nómadas" },
   spotify: { img: audioLogo5.url, label: "AUDIOGUÍA", url: "https://open.spotify.com/episode/6WTvT819txJzEpMSLfsmy2", alt: "Spotify" },
   maptour: { img: audioLogo6.url, label: "AUDIOGUÍA", url: "https://maptour.info/strasbourg.php?lang=es", alt: "Maptour Strasbourg" },
+  einstein: { img: einsteinLogo.url, label: "MUSEO EINSTEIN", url: "https://bhm.guide4.it/#/home/contentcompilation/OpDQVHeFUIMYFoJ9xgoV?t=eyAiaWQiOiAiUDF4UVhJS0Y1elV6UzRxS2ZzaUciLCAicHVycG9zZSI6ICJHZW5lcmFsIiwgInR5cGUiOiAiRW50aXR5IiwgInByZXNlbnRhdGlvbiI6ICJBdXRvIiwgImVudGl0eUlkIjogIk9wRFFWSGVGVUlNWUZvSjl4Z29WIiwgImVudGl0eUhpbnQiOiAiQ29udGVudENvbXBpbGF0aW9uIiB9", alt: "Museo Einstein Bern" },
+  planoTriberg: { img: audioLogo6.url, label: "🗺️ PLANO PDF", url: spanishMapPdf.url, alt: "Plano de la ruta Triberg (PDF)" },
 };
+
 
 // Días específicos del Plan B (Gran Tour Ferroviario): preceden a la base alpina
 const planBPrefix: any[] = [
@@ -29,14 +34,14 @@ const planBPrefix: any[] = [
     alt: "Vista aérea de Barcelona con la Sagrada Familia",
     tags: ["Tren Iryo", "Barrio de Gracia", "104 €/pers."],
     highlights:
-      "Arranca la expedición en clave ferroviaria. Tren Iryo desde Málaga María Zambrano hasta Barcelona Sants — 6h 27min cómodos, con maleta facturada incluida. Llegada al apartamento en el barrio de Gracia para descansar antes del primer paseo nocturno.",
+      "Arranca la expedición en clave ferroviaria. Tren Iryo desde Málaga María Zambrano hasta Barcelona Sants — 6h 39min cómodos, con maleta facturada incluida. Llegada al apartamento en el barrio de Gracia para descansar antes del primer paseo nocturno.",
     sections: [
       {
         title: "🚄 Tren Iryo Málaga → Barcelona",
         content: [
-          "Salida: 11:39 desde Málaga María Zambrano",
-          "Llegada: 18:06 a Barcelona Sants",
-          "Duración: 6h 27min · maleta 23 kg incluida",
+          "Salida: 11:34 desde Málaga María Zambrano",
+          "Llegada: 18:13 a Barcelona Sants",
+          "Duración: 6h 39min · maleta 23 kg incluida",
           "Precio: 65 €/persona (tarifa cotizada; reconfirmar condiciones de equipaje al comprar)",
         ],
       },
@@ -136,20 +141,20 @@ const planBPrefix: any[] = [
     day: 3,
     date: "1 Oct (Jueves)",
     route: "Barcelona → Lyon",
-    title: "Tren SNCF a Lyon · Capital gastronómica",
+    title: "Tren AVE Internacional a Lyon · Capital gastronómica",
     image: "/images/dia-lyon.jpg",
     alt: "Vista del Vieux Lyon con el río Saona",
-    tags: ["Tren SNCF", "Vieux Lyon UNESCO", "97 €/pers."],
+    tags: ["AVE Internacional", "Vieux Lyon UNESCO", "97 €/pers."],
     highlights:
-      "Tren directo SNCF desde Barcelona Sants hasta Lyon Part-Dieu, cruzando el Mediterráneo francés y la Provenza. Llegada a primera hora de la tarde al apartamento con terraza en el Vieux Lyon.",
+      "Tren directo AVE Internacional desde Barcelona Sants hasta Lyon Part-Dieu, cruzando el Mediterráneo francés y la Provenza. Llegada a primera hora de la tarde al apartamento con terraza en el Vieux Lyon.",
     sections: [
       {
-        title: "🚄 Tren SNCF Barcelona → Lyon",
+        title: "🚄 Tren AVE Internacional Barcelona → Lyon",
         content: [
           "Salida: 08:14 desde Barcelona Sants",
           "Llegada: 13:20 a Lyon Part-Dieu",
           "Duración: 5h 06min · maleta 23 kg incluida",
-          "Precio: 79 €/persona (tarifa cotizada; reconfirmar horario/precio en SNCF Connect/Renfe)",
+          "Precio: 55 €/persona (tarifa cotizada; reconfirmar horario/precio en SNCF Connect/Renfe)",
         ],
       },
       {
@@ -251,7 +256,7 @@ const planBPrefix: any[] = [
         title: "🌆 Tarde en Ginebra · Lago Lemán",
         content: [
           "Check-in en Hôtel Astoria: enfrente de la estación Cornavin — cruzas la calle y dejas las maletas",
-          "ℹ️ Desayuno no incluido (17 CHF/persona/día, 7:00-10:30 h)",
+          "ℹ️ Desayuno no incluido (~18,40 €/persona, 7:00-10:30 h)",
           "🔗 Geneva Transport Card GRATIS: https://www.geneve.com/en/plan-stay/getting-around/free-geneva-transport-card — tranvías, buses y barcos Mouettes ilimitados (llega por email 3 días antes)",
           "WiFi urbano gratis: conéctate a «((o)) city-geneva»",
           "16:30 · Bajada por Rue du Mont-Blanc hasta el Lago Lemán (~10 min)",
@@ -269,7 +274,7 @@ const planBPrefix: any[] = [
         content: [
           "Hotel: Hôtel Astoria — junto a la estación Cornavin",
           "Precio: 95 €/persona (1 noche)",
-          "Desayuno no incluido (17 CHF/persona/día) · check-in cómodo a pie desde la estación",
+          "Desayuno no incluido (~18,40 €/persona) · check-in cómodo a pie desde la estación",
           "🔗 Reserva: https://www.booking.com/hotel/ch/astoria-geneve.es.html",
         ],
       },
@@ -395,9 +400,10 @@ const days: any[] = [
           "🔗 SBB Meiringen · ficha de la estación: https://www.sbb.ch/en/travel-information/stations/find-station/station.16965.meiringen.html",
           "13:30 · Almuerzo ligero en el pueblo o sándwiches suizos tradicionales",
           "14:15 · Funicular histórico de madera a las Cataratas Reichenbach (escenario del enfrentamiento final de Sherlock Holmes)",
+          "⚠️ El 4 oct es el último día de temporada 2026 del funicular Reichenbach — Plan B si está cerrado: Museo Sherlock Holmes + paseo por el pueblo + merengue en pastelería local",
           "15:45 · Museo de Sherlock Holmes (gratis con el pase, abre hasta 17:30/18:00 h) · merengue local en pastelería tradicional",
           "17:30 · Recoger maletas y tren de enlace a Kandersteg",
-          "19:15 · Llegada al Chalet-Hotel Adler · cena y opcional piscina/spa (15 €)",
+          "19:40 · Llegada al Chalet-Hotel Adler · cena y opcional piscina/spa (15 €)",
         ],
       },
       {
@@ -429,8 +435,12 @@ const days: any[] = [
       {
         title: "🚂 Tren GoldenPass Belle Époque",
         content: [
-          "Salida: 12:02 desde Zweisimmen",
-          "Llegada a Montreux: 14:11",
+          "Salida: 12:04 desde Zweisimmen",
+          "Llegada a Montreux: 14:15 aprox.",
+          "Castillo de Chillon: visita 14:50-16:30",
+          "Barco de línea CGN Chillon → Villeneuve/Vevey: salida 16:50",
+          "Regreso: llegada a Kandersteg 20:13",
+          "⚠️ Punto crítico: transbordo en Brig de solo 4 min · vigilar el andén con antelación",
           "Coste billete: 0 € (Swiss Travel Pass)",
           "⚠️ Horarios GoldenPass/CGN de octubre: reconfirmar en SBB/MOB/CGN 30-60 días antes",
           "Reserva de asientos: opcional · CHF 10/persona (~65 € grupo). Recomendable si queréis garantizar 6 plazas juntas, pero no imprescindible",
@@ -496,7 +506,8 @@ const days: any[] = [
       {
         title: "💎 Tarde · El Blausee (Lago Azul) — Broche de Oro",
         content: [
-          "Bus 230 desde Kandersteg (8-10 min · GRATIS con la Swiss Travel Pass)",
+          "Barco BLS Interlaken Ost → Brienz: salida 11:07 · llegada Brienz 12:20",
+          "Bus 230 Kandersteg ↔ Blausee: horario 16:58 → 18:41 · llegada a Kandersteg 18:54 (GRATIS con Swiss Travel Pass)",
           "Sendero 100% llano y accesible hasta el lago",
           "Barca con fondo de cristal incluida en el acceso · truchas y estatua hundida visibles",
           "Tarifas orientativas: L-V adultos 11 CHF · fines de semana 13 CHF · niños 7-9 CHF (reconfirmar en 2026)",
@@ -508,6 +519,8 @@ const days: any[] = [
     savings: { label: "Ahorro Total Día 3", amount: "~65 €", detail: "Transporte y barco cubiertos; funicular Giessbach aparte" },
     audioButtons: [AUDIO.suiza2026],
   },
+
+
 
   {
     day: 4,
@@ -525,7 +538,7 @@ const days: any[] = [
         content: [
           "06:45-07:15 · Salida temprana de Kandersteg hacia Interlaken Ost / Grindelwald",
           "Dejar maletas en consignas de Interlaken Ost para subir ligeros a First",
-          "09:00-09:30 · Teleférico Grindelwald → First (50% dto. con Swiss Travel Pass)",
+          "12:05-14:05 · Teleférico Grindelwald → First (50% dto. con Swiss Travel Pass · ~39-41 €/persona · NO es gratis)",
           "First Cliff Walk: pasarela del Eiger y fotos panorámicas. Prioridad absoluta del día",
           "Hora límite: 12:15-12:30 iniciar bajada. No alargar comida ni actividades extra arriba",
         ],
@@ -554,13 +567,13 @@ const days: any[] = [
         title: "🏡 Noche: llegada a Gengenbach",
         content: [
           "Pueblo de cuento de hadas con calles empedradas y casas de madera",
-          "Check-in en Villa Beckmann a partir de las 16:00 h",
+          "Check-in en Villa Beckmann a partir de las 16:00 h · llegada objetivo 20:48 vía Basel/Offenburg",
           "Cena sencilla o compra rápida si llegamos cansados: este día no conviene reservar restaurante tarde",
         ],
       },
     ],
     costs: [
-      { concept: "Teleférico Grindelwald First (50% dto.)", pp: "~36 CHF (~40 €)", group: "~216 CHF (~240 €)" },
+      { concept: "Teleférico Grindelwald First (50% dto.)", pp: "~39-41 €", group: "~234-246 €" },
       { concept: "Consigna maletas Interlaken Ost", pp: "~7-10 €", group: "~21-30 €" },
       { concept: "Tramo suizo hasta Basel SBB", pp: "0 € (Swiss Pass)", group: "0 €" },
       { concept: "Tren Alemania/Selva Negra (Basel/Offenburg → Gengenbach)", pp: "~20-30 €", group: "~120-180 €" },
@@ -585,7 +598,7 @@ const days: any[] = [
           "Las más altas de Alemania, con siete niveles de caída",
           "Paseo agradable por el bosque",
           "¡Llevad cacahuetes! Hay ardillas muy simpáticas que se acercan a comer de la mano",
-          "Entrada: ~8 €/persona",
+          "Entrada: 8,50 €/adulto (GRATIS transporte con KONUS)",
           "Tren Gengenbach → Triberg: ~30 min, GRATIS con KONUS",
         ],
       },
@@ -594,8 +607,10 @@ const days: any[] = [
         content: [
           "Un reloj de cuco del tamaño de una casa",
           "Podéis entrar dentro para ver los engranajes gigantes de madera",
-          "Cada media hora sale el pájaro gigante a cantar",
-          "Entrada: ~2 €/persona",
+          "17:00 · Sale el pájaro gigante a cantar (imprescindible cuadrar la visita a esa hora)",
+          "Entrada: ~3 €/persona",
+          "Extra: Haus der 1000 Uhren (la casa de los 1000 relojes) en el mismo Triberg",
+          "Regreso a Gengenbach: tren 18:53 (GRATIS con KONUS · usar solo trenes regionales)",
         ],
       },
       {
@@ -624,7 +639,7 @@ const days: any[] = [
         },
       ],
     },
-    audioButtons: [AUDIO.suiza2026],
+    audioButtons: [AUDIO.suiza2026, AUDIO.planoTriberg],
   },
   {
     day: 6,
@@ -690,7 +705,7 @@ const days: any[] = [
         title: "🏘️ Opción 1-B: Esplendor Alsaciano — Solo Estrasburgo",
         content: [
           "Todo el día: Petite France, Catedral de Notre-Dame y su reloj astronómico",
-          "Reloj astronómico de la Catedral: 2 € por adulto (12 € grupo de 6) — corregido, no 4 €",
+          "Reloj astronómico de la Catedral: 4 €/adulto (24 € grupo de 6) · sonar del carillón ≈12:30",
           "Opcional: Paseo en barco por los canales (Batorama, 15 €/persona)",
           "Transporte: ~5-7 €/persona",
           "Muy relajado, sin prisas por horarios",
@@ -704,7 +719,7 @@ const days: any[] = [
           "Mañana: Lichtentaler Allee en Baden-Baden — el parque de lujo donde la Emperatriz Sissi paseaba a diario",
           "Tarde: Funicular Merkurberg a la cima de la montaña",
           "Transporte: 0 € (TOTALMENTE GRATIS con KONUS)",
-          "Funicular Merkur: 6 € ida y vuelta",
+          "Funicular Merkur: 8,50 €/adulto (51 € grupo de 6) ida y vuelta",
           "Coste total estimado: ~6 €/persona",
         ],
       },
@@ -737,7 +752,8 @@ const days: any[] = [
         title: "💰 Costes del Último Día",
         content: [
           "Tren regional Gengenbach → Basel SBB: 0 € con KONUS si se usan trenes regionales válidos (no ICE/IC/EC)",
-          "Bus Línea 50 Basel SBB → EuroAirport: ~6 CHF por adulto (reconfirmar tarifa TNW 2026)",
+          "Opción 1: Bus Línea 50 Basel SBB → EuroAirport ~7,15 €/adulto (reconfirmar tarifa TNW 2026)",
+          "Opción 2 (más económica): vía Haltingen + bus 220 → EuroAirport 5,80 €/adulto",
           "Vuelo Basilea → Málaga: 129 € (Senior · maleta facturada) · 45 € (Junior · sin maleta)",
         ],
       },
@@ -745,6 +761,55 @@ const days: any[] = [
     tip: "⚠️ Cuidado con la estación en Basilea: al venir de Alemania, algunos regionales paran primero en Basel Bad Bf. Para coger el bus 50 al aeropuerto más fácilmente, aseguraos de llegar hasta Basel SBB (o haced transbordo S-Bahn/regional válido, no ICE/IC). Haced el check-in online el día anterior para evitar colas.",
   },
 ];
+
+// Plan B por lluvia fuerte — Bern (se inserta después del día del Lago de Brienz solo en Plan B)
+const planBBernRainy: any = {
+  day: 0,
+  date: "6 Oct (Mar) · Plan B por lluvia",
+  route: "Kandersteg → Bern → Kandersteg",
+  title: "Plan B por mal tiempo · Bern bajo los soportales & Museo Einstein",
+  image: "/images/dia3-sherlock-blausee.jpg",
+  alt: "Casco antiguo de Bern con soportales y reloj Zytglogge",
+  tags: ["PLAN B por mal tiempo", "Soportales cubiertos", "Museo Einstein", "Swiss Pass"],
+  highlights:
+    "Alternativa al día de lagos si llueve fuerte en Kandersteg. Bern ofrece ~6 km de soportales cubiertos, el reloj astronómico Zytglogge y el Museo Einstein (dentro del Museo Histórico, gratis con Swiss Travel Pass).",
+  sections: [
+    {
+      title: "🚂 Ida directa Kandersteg → Bern",
+      content: [
+        "10:14 · Kandersteg (vía 1) — RE1 sin cambios",
+        "11:22 · Llegada a Bern (vía 9)",
+      ],
+    },
+    {
+      title: "🏛️ Mañana · Casco antiguo bajo los soportales",
+      content: [
+        "11:30-12:45 · Spitalgasse → Marktgasse → Kramgasse (~6 km totalmente cubiertos)",
+        "12:55-13:05 · Zytglogge (reloj astronómico) · carrillón antes de las 13:00",
+        "13:05-13:50 · Almuerzo bajo los soportales",
+      ],
+    },
+    {
+      title: "🧠 Tarde · Museo Histórico + Museo Einstein",
+      content: [
+        "≈13:55 · Tranvía 6 u 8 hasta Helvetiaplatz",
+        "14:00-16:30 · Museo Histórico + Museo Einstein (mismo edificio · martes 10:00-17:00 · GRATIS con Swiss Travel Pass)",
+        "Alternativa si no apetece Einstein: Museo de la Comunicación, Museo de Historia Natural, Bundeshaus, Catedral, o las fuentes bajo los soportales",
+        "16:30-17:25 · Regreso a la estación en tranvía",
+      ],
+    },
+    {
+      title: "🚂 Vuelta directa Bern → Kandersteg",
+      content: [
+        "17:39 · Bern (vía 9) — RE1 directo",
+        "18:40 · Llegada a Kandersteg",
+      ],
+    },
+  ],
+  tip: "💡 Activar solo si el pronóstico marca lluvia intensa todo el día en el valle. Todo el itinerario está bajo cubierto o en interiores.",
+  audioButtons: [AUDIO.einstein, AUDIO.suiza2026],
+};
+
 
 // Fechas reasignadas por plan para los días base (D1-D8): empiezan el 4 Oct
 const planADates = [
@@ -796,10 +861,16 @@ export default function ItinerarySection() {
   });
 
 
+  const planBDays = [...baseDays];
+  if (plan === "B") {
+    // Insertar módulo Bern (Plan B por lluvia) justo después del día del Lago de Brienz (base day index 2)
+    planBDays.splice(3, 0, planBBernRainy);
+  }
+
   const displayDays: any[] =
     plan === "A"
       ? [...planAGenevaPrefix, ...baseDays].map((d: any, i: number) => ({ ...d, day: i + 1 }))
-      : [...planBPrefix, ...baseDays].map((d: any, i: number) => ({ ...d, day: i + 1 }));
+      : [...planBPrefix, ...planBDays].map((d: any, i: number) => ({ ...d, day: i + 1 }));
 
 
 

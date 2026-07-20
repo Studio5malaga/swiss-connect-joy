@@ -25,13 +25,18 @@ function buildBreakdown(plan: "A" | "B", profile: "senior" | "junior", pass: "4d
     ];
   } else {
     transport = [
-      { concept: "Tren Iryo Málaga → Barcelona (11:39 → 18:06)", amount: 65, note: "Maleta 23 kg incluida" },
-      { concept: "Tren SNCF Barcelona → Lyon (08:14 → 13:20)", amount: 79, note: "Maleta 23 kg incluida" },
-      { concept: "Tren Lyon → Ginebra (12:38 → 14:40)", amount: 35.1 },
+      { concept: "Tren Iryo Málaga → Barcelona (11:34 → 18:13)", amount: 65, note: "Maleta 23 kg incluida" },
+      { concept: "Tren AVE Internacional Barcelona → Lyon (08:14 → 13:20)", amount: 55, note: "Maleta 23 kg incluida" },
+      { concept: "Tren TER Lyon → Ginebra (12:38 → 14:40)", amount: 25 },
+      { concept: "T-familiar (transporte urbano Barcelona)", amount: 2 },
+      { concept: "Carnets TCL ×3 (transporte urbano Lyon)", amount: 7 },
+      { concept: "Geneva Transport Card", amount: 0, note: "Gratuita con el hotel" },
+      { concept: "Tarjeta KONUS (Selva Negra)", amount: 0, note: "Gratuita con alojamiento en Gengenbach" },
+      { concept: "Bus Selva Negra → EuroAirport", amount: 7, note: "Basel SBB + bus 50 (~7,15 €) o Haltingen + bus 220 (5,80 €)" },
       {
-        concept: "Vuelo Basilea → Málaga (21:30 → 00:20)",
+        concept: "Vuelo Basilea → Málaga (21:00 → 00:20)",
         amount: profile === "senior" ? 129 : 45,
-        note: profile === "senior" ? "Maleta 23 kg facturada" : "Sin maleta facturada",
+        note: profile === "senior" ? "easyJet U27022 · maleta 23 kg facturada" : "easyJet U27022 · sin maleta facturada",
       },
     ];
   }
@@ -67,11 +72,17 @@ function buildBreakdown(plan: "A" | "B", profile: "senior" | "junior", pass: "4d
     ];
   } else {
     lodging = [
-      { concept: "Barcelona · Classic Gracia Apartments (2 noches)", amount: 104 },
-      { concept: "Lyon · Appartement Vieux Lyon Terrasse (2 noches)", amount: 97 },
-      { concept: "Ginebra · Hôtel Astoria (1 noche)", amount: 95 },
-      { concept: "Kandersteg · Alpen Chalet (3 noches)", amount: 121 },
-      { concept: "Gengenbach · Villa Beckmann (4 noches)", amount: 221 },
+      { concept: "Barcelona · Classic Gracia Apartments (2 noches)", amount: 103.83 },
+      { concept: "Lyon · Appartement Vieux Lyon Terrasse (2 noches)", amount: 97.17, note: "+33 7 68 10 83 88" },
+      { concept: "Ginebra · Hôtel Astoria (1 noche)", amount: 93.83, note: "+41 22 544 52 52" },
+      { concept: "Kandersteg · Chalet-Hotel Adler (3 noches)", amount: 119.5, note: "+41 33 655 60 80" },
+      { concept: "Gengenbach · Villa Beckmann (4 noches)", amount: 221.17 },
+      { concept: "Funicular Giessbach (no cubierto por Swiss Travel Pass)", amount: 15.17 },
+      { concept: "Blausee", amount: 13 },
+      { concept: "Teleférico Grindelwald First (50% dto. STP · no gratis)", amount: 40 },
+      { concept: "Cascadas Triberg", amount: 8.5 },
+      { concept: "Eble Uhren-Park (reloj de cuco gigante)", amount: 3 },
+      { concept: "Gran cierre · Funicular Merkur (Baden-Baden)", amount: 8.5, note: "Si elegís Estrasburgo: EUROPASS-Family + reloj astronómico ≈ +19 €/persona" },
     ];
   }
 
