@@ -6,6 +6,8 @@ import audioLogo3 from "../assets/audio-logo-3.png.asset.json";
 import audioLogo4 from "../assets/audio-logo-4.png.asset.json";
 import audioLogo5 from "../assets/audio-logo-5.png.asset.json";
 import audioLogo6 from "../assets/audio-logo-6.png.asset.json";
+import einsteinLogo from "../assets/einstein.jpg.asset.json";
+import spanishMapPdf from "../assets/spanish.pdf.asset.json";
 
 const AUDIO = {
   mytoursBcn: { img: audioLogo1.url, label: "AUDIOGUÍA", url: "https://mytours.city/es-barcelona/", alt: "mytours.city" },
@@ -16,7 +18,10 @@ const AUDIO = {
   rtve: { img: audioLogo4.url, label: "AUDIOGUÍA", url: "https://www.rtve.es/play/audios/nomadas/nomadas-friburgo-alta-selva-negra-270316/1833547/", alt: "RNE Nómadas" },
   spotify: { img: audioLogo5.url, label: "AUDIOGUÍA", url: "https://open.spotify.com/episode/6WTvT819txJzEpMSLfsmy2", alt: "Spotify" },
   maptour: { img: audioLogo6.url, label: "AUDIOGUÍA", url: "https://maptour.info/strasbourg.php?lang=es", alt: "Maptour Strasbourg" },
+  einstein: { img: einsteinLogo.url, label: "MUSEO EINSTEIN", url: "https://bhm.guide4.it/#/home/contentcompilation/OpDQVHeFUIMYFoJ9xgoV?t=eyAiaWQiOiAiUDF4UVhJS0Y1elV6UzRxS2ZzaUciLCAicHVycG9zZSI6ICJHZW5lcmFsIiwgInR5cGUiOiAiRW50aXR5IiwgInByZXNlbnRhdGlvbiI6ICJBdXRvIiwgImVudGl0eUlkIjogIk9wRFFWSGVGVUlNWUZvSjl4Z29WIiwgImVudGl0eUhpbnQiOiAiQ29udGVudENvbXBpbGF0aW9uIiB9", alt: "Museo Einstein Bern" },
+  planoTriberg: { img: audioLogo6.url, label: "🗺️ PLANO PDF", url: spanishMapPdf.url, alt: "Plano de la ruta Triberg (PDF)" },
 };
+
 
 // Días específicos del Plan B (Gran Tour Ferroviario): preceden a la base alpina
 const planBPrefix: any[] = [
