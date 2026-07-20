@@ -1,4 +1,5 @@
 import { usePlan } from "../context/PlanContext";
+import guiaViaje from "../assets/GuiaViaje.pdf.asset.json";
 
 export default function HeroSection() {
   const { plan, profile } = usePlan();
@@ -40,8 +41,9 @@ export default function HeroSection() {
             ⚙️ Configurar mi plan
           </a>
           <a
-            href="/docs/plan-de-viaje-alpes-2026.pdf"
-            download
+            href={guiaViaje.url}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-xl border-2 border-alpine-foreground/30 bg-alpine-foreground/10 px-8 py-4 text-base font-bold text-alpine-foreground backdrop-blur-sm hover:bg-alpine-foreground/20 transition-all"
           >
             📥 Descargar plan
