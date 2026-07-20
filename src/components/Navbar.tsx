@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
+import guiaViaje from "../assets/GuiaViaje.pdf.asset.json";
 
 const navLinks = [
   { label: "Itinerario", href: "#itinerario" },
@@ -28,7 +29,7 @@ export default function Navbar() {
           <a href="https://imaginative-dango-1afdc9.netlify.app/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg border border-primary px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/10 transition-opacity">
             🧳 MALETAS
           </a>
-          <a href="/docs/plan-de-viaje-alpes-2026.pdf" download className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground hover:opacity-90 transition-opacity">
+          <a href={guiaViaje.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground hover:opacity-90 transition-opacity">
             📥 Descargar Plan
           </a>
         </div>
@@ -44,7 +45,7 @@ export default function Navbar() {
           <a href="https://imaginative-dango-1afdc9.netlify.app/" target="_blank" rel="noopener noreferrer" className="mt-2 block rounded-lg border border-primary px-4 py-2 text-center text-sm font-semibold text-primary">
             🧳 MALETAS
           </a>
-          <a href="/docs/plan-de-viaje-alpes-2026.pdf" download className="mt-2 block rounded-lg bg-primary px-4 py-2 text-center text-sm font-semibold text-primary-foreground">
+          <a href={guiaViaje.url} target="_blank" rel="noopener noreferrer" className="mt-2 block rounded-lg bg-primary px-4 py-2 text-center text-sm font-semibold text-primary-foreground">
             📥 Descargar Plan
           </a>
         </div>
