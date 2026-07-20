@@ -34,14 +34,14 @@ const planBPrefix: any[] = [
     alt: "Vista aérea de Barcelona con la Sagrada Familia",
     tags: ["Tren Iryo", "Barrio de Gracia", "104 €/pers."],
     highlights:
-      "Arranca la expedición en clave ferroviaria. Tren Iryo desde Málaga María Zambrano hasta Barcelona Sants — 6h 27min cómodos, con maleta facturada incluida. Llegada al apartamento en el barrio de Gracia para descansar antes del primer paseo nocturno.",
+      "Arranca la expedición en clave ferroviaria. Tren Iryo desde Málaga María Zambrano hasta Barcelona Sants — 6h 39min cómodos, con maleta facturada incluida. Llegada al apartamento en el barrio de Gracia para descansar antes del primer paseo nocturno.",
     sections: [
       {
         title: "🚄 Tren Iryo Málaga → Barcelona",
         content: [
-          "Salida: 11:39 desde Málaga María Zambrano",
-          "Llegada: 18:06 a Barcelona Sants",
-          "Duración: 6h 27min · maleta 23 kg incluida",
+          "Salida: 11:34 desde Málaga María Zambrano",
+          "Llegada: 18:13 a Barcelona Sants",
+          "Duración: 6h 39min · maleta 23 kg incluida",
           "Precio: 65 €/persona (tarifa cotizada; reconfirmar condiciones de equipaje al comprar)",
         ],
       },
@@ -141,20 +141,20 @@ const planBPrefix: any[] = [
     day: 3,
     date: "1 Oct (Jueves)",
     route: "Barcelona → Lyon",
-    title: "Tren SNCF a Lyon · Capital gastronómica",
+    title: "Tren AVE Internacional a Lyon · Capital gastronómica",
     image: "/images/dia-lyon.jpg",
     alt: "Vista del Vieux Lyon con el río Saona",
-    tags: ["Tren SNCF", "Vieux Lyon UNESCO", "97 €/pers."],
+    tags: ["AVE Internacional", "Vieux Lyon UNESCO", "97 €/pers."],
     highlights:
-      "Tren directo SNCF desde Barcelona Sants hasta Lyon Part-Dieu, cruzando el Mediterráneo francés y la Provenza. Llegada a primera hora de la tarde al apartamento con terraza en el Vieux Lyon.",
+      "Tren directo AVE Internacional desde Barcelona Sants hasta Lyon Part-Dieu, cruzando el Mediterráneo francés y la Provenza. Llegada a primera hora de la tarde al apartamento con terraza en el Vieux Lyon.",
     sections: [
       {
-        title: "🚄 Tren SNCF Barcelona → Lyon",
+        title: "🚄 Tren AVE Internacional Barcelona → Lyon",
         content: [
           "Salida: 08:14 desde Barcelona Sants",
           "Llegada: 13:20 a Lyon Part-Dieu",
           "Duración: 5h 06min · maleta 23 kg incluida",
-          "Precio: 79 €/persona (tarifa cotizada; reconfirmar horario/precio en SNCF Connect/Renfe)",
+          "Precio: 55 €/persona (tarifa cotizada; reconfirmar horario/precio en SNCF Connect/Renfe)",
         ],
       },
       {
@@ -256,7 +256,7 @@ const planBPrefix: any[] = [
         title: "🌆 Tarde en Ginebra · Lago Lemán",
         content: [
           "Check-in en Hôtel Astoria: enfrente de la estación Cornavin — cruzas la calle y dejas las maletas",
-          "ℹ️ Desayuno no incluido (17 CHF/persona/día, 7:00-10:30 h)",
+          "ℹ️ Desayuno no incluido (~18,40 €/persona, 7:00-10:30 h)",
           "🔗 Geneva Transport Card GRATIS: https://www.geneve.com/en/plan-stay/getting-around/free-geneva-transport-card — tranvías, buses y barcos Mouettes ilimitados (llega por email 3 días antes)",
           "WiFi urbano gratis: conéctate a «((o)) city-geneva»",
           "16:30 · Bajada por Rue du Mont-Blanc hasta el Lago Lemán (~10 min)",
@@ -274,7 +274,7 @@ const planBPrefix: any[] = [
         content: [
           "Hotel: Hôtel Astoria — junto a la estación Cornavin",
           "Precio: 95 €/persona (1 noche)",
-          "Desayuno no incluido (17 CHF/persona/día) · check-in cómodo a pie desde la estación",
+          "Desayuno no incluido (~18,40 €/persona) · check-in cómodo a pie desde la estación",
           "🔗 Reserva: https://www.booking.com/hotel/ch/astoria-geneve.es.html",
         ],
       },
@@ -400,9 +400,10 @@ const days: any[] = [
           "🔗 SBB Meiringen · ficha de la estación: https://www.sbb.ch/en/travel-information/stations/find-station/station.16965.meiringen.html",
           "13:30 · Almuerzo ligero en el pueblo o sándwiches suizos tradicionales",
           "14:15 · Funicular histórico de madera a las Cataratas Reichenbach (escenario del enfrentamiento final de Sherlock Holmes)",
+          "⚠️ El 4 oct es el último día de temporada 2026 del funicular Reichenbach — Plan B si está cerrado: Museo Sherlock Holmes + paseo por el pueblo + merengue en pastelería local",
           "15:45 · Museo de Sherlock Holmes (gratis con el pase, abre hasta 17:30/18:00 h) · merengue local en pastelería tradicional",
           "17:30 · Recoger maletas y tren de enlace a Kandersteg",
-          "19:15 · Llegada al Chalet-Hotel Adler · cena y opcional piscina/spa (15 €)",
+          "19:40 · Llegada al Chalet-Hotel Adler · cena y opcional piscina/spa (15 €)",
         ],
       },
       {
@@ -434,8 +435,12 @@ const days: any[] = [
       {
         title: "🚂 Tren GoldenPass Belle Époque",
         content: [
-          "Salida: 12:02 desde Zweisimmen",
-          "Llegada a Montreux: 14:11",
+          "Salida: 12:04 desde Zweisimmen",
+          "Llegada a Montreux: 14:15 aprox.",
+          "Castillo de Chillon: visita 14:50-16:30",
+          "Barco de línea CGN Chillon → Villeneuve/Vevey: salida 16:50",
+          "Regreso: llegada a Kandersteg 20:13",
+          "⚠️ Punto crítico: transbordo en Brig de solo 4 min · vigilar el andén con antelación",
           "Coste billete: 0 € (Swiss Travel Pass)",
           "⚠️ Horarios GoldenPass/CGN de octubre: reconfirmar en SBB/MOB/CGN 30-60 días antes",
           "Reserva de asientos: opcional · CHF 10/persona (~65 € grupo). Recomendable si queréis garantizar 6 plazas juntas, pero no imprescindible",
@@ -501,7 +506,8 @@ const days: any[] = [
       {
         title: "💎 Tarde · El Blausee (Lago Azul) — Broche de Oro",
         content: [
-          "Bus 230 desde Kandersteg (8-10 min · GRATIS con la Swiss Travel Pass)",
+          "Barco BLS Interlaken Ost → Brienz: salida 11:07 · llegada Brienz 12:20",
+          "Bus 230 Kandersteg ↔ Blausee: horario 16:58 → 18:41 · llegada a Kandersteg 18:54 (GRATIS con Swiss Travel Pass)",
           "Sendero 100% llano y accesible hasta el lago",
           "Barca con fondo de cristal incluida en el acceso · truchas y estatua hundida visibles",
           "Tarifas orientativas: L-V adultos 11 CHF · fines de semana 13 CHF · niños 7-9 CHF (reconfirmar en 2026)",
@@ -530,7 +536,7 @@ const days: any[] = [
         content: [
           "06:45-07:15 · Salida temprana de Kandersteg hacia Interlaken Ost / Grindelwald",
           "Dejar maletas en consignas de Interlaken Ost para subir ligeros a First",
-          "09:00-09:30 · Teleférico Grindelwald → First (50% dto. con Swiss Travel Pass)",
+          "12:05-14:05 · Teleférico Grindelwald → First (50% dto. con Swiss Travel Pass · ~39-41 €/persona · NO es gratis)",
           "First Cliff Walk: pasarela del Eiger y fotos panorámicas. Prioridad absoluta del día",
           "Hora límite: 12:15-12:30 iniciar bajada. No alargar comida ni actividades extra arriba",
         ],
@@ -559,13 +565,13 @@ const days: any[] = [
         title: "🏡 Noche: llegada a Gengenbach",
         content: [
           "Pueblo de cuento de hadas con calles empedradas y casas de madera",
-          "Check-in en Villa Beckmann a partir de las 16:00 h",
+          "Check-in en Villa Beckmann a partir de las 16:00 h · llegada objetivo 20:48 vía Basel/Offenburg",
           "Cena sencilla o compra rápida si llegamos cansados: este día no conviene reservar restaurante tarde",
         ],
       },
     ],
     costs: [
-      { concept: "Teleférico Grindelwald First (50% dto.)", pp: "~36 CHF (~40 €)", group: "~216 CHF (~240 €)" },
+      { concept: "Teleférico Grindelwald First (50% dto.)", pp: "~39-41 €", group: "~234-246 €" },
       { concept: "Consigna maletas Interlaken Ost", pp: "~7-10 €", group: "~21-30 €" },
       { concept: "Tramo suizo hasta Basel SBB", pp: "0 € (Swiss Pass)", group: "0 €" },
       { concept: "Tren Alemania/Selva Negra (Basel/Offenburg → Gengenbach)", pp: "~20-30 €", group: "~120-180 €" },
@@ -590,7 +596,7 @@ const days: any[] = [
           "Las más altas de Alemania, con siete niveles de caída",
           "Paseo agradable por el bosque",
           "¡Llevad cacahuetes! Hay ardillas muy simpáticas que se acercan a comer de la mano",
-          "Entrada: ~8 €/persona",
+          "Entrada: 8,50 €/adulto (GRATIS transporte con KONUS)",
           "Tren Gengenbach → Triberg: ~30 min, GRATIS con KONUS",
         ],
       },
@@ -599,8 +605,10 @@ const days: any[] = [
         content: [
           "Un reloj de cuco del tamaño de una casa",
           "Podéis entrar dentro para ver los engranajes gigantes de madera",
-          "Cada media hora sale el pájaro gigante a cantar",
-          "Entrada: ~2 €/persona",
+          "17:00 · Sale el pájaro gigante a cantar (imprescindible cuadrar la visita a esa hora)",
+          "Entrada: ~3 €/persona",
+          "Extra: Haus der 1000 Uhren (la casa de los 1000 relojes) en el mismo Triberg",
+          "Regreso a Gengenbach: tren 18:53 (GRATIS con KONUS · usar solo trenes regionales)",
         ],
       },
       {
@@ -695,7 +703,7 @@ const days: any[] = [
         title: "🏘️ Opción 1-B: Esplendor Alsaciano — Solo Estrasburgo",
         content: [
           "Todo el día: Petite France, Catedral de Notre-Dame y su reloj astronómico",
-          "Reloj astronómico de la Catedral: 2 € por adulto (12 € grupo de 6) — corregido, no 4 €",
+          "Reloj astronómico de la Catedral: 4 €/adulto (24 € grupo de 6) · sonar del carillón ≈12:30",
           "Opcional: Paseo en barco por los canales (Batorama, 15 €/persona)",
           "Transporte: ~5-7 €/persona",
           "Muy relajado, sin prisas por horarios",
@@ -709,7 +717,7 @@ const days: any[] = [
           "Mañana: Lichtentaler Allee en Baden-Baden — el parque de lujo donde la Emperatriz Sissi paseaba a diario",
           "Tarde: Funicular Merkurberg a la cima de la montaña",
           "Transporte: 0 € (TOTALMENTE GRATIS con KONUS)",
-          "Funicular Merkur: 6 € ida y vuelta",
+          "Funicular Merkur: 8,50 €/adulto (51 € grupo de 6) ida y vuelta",
           "Coste total estimado: ~6 €/persona",
         ],
       },
@@ -742,7 +750,8 @@ const days: any[] = [
         title: "💰 Costes del Último Día",
         content: [
           "Tren regional Gengenbach → Basel SBB: 0 € con KONUS si se usan trenes regionales válidos (no ICE/IC/EC)",
-          "Bus Línea 50 Basel SBB → EuroAirport: ~6 CHF por adulto (reconfirmar tarifa TNW 2026)",
+          "Opción 1: Bus Línea 50 Basel SBB → EuroAirport ~7,15 €/adulto (reconfirmar tarifa TNW 2026)",
+          "Opción 2 (más económica): vía Haltingen + bus 220 → EuroAirport 5,80 €/adulto",
           "Vuelo Basilea → Málaga: 129 € (Senior · maleta facturada) · 45 € (Junior · sin maleta)",
         ],
       },
