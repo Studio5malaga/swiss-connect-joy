@@ -87,7 +87,7 @@ const planBPrefix: any[] = [
         ],
       },
     ],
-    tip: "💡 Comprobad los billetes Iryo con 2 meses de antelación: a esos precios se agotan rápido.",
+    tip: "💡 Comprad los billetes del AVE con 2 meses de antelación: a esos precios se agotan rápido. Al llegar a las 23:00, dejad decidido de antemano si bajáis en metro o pedís Uber.",
 
   },
 

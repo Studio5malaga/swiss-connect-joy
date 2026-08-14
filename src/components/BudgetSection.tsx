@@ -25,7 +25,7 @@ function buildBreakdown(plan: "A" | "B", profile: "senior" | "junior", pass: "4d
     ];
   } else {
     transport = [
-      { concept: "Tren Iryo Málaga → Barcelona (11:34 → 18:13)", amount: 65, note: "Maleta 23 kg incluida" },
+      { concept: "AVE Renfe Málaga → Barcelona (15:50 → 23:00)", amount: 65, note: "Maleta 23 kg incluida" },
       { concept: "Tren AVE Internacional Barcelona → Lyon (08:14 → 13:20)", amount: 55, note: "Maleta 23 kg incluida" },
       { concept: "Tren TER Lyon → Ginebra (12:38 → 14:40)", amount: 25 },
       { concept: "T-familiar (transporte urbano Barcelona)", amount: 2 },
