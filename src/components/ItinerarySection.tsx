@@ -813,17 +813,6 @@ const planBBernRainy: any = {
 
 
 // Fechas reasignadas por plan para los días base (D1-D8): empiezan el 4 Oct
-const planADates = [
-  "4 Oct (Dom)",
-  "5 Oct (Lun)",
-  "6 Oct (Mar)",
-  "7 Oct (Mié)",
-  "8 Oct (Jue)",
-  "9 Oct (Vie)",
-  "10 Oct (Sáb)",
-  "11 Oct (Dom)",
-];
-
 const planBBaseDates = [
   "4 Oct (Dom)",
   "5 Oct (Lun)",
@@ -854,8 +843,8 @@ export default function ItinerarySection() {
   ];
 
   const baseDays: any[] = days.map((d: any, i: number) => {
-    const next: any = { ...d, date: plan === "A" ? planADates[i] : planBBaseDates[i] };
-    if (i === 0 && plan === "B") {
+    const next: any = { ...d, date: planBBaseDates[i] };
+    if (i === 0) {
       next.sections = [...planBDay1Extra, ...(d.sections ?? [])];
     }
     return next;
@@ -863,24 +852,16 @@ export default function ItinerarySection() {
 
 
   const planBDays = [...baseDays];
-  if (plan === "B") {
-    // Insertar módulo Bern (Plan B por lluvia) justo después del día del Lago de Brienz (base day index 2)
-    planBDays.splice(3, 0, planBBernRainy);
-  }
+  // Insertar módulo Bern (Plan B por lluvia) justo después del día del Lago de Brienz (base day index 2)
+  planBDays.splice(3, 0, planBBernRainy);
 
-  const displayDays: any[] =
-    plan === "A"
-      ? [...planAGenevaPrefix, ...baseDays].map((d: any, i: number) => ({ ...d, day: i + 1 }))
-      : [...planBPrefix, ...planBDays].map((d: any, i: number) => ({ ...d, day: i + 1 }));
+  const displayDays: any[] = [...planBPrefix, ...planBDays].map((d: any, i: number) => ({ ...d, day: i + 1 }));
 
 
 
 
 
-  const heading =
-    plan === "A"
-      ? `Plan A · 10 días · 2-11 Oct 2026`
-      : `Plan B · 13 días · 29 Sep-11 Oct 2026`;
+  const heading = `Gran Tour Ferroviario · 13 días · 29 Sep-11 Oct 2026`;
 
   return (
     <section id="itinerario" className="section-padding" aria-label="Itinerario completo">

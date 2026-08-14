@@ -94,15 +94,13 @@ export default function AccommodationSection() {
     <section id="alojamientos" className="section-padding bg-surface" aria-label="Alojamientos">
       <div className="mx-auto max-w-6xl">
         <p className="text-center text-sm font-semibold uppercase tracking-widest text-accent">
-          Alojamientos · Plan {plan}
+          Alojamientos · Gran Tour Ferroviario
         </p>
         <h2 className="mt-2 text-center text-3xl font-bold text-foreground sm:text-4xl">
           Dónde Dormiremos
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-center text-muted-foreground">
-          {plan === "A"
-            ? "3 alojamientos: Ginebra, Kandersteg y Gengenbach. Todos con cocina propia para mayor comodidad y ahorro."
-            : "5 alojamientos a lo largo del Gran Tour Ferroviario: Barcelona, Lyon, Ginebra, Kandersteg y Gengenbach."}
+          5 alojamientos a lo largo del Gran Tour Ferroviario: Barcelona, Lyon, Ginebra, Kandersteg y Gengenbach.
         </p>
 
         <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
