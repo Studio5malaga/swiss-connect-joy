@@ -781,8 +781,7 @@ export default function ItinerarySection() {
           Itinerario Completo
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-center text-muted-foreground">
-          Los días 1 a {plan === "B" ? "5" : "2"} cambian según el plan elegido. Pulsa en cada día para
-          ver todos los detalles, horarios y costes.
+          Pulsa en cada día para ver todos los detalles, horarios y costes.
         </p>
 
         <div className="mt-12 space-y-8">

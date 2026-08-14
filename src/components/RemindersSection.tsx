@@ -55,14 +55,6 @@ const DEFAULT_ITEMS: Item[] = [
     done: false,
   },
   {
-    id: "nonanteneuf",
-    title: "Hôtel Astoria (Ginebra) — cancelación gratuita hasta",
-    category: "Alojamiento",
-    date: "2026-09-30",
-    note: "Check-in 2 Oct. Confirmar condiciones exactas en Booking.",
-    done: false,
-  },
-  {
     id: "hotel-astoria",
     title: "Hôtel Astoria (Plan B) — cancelación gratuita hasta",
     category: "Alojamiento",
