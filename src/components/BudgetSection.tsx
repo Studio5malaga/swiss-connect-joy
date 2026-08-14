@@ -102,7 +102,7 @@ export default function BudgetSection() {
           Presupuesto
         </p>
         <h2 className="mt-2 text-center text-3xl font-bold text-foreground sm:text-4xl">
-          Desglose · Plan {plan} · {profile === "senior" ? "Senior" : "Junior"}
+          Desglose · Perfil {profile === "senior" ? "Senior" : "Junior"}
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-center text-muted-foreground">
           Precios por persona basados en cotizaciones reales y tarifas oficiales revisadas. El total no incluye
@@ -148,9 +148,9 @@ export default function BudgetSection() {
             <span className="mt-1 text-xs opacity-80">por persona (sin comidas)</span>
             <div className="mt-5 w-full space-y-2 rounded-lg bg-primary-foreground/10 p-4 text-xs">
               <p>👥 Grupo (6): ~{Math.round(total * 6).toLocaleString("es-ES")} €</p>
-              <p>🛫 Plan {plan === "A" ? "A · Directo" : "B · Gran Tour"}</p>
+              <p>🚄 Gran Tour Ferroviario · 13 días</p>
               <p>🎫 {profile === "senior" ? "Senior premium" : "Junior estándar"}</p>
-              <p>🚄 Swiss Pass {pass === "4d" ? "4 días" : "3 días"}</p>
+              <p>🎟️ Swiss Travel Pass 4 días</p>
             </div>
             <p className="mt-4 text-[11px] opacity-75 text-center leading-relaxed">
               + comidas, tasa turística local y gastos varios. Transportes 2026: reconfirmar horarios 30-60 días antes.

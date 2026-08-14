@@ -2,9 +2,9 @@ import { usePlan } from "../context/PlanContext";
 import guiaViaje from "../assets/GuiaViaje.pdf.asset.json";
 
 export default function HeroSection() {
-  const { plan, profile } = usePlan();
-  const dates = plan === "A" ? "2 – 11 Oct 2026" : "29 Sep – 11 Oct 2026";
-  const duration = plan === "A" ? "10 días" : "13 días";
+  const { profile } = usePlan();
+  const dates = "29 Sep – 11 Oct 2026";
+  const duration = "13 días";
 
   return (
     <section
@@ -25,12 +25,10 @@ export default function HeroSection() {
           Expedición 2026 · {dates} · 6 personas · {duration}
         </p>
         <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-alpine-foreground sm:text-5xl md:text-6xl lg:text-7xl">
-          {plan === "A" ? "Plan A · Ruta Directa" : "Plan B · Gran Tour Ferroviario"}
+          Gran Tour Ferroviario
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-alpine-foreground/90 sm:text-xl">
-          {plan === "A"
-            ? "Vuelo directo a Ginebra y base en los Alpes y la Selva Negra. Itinerario compacto y eficiente."
-            : "Tren desde Málaga a través de Barcelona y Lyon, hasta los Alpes suizos y la Selva Negra alemana."}{" "}
+          Tren desde Málaga a través de Barcelona y Lyon, hasta los Alpes suizos y la Selva Negra alemana.{" "}
           Perfil <strong>{profile === "senior" ? "Senior" : "Junior"}</strong> activo.
         </p>
         <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
@@ -52,7 +50,7 @@ export default function HeroSection() {
         <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-alpine-foreground/80">
           <span>👥 6 personas</span>
           <span>📅 {duration}</span>
-          <span>🛫 {plan === "A" ? "Vuelo directo" : "Tren + tren + vuelo"}</span>
+          <span>🚄 Tren + tren + vuelo</span>
         </div>
       </div>
     </section>
