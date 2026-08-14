@@ -7,7 +7,7 @@ const linkGroups = [
       { label: "Swiss Travel Pass (SBB)", url: "https://www.sbb.ch/en/offers/swiss-travel-pass" },
       { label: "Swiss Travel Pass (Swiss Activities)", url: "https://www.swissactivities.com/es-es/pasos-ferroviarios/comprar-swiss-travel-pass/" },
       { label: "Renfe AVE — Barcelona ↔ Lyon", url: "https://www.renfe.com/es/es" },
-      { label: "Iryo — Alta velocidad Málaga ↔ Barcelona", url: "https://iryo.es/" },
+      { label: "Renfe AVE — Alta velocidad Málaga ↔ Barcelona", url: "https://www.renfe.com/es/es" },
       { label: "DB — Tarifa de grupo (Alemania)", url: "https://int.bahn.de/es/ofertas/tarifa-de-precio-reducido-precio-flexible/tarifa-de-precio-reducido-para-grupos" },
       { label: "CGN — Barcos Lago Lemán", url: "https://www.cgn.ch/en/horaires-billets" },
       { label: "BLS — Barcos Lago de Brienz", url: "https://www.bls-schiff.ch/en/lake-cruise/timetable/boat-schedule" },
@@ -20,8 +20,7 @@ const linkGroups = [
   {
     title: "🏨 Alojamientos",
     links: [
-      { label: "Nonanteneuf Appart Hôtel · Ginebra (Plan A)", url: "https://nonanteneuf.ch/" },
-      { label: "Hôtel Astoria · Ginebra (Plan B)", url: "https://www.astoria-geneva.com/" },
+            { label: "Hôtel Astoria · Ginebra (Plan B)", url: "https://www.astoria-geneva.com/" },
       { label: "Appartement Vieux Lyon Terrasse · Lyon", url: "https://www.booking.com/searchresults.html?ss=Vieux+Lyon" },
       { label: "Gracia Classic Apartments · Barcelona", url: "https://www.booking.com/searchresults.html?ss=Gracia+Classic+Apartments+Barcelona" },
       { label: "Chalet alpino · Kandersteg", url: "https://www.airbnb.com/s/Kandersteg--Switzerland" },

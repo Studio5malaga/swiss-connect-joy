@@ -35,7 +35,7 @@ export default function SwissTravelPassSection() {
                 "Buses y tranvías urbanos (Ginebra, Berna, Basilea…)",
                 "Entrada GRATUITA a más de 500 museos (incluido Sherlock Holmes)",
                 "25-50% descuento en teleféricos y funiculares",
-                "Precio oficial 2026 adulto 2ª clase: 4 días CHF 309 (~344€) · 3 días CHF 254 (~283€)",
+                "Precio oficial 2026 adulto 2ª clase: 4 días CHF 309 (~344€) — opción elegida",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2 text-sm text-foreground">
                   <span className="text-accent shrink-0">✓</span> {item}
@@ -63,7 +63,7 @@ export default function SwissTravelPassSection() {
             </div>
 
             <p className="mt-4 rounded-lg bg-accent/10 p-3 text-xs text-muted-foreground">
-              💡 <strong>Consejo:</strong> No suele tener precio dinámico, así que no hace falta comprarlo con mucha antelación; sí conviene dejarlo comprado antes de salir. Para este itinerario recomiendo 4 días consecutivos (4–7 Oct): el de 3 días solo compensa si se recalculan y se pagan aparte algunos trayectos suizos.
+              💡 <strong>Consejo:</strong> No suele tener precio dinámico, así que no hace falta comprarlo con mucha antelación; sí conviene dejarlo comprado antes de salir. Para este itinerario está decidido el pase de 4 días consecutivos (4–7 Oct).
             </p>
           </div>
         </div>
