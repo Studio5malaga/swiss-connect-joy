@@ -1,7 +1,7 @@
-import { usePlan, Plan, Profile, Pass } from "../context/PlanContext";
+import { usePlan, Profile } from "../context/PlanContext";
 
 export default function PlanSelector() {
-  const { plan, profile, pass, setPlan, setProfile, setPass } = usePlan();
+  const { profile, setProfile } = usePlan();
 
   const Btn = ({
     active,
@@ -29,17 +29,17 @@ export default function PlanSelector() {
     <section
       id="selector"
       className="section-padding bg-surface/70 backdrop-blur-sm border-y border-border"
-      aria-label="Selector de plan y perfil"
+      aria-label="Selector de perfil del viajero"
     >
       <div className="mx-auto max-w-4xl">
         <p className="text-center text-sm font-semibold uppercase tracking-widest text-accent">
           Configura tu Expedición
         </p>
         <h2 className="mt-2 text-center text-2xl font-bold text-foreground sm:text-3xl">
-          Plan A, Plan B y perfil del viajero
+          Gran Tour Ferroviario · perfil del viajero
         </h2>
         <p className="mx-auto mt-2 max-w-2xl text-center text-sm text-muted-foreground">
-          El itinerario, alojamientos y presupuesto se adaptan automáticamente a tu elección.
+          Ruta definitiva: 13 días, del 29 de septiembre al 11 de octubre de 2026. El presupuesto se adapta al perfil elegido.
         </p>
 
         <div className="mt-6 grid gap-4 sm:grid-cols-3">
@@ -47,17 +47,11 @@ export default function PlanSelector() {
             <p className="mb-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">
               Ruta
             </p>
-            <div className="flex gap-1 rounded-lg bg-secondary p-1">
-              {(["A", "B"] as Plan[]).map((p) => (
-                <Btn key={p} active={plan === p} onClick={() => setPlan(p)}>
-                  Plan {p}
-                </Btn>
-              ))}
+            <div className="rounded-lg bg-secondary p-3 text-sm font-semibold text-foreground">
+              Gran Tour Ferroviario
             </div>
             <p className="mt-2 text-xs text-muted-foreground">
-              {plan === "A"
-                ? "Directo · 2-11 Oct · vuelo a Ginebra"
-                : "Gran Tour Ferroviario · 29 Sep-11 Oct · Barcelona + Lyon"}
+              29 Sep-11 Oct · Barcelona + Lyon + Alpes + Selva Negra
             </p>
           </div>
 
@@ -83,15 +77,11 @@ export default function PlanSelector() {
             <p className="mb-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">
               Swiss Travel Pass
             </p>
-            <div className="flex gap-1 rounded-lg bg-secondary p-1">
-              {(["4d", "3d"] as Pass[]).map((p) => (
-                <Btn key={p} active={pass === p} onClick={() => setPass(p)}>
-                  {p === "4d" ? "4 días" : "3 días"}
-                </Btn>
-              ))}
+            <div className="rounded-lg bg-secondary p-3 text-sm font-semibold text-foreground">
+              4 días consecutivos
             </div>
             <p className="mt-2 text-xs text-muted-foreground">
-              {pass === "4d" ? "344 € aprox. · recomendado" : "283 € aprox. · solo si optimizamos días"}
+              344 € aprox. · opción decidida (4-7 Oct)
             </p>
           </div>
         </div>
