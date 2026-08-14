@@ -29,28 +29,29 @@ const planBPrefix: any[] = [
     day: 1,
     date: "29 Sep (Martes)",
     route: "Málaga → Barcelona",
-    title: "Inicio del Gran Tour · Tren Iryo a Barcelona",
+    title: "Inicio del Gran Tour · AVE de Renfe a Barcelona",
     image: "/images/dia-barcelona.jpg",
     alt: "Vista aérea de Barcelona con la Sagrada Familia",
-    tags: ["Tren Iryo", "Barrio de Gracia", "104 €/pers."],
+    tags: ["AVE Renfe", "Barrio de Gracia", "Llegada nocturna"],
     highlights:
-      "Arranca la expedición en clave ferroviaria. Tren Iryo desde Málaga María Zambrano hasta Barcelona Sants — 6h 39min cómodos, con maleta facturada incluida. Llegada al apartamento en el barrio de Gracia para descansar antes del primer paseo nocturno.",
+      "Arranca la expedición en clave ferroviaria. AVE de Renfe desde Málaga María Zambrano hasta Barcelona Sants, saliendo a las 15:50 y llegando a las 23:00. Al llegar, directos al apartamento del barrio de Gracia (metro o Uber) para descansar: no hay plan nocturno.",
     sections: [
       {
-        title: "🚄 Tren Iryo Málaga → Barcelona",
+        title: "🚄 AVE Renfe Málaga → Barcelona",
         content: [
-          "Salida: 11:34 desde Málaga María Zambrano",
-          "Llegada: 18:13 a Barcelona Sants",
-          "Duración: 6h 39min · maleta 23 kg incluida",
-          "Precio: 65 €/persona (tarifa cotizada; reconfirmar condiciones de equipaje al comprar)",
+          "Salida: 15:50 desde Málaga María Zambrano",
+          "Llegada: 23:00 a Barcelona Sants",
+          "Duración: ~7h 10min · maleta incluida",
+          "Precio: 65 €/persona (tarifa cotizada; reconfirmar condiciones al comprar)",
         ],
       },
       {
-        title: "🏙️ Llegada a Barcelona",
+        title: "🏙️ Llegada a Barcelona (23:00)",
         content: [
-          "Check-in en Barcelona Classic Gracia Apartments (calle de l'Or, parada Fontana L3)",
-          "20:30 · Cena local en Gràcia: Plaça del Sol o Plaça de la Virreina, a 5 min andando — terrazas auténticas y precios mucho mejores que en el centro turístico",
-          "Reservar lo justo para no madrugar al día siguiente",
+          "Sin plan nocturno: directos al alojamiento",
+          "Opción metro: L3 desde Barcelona Sants (transbordo en Passeig de Gràcia) hasta Fontana, al lado del apartamento — el metro funciona hasta pasada la medianoche",
+          "Opción Uber/taxi: ~12-18 € desde Sants hasta Gràcia (más cómodo con maletas y siendo 6)",
+          "Check-in en Barcelona Classic Gracia Apartments (calle de l'Or) · avisar al anfitrión de la llegada tardía",
         ],
       },
       {
@@ -86,7 +87,7 @@ const planBPrefix: any[] = [
         ],
       },
     ],
-    tip: "💡 Comprobad los billetes Iryo con 2 meses de antelación: a esos precios se agotan rápido.",
+    tip: "💡 Comprad los billetes del AVE con 2 meses de antelación: a esos precios se agotan rápido. Al llegar a las 23:00, dejad decidido de antemano si bajáis en metro o pedís Uber.",
 
   },
 
@@ -286,98 +287,6 @@ const planBPrefix: any[] = [
 
 ];
 
-// Días específicos del Plan A: 2 noches en Ginebra antes de subir a los Alpes
-const planAGenevaPrefix: any[] = [
-  {
-    day: 1,
-    date: "2 Oct (Vie)",
-    route: "Málaga → Ginebra",
-    title: "Vuelo SWISS a Ginebra y tarde libre",
-    image: "/images/dia1-ginebra-kandersteg.jpg",
-    alt: "Jet d'Eau de Ginebra al atardecer con el Lago Lemán",
-    tags: ["Vuelo SWISS directo", "Llegada mediodía", "Nonanteneuf · 2 noches"],
-    highlights:
-      "Arranca la expedición sin madrugones. Vuelo directo de SWISS desde Málaga a Ginebra en 2h 20min, llegada a mediodía y tarde libre para descubrir la ciudad sin prisas antes de descansar en el apart-hotel junto al aeropuerto.",
-    sections: [
-      {
-        title: "✈️ Vuelo SWISS AGP → GVA",
-        content: [
-          "Salida: 09:40 desde Málaga (AGP)",
-          "Llegada: 12:00 a Ginebra (GVA) · 2h 20min",
-          "Maleta facturada 23 kg incluida (perfil Senior · 189 €)",
-          "Sin maleta (perfil Junior · 150 €)",
-        ],
-      },
-      {
-        title: "🚆 Traslado aeropuerto → hotel",
-        content: [
-          "Geneva Transport Card: debería llegar digital por email hasta 3 días antes; si no llega, pedirla al hotel antes de pagar transporte",
-          "Tren / tranvía directo hasta la zona de Étang (~15-20 min)",
-          "Check-in en Nonanteneuf Appart Hôtel y descanso",
-        ],
-      },
-      {
-        title: "🌆 Tarde libre en Ginebra",
-        content: [
-          "Paseo por la Vieille Ville y Catedral de Saint-Pierre",
-          "Foto en el Jet d'Eau (chorro de 140 m sobre el Lago Lemán)",
-          "Reloj de las Flores en el Jardin Anglais",
-          "Cena ligera junto al lago",
-        ],
-      },
-      {
-        title: "🏨 Alojamiento en Ginebra (2 noches · 2-4 Oct)",
-        content: [
-          "Hotel: Nonanteneuf Appart Hôtel Genève Étang · Airport",
-          "Precio: 126 €/persona (2 noches)",
-          "Apartamentos con cocina · junto al aeropuerto y transporte público directo al centro",
-          "🔗 Reserva: https://www.booking.com/hotel/ch/nonanteneuf-geneve-etang-airport-contactless-check-in.es.html",
-        ],
-      },
-    ],
-    tip: "💡 La Geneva Transport Card es gratuita para todos los huéspedes de hoteles en Ginebra y cubre tranvía, bus y tren urbanos durante toda la estancia.",
-  },
-  {
-    day: 2,
-    date: "3 Oct (Sáb)",
-    route: "Ginebra (día completo)",
-    title: "Día completo en Ginebra · Lago Lemán y diplomacia",
-    image: "/images/dia1-ginebra-kandersteg.jpg",
-    alt: "Vista panorámica del Lago Lemán y la ciudad de Ginebra",
-    tags: ["Vieille Ville", "Lago Lemán", "Naciones Unidas", "Museos"],
-    highlights:
-      "Día completo para descubrir Ginebra a fondo antes del bloque alpino. Mañana cultural en el casco histórico, mediodía junto al lago y tarde a elegir entre los museos del barrio internacional o un crucero corto por el Lemán.",
-    sections: [
-      {
-        title: "🌅 Mañana — Vieille Ville",
-        content: [
-          "09:30 · Subida a la Catedral de Saint-Pierre (torre con vistas)",
-          "10:30 · Muro de los Reformadores en el Parc des Bastions",
-          "11:30 · Place du Bourg-de-Four (la plaza más antigua)",
-          "13:00 · Comida en una brasserie del casco antiguo",
-        ],
-      },
-      {
-        title: "🚢 Mediodía — Lago Lemán",
-        content: [
-          "Mini-crucero CGN por la rada (1h) solo si activamos el Swiss Travel Pass ese día; si no, mejor Mouettes con Geneva Transport Card o pagar aparte",
-          "Paseo por el Quai du Mont-Blanc",
-          "Reloj de las Flores y Jardin Anglais",
-        ],
-      },
-      {
-        title: "🌍 Tarde — Barrio internacional (a elegir)",
-        content: [
-          "Opción A: Palacio de las Naciones (ONU) · visita guiada con reserva previa",
-          "Opción B: Museo Internacional de la Cruz Roja (CICR) · muy didáctico",
-          "Opción C: Museo Patek Philippe · relojería suiza de lujo",
-          "Cierre del día: cena junto al lago al atardecer",
-        ],
-      },
-    ],
-    tip: "💡 Reservad la visita al Palacio de la ONU con varios días de antelación: las plazas son limitadas y hay que llevar el pasaporte.",
-  },
-];
 
 const days: any[] = [
   {
@@ -812,17 +721,6 @@ const planBBernRainy: any = {
 
 
 // Fechas reasignadas por plan para los días base (D1-D8): empiezan el 4 Oct
-const planADates = [
-  "4 Oct (Dom)",
-  "5 Oct (Lun)",
-  "6 Oct (Mar)",
-  "7 Oct (Mié)",
-  "8 Oct (Jue)",
-  "9 Oct (Vie)",
-  "10 Oct (Sáb)",
-  "11 Oct (Dom)",
-];
-
 const planBBaseDates = [
   "4 Oct (Dom)",
   "5 Oct (Lun)",
@@ -853,8 +751,8 @@ export default function ItinerarySection() {
   ];
 
   const baseDays: any[] = days.map((d: any, i: number) => {
-    const next: any = { ...d, date: plan === "A" ? planADates[i] : planBBaseDates[i] };
-    if (i === 0 && plan === "B") {
+    const next: any = { ...d, date: planBBaseDates[i] };
+    if (i === 0) {
       next.sections = [...planBDay1Extra, ...(d.sections ?? [])];
     }
     return next;
@@ -862,24 +760,16 @@ export default function ItinerarySection() {
 
 
   const planBDays = [...baseDays];
-  if (plan === "B") {
-    // Insertar módulo Bern (Plan B por lluvia) justo después del día del Lago de Brienz (base day index 2)
-    planBDays.splice(3, 0, planBBernRainy);
-  }
+  // Insertar módulo Bern (Plan B por lluvia) justo después del día del Lago de Brienz (base day index 2)
+  planBDays.splice(3, 0, planBBernRainy);
 
-  const displayDays: any[] =
-    plan === "A"
-      ? [...planAGenevaPrefix, ...baseDays].map((d: any, i: number) => ({ ...d, day: i + 1 }))
-      : [...planBPrefix, ...planBDays].map((d: any, i: number) => ({ ...d, day: i + 1 }));
+  const displayDays: any[] = [...planBPrefix, ...planBDays].map((d: any, i: number) => ({ ...d, day: i + 1 }));
 
 
 
 
 
-  const heading =
-    plan === "A"
-      ? `Plan A · 10 días · 2-11 Oct 2026`
-      : `Plan B · 13 días · 29 Sep-11 Oct 2026`;
+  const heading = `Gran Tour Ferroviario · 13 días · 29 Sep-11 Oct 2026`;
 
   return (
     <section id="itinerario" className="section-padding" aria-label="Itinerario completo">

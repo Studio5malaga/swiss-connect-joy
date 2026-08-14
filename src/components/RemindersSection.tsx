@@ -56,7 +56,7 @@ const DEFAULT_ITEMS: Item[] = [
   },
   {
     id: "nonanteneuf",
-    title: "Nonanteneuf Appart Hôtel (Plan A) — cancelación gratuita hasta",
+    title: "Hôtel Astoria (Ginebra) — cancelación gratuita hasta",
     category: "Alojamiento",
     date: "2026-09-30",
     note: "Check-in 2 Oct. Confirmar condiciones exactas en Booking.",
@@ -116,7 +116,7 @@ const DEFAULT_ITEMS: Item[] = [
     title: "Reservar Swiss Travel Pass",
     category: "Suiza",
     date: "2026-07-29",
-    note: "Precio oficial 2026 adulto 2ª clase: 4 días CHF 309 (~344 €) / 3 días CHF 254 (~283 €). No suele tener precio dinámico; comprar antes de salir.",
+    note: "Precio oficial 2026 adulto 2ª clase: 4 días CHF 309 (~344 €). No suele tener precio dinámico; comprar antes de salir.",
     done: false,
   },
   {
