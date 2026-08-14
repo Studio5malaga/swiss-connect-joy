@@ -734,7 +734,7 @@ const planBBaseDates = [
 
 export default function ItinerarySection() {
   const [expandedDay, setExpandedDay] = useState<number | null>(null);
-  const { plan } = usePlan();
+  usePlan();
 
   const planBDay1Extra = [
     {
