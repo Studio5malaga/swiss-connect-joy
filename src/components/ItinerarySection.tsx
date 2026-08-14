@@ -29,28 +29,29 @@ const planBPrefix: any[] = [
     day: 1,
     date: "29 Sep (Martes)",
     route: "Málaga → Barcelona",
-    title: "Inicio del Gran Tour · Tren Iryo a Barcelona",
+    title: "Inicio del Gran Tour · AVE de Renfe a Barcelona",
     image: "/images/dia-barcelona.jpg",
     alt: "Vista aérea de Barcelona con la Sagrada Familia",
-    tags: ["Tren Iryo", "Barrio de Gracia", "104 €/pers."],
+    tags: ["AVE Renfe", "Barrio de Gracia", "Llegada nocturna"],
     highlights:
-      "Arranca la expedición en clave ferroviaria. Tren Iryo desde Málaga María Zambrano hasta Barcelona Sants — 6h 39min cómodos, con maleta facturada incluida. Llegada al apartamento en el barrio de Gracia para descansar antes del primer paseo nocturno.",
+      "Arranca la expedición en clave ferroviaria. AVE de Renfe desde Málaga María Zambrano hasta Barcelona Sants, saliendo a las 15:50 y llegando a las 23:00. Al llegar, directos al apartamento del barrio de Gracia (metro o Uber) para descansar: no hay plan nocturno.",
     sections: [
       {
-        title: "🚄 Tren Iryo Málaga → Barcelona",
+        title: "🚄 AVE Renfe Málaga → Barcelona",
         content: [
-          "Salida: 11:34 desde Málaga María Zambrano",
-          "Llegada: 18:13 a Barcelona Sants",
-          "Duración: 6h 39min · maleta 23 kg incluida",
-          "Precio: 65 €/persona (tarifa cotizada; reconfirmar condiciones de equipaje al comprar)",
+          "Salida: 15:50 desde Málaga María Zambrano",
+          "Llegada: 23:00 a Barcelona Sants",
+          "Duración: ~7h 10min · maleta incluida",
+          "Precio: 65 €/persona (tarifa cotizada; reconfirmar condiciones al comprar)",
         ],
       },
       {
-        title: "🏙️ Llegada a Barcelona",
+        title: "🏙️ Llegada a Barcelona (23:00)",
         content: [
-          "Check-in en Barcelona Classic Gracia Apartments (calle de l'Or, parada Fontana L3)",
-          "20:30 · Cena local en Gràcia: Plaça del Sol o Plaça de la Virreina, a 5 min andando — terrazas auténticas y precios mucho mejores que en el centro turístico",
-          "Reservar lo justo para no madrugar al día siguiente",
+          "Sin plan nocturno: directos al alojamiento",
+          "Opción metro: L3 desde Barcelona Sants (transbordo en Passeig de Gràcia) hasta Fontana, al lado del apartamento — el metro funciona hasta pasada la medianoche",
+          "Opción Uber/taxi: ~12-18 € desde Sants hasta Gràcia (más cómodo con maletas y siendo 6)",
+          "Check-in en Barcelona Classic Gracia Apartments (calle de l'Or) · avisar al anfitrión de la llegada tardía",
         ],
       },
       {
