@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarjetas para Viajar a Suiza: Imagin vs BBVA vs N26</title>
+<meta name="description" content="Comparativa de tarjetas para viajar a Suiza: comisiones en pagos y cajeros de Imagin, BBVA y N26, y la regla de oro de pagar siempre en CHF.">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); min-height:100vh; padding:20px; }
+.container { max-width:1200px; margin:0 auto; }
+header { text-align:center; color:white; margin-bottom:40px; animation:slideDown .6s ease-out; }
+header h1 { font-size:2.5em; margin-bottom:10px; text-shadow:2px 2px 4px rgba(0,0,0,.3); }
+header .flag { font-size:3em; margin:10px 0; }
+.comparison { display:grid; grid-template-columns:1fr 1fr 1fr; gap:30px; margin-bottom:40px; align-items:start; }
+.card { background:white; border-radius:15px; padding:30px; box-shadow:0 10px 40px rgba(0,0,0,.2); transition:transform .3s ease, box-shadow .3s ease; }
+.card:hover { transform:translateY(-5px); box-shadow:0 15px 50px rgba(0,0,0,.3); }
+.card.winner { border:4px solid #FFD700; background:linear-gradient(to bottom,#fffef5,white); position:relative; }
+.winner-badge { position:absolute; top:-15px; left:50%; transform:translateX(-50%); background:#FFD700; color:#333; padding:8px 20px; border-radius:30px; font-weight:bold; font-size:.9em; box-shadow:0 4px 10px rgba(255,215,0,.4); }
+.bank-header { display:flex; align-items:center; margin-bottom:25px; padding-bottom:15px; border-bottom:2px solid #eee; }
+.bank-icon { font-size:2.5em; margin-right:15px; }
+.bank-header h2 { color:#333; font-size:1.8em; }
+.feature { margin-bottom:15px; padding-bottom:15px; border-bottom:1px solid #eee; }
+.feature:last-child { border-bottom:none; margin-bottom:0; padding-bottom:0; }
+.feature-title { font-weight:600; color:#333; margin-bottom:8px; font-size:1.1em; }
+.feature-description { color:#666; font-size:.95em; line-height:1.5; }
+.checkmark { color:#27ae60; font-weight:bold; margin-right:8px; }
+.warning-box { background:#fff3cd; border-left:5px solid #ffc107; border-radius:8px; padding:25px; margin:40px 0; animation:slideUp .6s ease-out .3s both; }
+.warning-box h3 { color:#856404; margin-bottom:15px; display:flex; align-items:center; font-size:1.3em; }
+.warning-box h3::before { content:"⚠️"; margin-right:10px; font-size:1.2em; }
+.warning-box p { color:#856404; line-height:1.8; margin-bottom:10px; }
+.warning-box .rule { background:#ffe69c; padding:15px; border-radius:8px; margin-top:15px; font-weight:600; }
+.conclusion { background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); color:white; border-radius:15px; padding:30px; text-align:center; animation:slideUp .6s ease-out .6s both; }
+.conclusion h3 { font-size:1.5em; margin-bottom:15px; }
+.conclusion p { font-size:1.1em; line-height:1.8; margin-bottom:10px; }
+.emoji-large { font-size:2em; margin:15px 0; }
+.age-sections { margin-top:20px; }
+.age-section { background:#f8f9fa; padding:15px; border-radius:8px; margin-bottom:15px; border-left:4px solid #667eea; }
+.age-section:last-child { margin-bottom:0; }
+.age-section-title { font-weight:700; color:#667eea; margin-bottom:8px; font-size:1em; }
+.back-link { display:inline-block; margin-bottom:20px; color:white; text-decoration:none; font-weight:600; background:rgba(255,255,255,.15); padding:8px 16px; border-radius:30px; }
+@keyframes slideDown { from { opacity:0; transform:translateY(-30px); } to { opacity:1; transform:translateY(0); } }
+@keyframes slideUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
+@media (max-width:1024px) { .comparison { grid-template-columns:1fr 1fr; } }
+@media (max-width:768px) {
+  .comparison { grid-template-columns:1fr; }
+  header h1 { font-size:1.8em; }
+  header .flag { font-size:2.5em; }
+  .card { padding:20px; }
+  .bank-header h2 { font-size:1.4em; }
+  .warning-box { padding:20px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <a class="back-link" href="/">← Volver al plan de viaje</a>
+  <header>
+    <div class="flag">🇨🇭</div>
+    <h1>Resumen para Viajar a Suiza</h1>
+    <p style="font-size:1.2em; margin-top:10px;">Imagin vs BBVA vs N26</p>
+  </header>
+
+  <div class="comparison">
+    <div class="card winner">
+      <div class="winner-badge">🏆 GANADORA</div>
+      <div class="bank-header"><div class="bank-icon">🏦</div><h2>Imagin Bank</h2></div>
+      <div class="feature">
+        <div class="feature-title"><span class="checkmark">✅</span>Pagos con tarjeta</div>
+        <div class="feature-description">0% comisión (ilimitado)</div>
+      </div>
+      <div class="feature">
+        <div class="feature-title"><span class="checkmark">✅</span>Sacar efectivo</div>
+        <div class="feature-description">0% comisión en cajeros extranjeros</div>
+      </div>
+      <div class="feature">
+        <div class="feature-title"><span class="checkmark">✅</span>Simplicidad</div>
+        <div class="feature-description">Es la más sencilla, gratis y sin letra pequeña</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="bank-header"><div class="bank-icon">🏢</div><h2>BBVA</h2></div>
+      <div class="feature">
+        <div class="feature-title">⚠️ Depende de tu edad</div>
+        <div class="feature-description">Las condiciones varían significativamente según tu edad</div>
+      </div>
+      <div class="age-sections">
+        <div class="age-section">
+          <div class="age-section-title">👶 Si tienes &lt; 30 años (Cuenta Joven)</div>
+          <div class="feature-description">
+            <span class="checkmark">✅</span>0% comisión en pagos sin límite<br>
+            <span class="checkmark">✅</span>0% comisión en cajeros sin límite<br>
+            <span style="color:#27ae60;">→ Igual de buena que Imagin</span>
+          </div>
+        </div>
+        <div class="age-section">
+          <div class="age-section-title">👴 Si tienes ≥ 30 años</div>
+          <div class="feature-description">
+            <span style="color:#e74c3c;">❌</span>0% en compras solo hasta 300€/mes (luego cobra 3%)<br>
+            <span style="color:#e74c3c;">❌</span>Sacar efectivo: 4,5% (mín. 3,50€)<br>
+            <span style="font-size:.9em; color:#666;">💡 A menos que pagues por "Pack Viajes" en la app</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="bank-header"><div class="bank-icon">📱</div><h2>N26</h2></div>
+      <div class="feature">
+        <div class="feature-title"><span class="checkmark">✅</span>Pagos con tarjeta</div>
+        <div class="feature-description">0% comisión (ilimitado, con tasa real Mastercard)</div>
+      </div>
+      <div class="feature">
+        <div class="feature-title">⚠️ Sacar efectivo (plan importante)</div>
+        <div class="feature-description">Depende de tu tipo de cuenta</div>
+      </div>
+      <div class="age-sections">
+        <div class="age-section">
+          <div class="age-section-title">🆓 N26 Estándar (gratuito)</div>
+          <div class="feature-description">
+            <span style="color:#f39c12;">⚠️</span>1,7% comisión por retiros<br>
+            <span style="font-size:.9em; color:#666;">Pero pagos sin comisión</span>
+          </div>
+        </div>
+        <div class="age-section">
+          <div class="age-section-title">💎 N26 Go/Metal (pago)</div>
+          <div class="feature-description">
+            <span class="checkmark">✅</span>0% comisión en retiros<br>
+            <span class="checkmark">✅</span>0% comisión en pagos<br>
+            <span style="font-size:.9em; color:#27ae60;">→ Similar a Imagin</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="warning-box">
+    <h3>Regla de Oro en Suiza (¡Muy importante!)</h3>
+    <p>Al pagar o sacar dinero en un cajero, la máquina te preguntará si quieres que te cobren en <strong>Euros (EUR)</strong> o en <strong>Francos Suizos (CHF)</strong>.</p>
+    <div class="rule">🛑 Elige SIEMPRE CHF (moneda local)</div>
+    <p style="margin-top:15px;">Si eliges Euros, el cajero aplicará su propio tipo de cambio (pésimo) y <strong>perderás entre un 3% y un 7% extra</strong> en esa operación.</p>
+  </div>
+
+  <div class="conclusion">
+    <h3>💡 Conclusión Final</h3>
+    <p>Las mejores opciones son <strong>Imagin, N26 Go/Metal, o BBVA Joven</strong>.</p>
+    <p>Si quieres la opción más sencilla sin pagar nada: <strong>Imagin</strong></p>
+    <p>Si usas frecuentemente bancos digitales: <strong>N26 Go/Metal</strong> (pago anual pero compensa en viajes)</p>
+    <p><strong>¡Y lo más importante: paga siempre en CHF, nunca en EUR!</strong></p>
+    <div class="emoji-large">✈️🏔️</div>
+    <p style="font-size:1.3em; margin-top:20px;"><strong>¡Buen viaje a Suiza!</strong></p>
+  </div>
+</div>
+</body>
+</html>
