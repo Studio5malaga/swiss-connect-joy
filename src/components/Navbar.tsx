@@ -29,8 +29,8 @@ export default function Navbar() {
           <a href="https://imaginative-dango-1afdc9.netlify.app/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg border border-primary px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/10 transition-opacity">
             🧳 MALETAS
           </a>
-          <a href="/tarjetas.html" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg border border-accent px-4 py-2 text-sm font-semibold text-accent hover:bg-accent/10 transition-opacity">
-            💳 TARJETAS
+          <a href="https://6a84a13b7c887ddd38f1f4c5--stupendous-sopapillas-01729c.netlify.app/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg border border-accent px-4 py-2 text-sm font-semibold text-accent hover:bg-accent/10 transition-opacity">
+            💳 Cómo pagar en Suiza
           </a>
 
           <a href={guiaViaje.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground hover:opacity-90 transition-opacity">
