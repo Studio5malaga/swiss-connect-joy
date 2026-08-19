@@ -49,8 +49,8 @@ export default function Navbar() {
           <a href="https://imaginative-dango-1afdc9.netlify.app/" target="_blank" rel="noopener noreferrer" className="mt-2 block rounded-lg border border-primary px-4 py-2 text-center text-sm font-semibold text-primary">
             🧳 MALETAS
           </a>
-          <a href="https://claude.ai/public/artifacts/f2cd578f-7401-4565-8320-1b6a4a6a943c" target="_blank" rel="noopener noreferrer" className="mt-2 block rounded-lg border border-accent px-4 py-2 text-center text-sm font-semibold text-accent">
-            🗺️ GUÍA EXTRA
+          <a href="https://6a84a13b7c887ddd38f1f4c5--stupendous-sopapillas-01729c.netlify.app/" target="_blank" rel="noopener noreferrer" className="mt-2 block rounded-lg border border-accent px-4 py-2 text-center text-sm font-semibold text-accent">
+            💳 Cómo pagar en Suiza
           </a>
           <a href={guiaViaje.url} target="_blank" rel="noopener noreferrer" className="mt-2 block rounded-lg bg-primary px-4 py-2 text-center text-sm font-semibold text-primary-foreground">
             📥 Descargar Plan
