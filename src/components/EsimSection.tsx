@@ -1,3 +1,5 @@
+import nineEsimLogo from "../assets/9esim-logo.svg.asset.json";
+
 export default function EsimSection() {
   return (
     <section id="esim" className="section-padding bg-surface" aria-label="Conectividad eSIM">
@@ -88,6 +90,34 @@ export default function EsimSection() {
               </tr>
             </tbody>
           </table>
+        </div>
+
+        {/* 9eSIM */}
+        <div className="mt-10 rounded-2xl border border-border bg-card p-6 shadow-sm">
+          <a
+            href="https://www.9esim.com/es"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 rounded-xl border border-border bg-secondary/40 px-5 py-3 hover:shadow-md transition-shadow"
+            aria-label="Ir a la web de 9eSIM"
+          >
+            <img src={nineEsimLogo.url} alt="Logo de 9eSIM" className="h-10 w-auto" loading="lazy" />
+            <span className="text-sm font-bold text-foreground">Ver 9eSIM ↗</span>
+          </a>
+
+          <h3 className="mt-5 text-lg font-bold text-foreground">
+            Solución 9eSIM para móviles sin eSIM: una SIM física con superpoderes
+          </h3>
+          <p className="mt-3 text-sm text-muted-foreground">El concepto es simple pero genial:</p>
+          <p className="mt-3 text-sm text-foreground">
+            <strong>1. Es una SIM física:</strong> la insertas en la ranura para SIM de tu teléfono como cualquier otra tarjeta. Por lo tanto, no necesitas que tu móvil sea compatible con eSIM, solo necesita tener un lector de tarjetas SIM estándar.
+          </p>
+          <p className="mt-4 text-sm text-foreground">En resumen, 9eSIM es la solución perfecta si:</p>
+          <ul className="mt-2 space-y-2 text-sm text-muted-foreground">
+            <li>· Tu móvil no tiene eSIM de fábrica.</li>
+            <li>· Viajas a menudo y quieres contratar datos locales en cada país.</li>
+            <li>· Quieres evitar el engorro de cambiar de SIM física en cada destino.</li>
+          </ul>
         </div>
 
         <div className="mt-6 rounded-xl bg-primary/5 border border-primary/20 p-4 text-sm text-foreground">
