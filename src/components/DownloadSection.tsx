@@ -14,7 +14,7 @@ export default function DownloadSection() {
         >
           📥 Descargar PLANDEVIAJE (PDF)
         </a>
-        <p className="mt-4 text-xs text-primary-foreground/60">GuiaViaje.pdf · Edición 17 jul 2026 · Idioma: Español</p>
+        <p className="mt-4 text-xs text-primary-foreground/60">GuiaViaje.pdf · Edición 19 ago 2026 · Idioma: Español</p>
       </div>
     </section>
   );
