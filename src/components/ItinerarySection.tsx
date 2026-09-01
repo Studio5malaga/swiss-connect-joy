@@ -877,6 +877,11 @@ export default function ItinerarySection() {
 
                   {isExpanded && (
                     <div className="mt-4 space-y-4 fade-in">
+                      {d.warning && (
+                        <div className="rounded-xl border-2 border-destructive/50 bg-destructive/10 p-4">
+                          <p className="text-sm font-semibold text-foreground leading-relaxed">⚠️ {d.warning}</p>
+                        </div>
+                      )}
                       {d.sections?.map((sec: any, i: number) => (
                         <div key={i} className="rounded-xl bg-surface/80 p-4">
                           <h4 className="text-sm font-bold text-foreground mb-2">{sec.title}</h4>
