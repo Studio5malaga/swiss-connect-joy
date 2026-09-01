@@ -1,4 +1,5 @@
 import { usePlan } from "../context/PlanContext";
+import airbnbBarcelona from "../assets/airbnb-barcelona.jpg.asset.json";
 
 type Lodging = {
   name: string;
@@ -13,12 +14,18 @@ type Lodging = {
 
 const accommodations: Lodging[] = [
   {
-    name: "Barcelona Classic Gracia Apartments",
-    location: "Barcelona, España 🇪🇸",
-    type: "Apartamento · 2 noches (29 Sep–1 Oct)",
-    image: "/images/loja-barcelona.jpg",
-    alt: "Apartamento en el barrio de Gracia, Barcelona",
-    features: ["Apartamento céntrico en Gracia", "104 €/persona", "Cerca de Sagrada Familia", "Cocina equipada"],
+    name: "Apartamento Passatge Nogués (Gràcia)",
+    location: "Passatge Nogués, 61, 1º · 08025 Barcelona, España 🇪🇸",
+    type: "Airbnb · anfitrión Roberto · 2 noches (29 Sep–1 Oct)",
+    image: airbnbBarcelona.url,
+    alt: "Salón-comedor del apartamento Airbnb en Passatge Nogués, Gràcia, Barcelona",
+    features: [
+      "Apartamento céntrico en Gràcia, cerca de la Sagrada Familia",
+      "Check-in desde las 16:00 (self check-in; llegada real ≈23:00)",
+      "Check-out: jueves 1 de octubre, 10:00",
+      "Reserva: HM48AZMHYN",
+      "Contacto: mensajería de la app de Airbnb — confirmar el procedimiento de acceso antes del 29 de septiembre",
+    ],
     plans: ["B"],
     emoji: "🏙️",
   },
@@ -102,6 +109,16 @@ export default function AccommodationSection() {
         <p className="mx-auto mt-3 max-w-2xl text-center text-muted-foreground">
           5 alojamientos a lo largo del Gran Tour Ferroviario: Barcelona, Lyon, Ginebra, Kandersteg y Gengenbach.
         </p>
+
+        <div className="mx-auto mt-6 max-w-3xl rounded-xl border-2 border-destructive/50 bg-destructive/10 p-4 text-sm text-foreground">
+          <p className="font-bold text-destructive">⚠️ AVISO · RUIDO EN LOS ALOJAMIENTOS</p>
+          <p className="mt-1">
+            Barcelona vive un conflicto social por la vivienda turística, con bastante tensión vecinal. En todos los
+            alojamientos del viaje avisan de sensores de ruido muy sensibles: lo mínimo puede generar un aviso al
+            anfitrión o incluso una llamada a la policía. Extremar el silencio siempre, sobre todo en la llegada
+            nocturna a Barcelona (≈23:00) y en zonas comunes de los edificios.
+          </p>
+        </div>
 
         <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {visible.map((a) => (

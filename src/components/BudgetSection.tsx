@@ -43,7 +43,7 @@ function buildBreakdown(profile: "senior" | "junior"): {
 
   // Alojamiento (precios por persona; basado en grupo de 6)
   const lodging: Row[] = [
-    { concept: "Barcelona · Classic Gracia Apartments (2 noches)", amount: 103.83 },
+    { concept: "Barcelona · Apartamento Passatge Nogués, Airbnb (2 noches)", amount: 103.83 },
     { concept: "Lyon · Appartement Vieux Lyon Terrasse (2 noches)", amount: 97.17, note: "+33 7 68 10 83 88" },
     { concept: "Ginebra · Hôtel Astoria (1 noche)", amount: 93.83, note: "+41 22 544 52 52" },
     { concept: "Kandersteg · Chalet-Hotel Adler (3 noches)", amount: 119.5, note: "+41 33 655 60 80" },

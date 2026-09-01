@@ -22,7 +22,7 @@ const linkGroups = [
     links: [
             { label: "Hôtel Astoria · Ginebra (Plan B)", url: "https://www.astoria-geneva.com/" },
       { label: "Appartement Vieux Lyon Terrasse · Lyon", url: "https://www.booking.com/searchresults.html?ss=Vieux+Lyon" },
-      { label: "Gracia Classic Apartments · Barcelona", url: "https://www.booking.com/searchresults.html?ss=Gracia+Classic+Apartments+Barcelona" },
+      { label: "Airbnb · Apartamento Passatge Nogués · Barcelona (reserva HM48AZMHYN)", url: "https://www.airbnb.es/trips/v1/reservation-details/ro/RESERVATION2_CHECKIN/HM48AZMHYN" },
       { label: "Chalet alpino · Kandersteg", url: "https://www.airbnb.com/s/Kandersteg--Switzerland" },
     ],
   },
