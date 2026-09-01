@@ -8,6 +8,7 @@ import audioLogo5 from "../assets/audio-logo-5.png.asset.json";
 import audioLogo6 from "../assets/audio-logo-6.png.asset.json";
 import einsteinLogo from "../assets/einstein.jpg.asset.json";
 import spanishMapPdf from "../assets/spanish.pdf.asset.json";
+import parcCiutadella from "../assets/parc-ciutadella.jpg.asset.json";
 
 const AUDIO = {
   mytoursBcn: { img: audioLogo1.url, label: "AUDIOGUÍA", url: "https://mytours.city/es-barcelona/", alt: "mytours.city" },
