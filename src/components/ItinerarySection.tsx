@@ -52,7 +52,8 @@ const planBPrefix: any[] = [
           "Sin plan nocturno: directos al alojamiento",
           "Opción metro: L3 desde Barcelona Sants (transbordo en Passeig de Gràcia) hasta Fontana, al lado del apartamento — el metro funciona hasta pasada la medianoche",
           "Opción Uber/taxi: ~12-18 € desde Sants hasta Gràcia (más cómodo con maletas y siendo 6)",
-          "Check-in en Barcelona Classic Gracia Apartments (calle de l'Or) · avisar al anfitrión de la llegada tardía",
+          "Self check-in en el Apartamento Passatge Nogués, 61, 1º (Gràcia) · Airbnb, reserva HM48AZMHYN · avisar al anfitrión Roberto por la mensajería de la app de la llegada tardía",
+          "⚠️ Ruido: llegada nocturna (≈23:00) — máximo silencio en el portal y zonas comunes; hay sensores de ruido muy sensibles",
         ],
       },
       {

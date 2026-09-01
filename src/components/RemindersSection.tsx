@@ -40,10 +40,10 @@ const DEFAULT_ITEMS: Item[] = [
   },
   {
     id: "bcn-apartment",
-    title: "Barcelona Classic Gracia Apartments — cancelación gratuita hasta",
+    title: "Apartamento Passatge Nogués (Airbnb · reserva HM48AZMHYN)",
     category: "Alojamiento",
-    date: "2026-09-14",
-    note: "Check-in 29 Sep. Pasada esta fecha se cobra si se cancela.",
+    date: "2026-09-29",
+    note: "Check-in 29 Sep desde las 16:00 (self check-in, llegada ≈23:00). Contacto solo por la mensajería de Airbnb: confirmar con el anfitrión Roberto el procedimiento de acceso antes del 29 Sep. Check-out 1 Oct, 10:00.",
     done: false,
   },
   {
