@@ -101,41 +101,46 @@ const planBPrefix: any[] = [
     alt: "Calles del Barrio Gótico de Barcelona",
     tags: ["Sagrada Familia", "Barrio Gótico", "Mediterráneo"],
     highlights:
-      "Día completo para empaparse de Barcelona antes de subir a Francia. Mañana en la Sagrada Familia y Passeig de Gràcia (Gaudí), tarde por el Barrio Gótico y Born, y atardecer en la Barceloneta.",
+      "Día completo para empaparse de Barcelona antes de subir a Francia. Mañana por Passeig de Gràcia, las Ramblas y el Barrio Gótico; tarde con Born opcional, Sagrada Família por fuera y atardecer en los Bunkers del Carmel.",
+    warning:
+      "AVISO · CAMBIO DE ÚLTIMA HORA — El Parque del Laberinto de Horta permanece cerrado hasta principios de 2027: se elimina esa visita. El hueco se reparte en un almuerzo con más calma y un paseo opcional por el Born / Parc de la Ciutadella. El resto de la tarde (Sagrada Família, Turó de la Rovira y Bunkers, pensados para el atardecer) no cambia.",
     sections: [
       {
         title: "🌅 Mañana · Modernismo y Barrio Gótico",
         content: [
-          "09:00 · Paseo de Gracia a pie (La Pedrera y Casa Batlló desde la acera) hasta Plaza de Cataluña",
-          "10:15 · Las Ramblas y Mercado de La Boqueria (gratis)",
-          "11:15 · Barrio Gótico, Pont del Bisbe y Basílica de Santa Maria del Pi (entrada 4 €)",
-          "12:45 · Almuerzo rápido (menú del día o porciones de pizza)",
+          "09:00 · Passeig de Gràcia: La Pedrera y Casa Batlló desde el exterior; continuar hasta Plaça de Catalunya",
+          "10:15 · Las Ramblas y Mercado de La Boqueria",
+          "11:15 · Barrio Gótico, Pont del Bisbe y Santa Maria del Pi",
+          "12:45 · Almuerzo con más calma, sin prisas",
         ],
       },
       {
-        title: "🌳 Tarde · Laberinto + Sagrada Familia",
+        title: "🌳 Tarde · Born opcional + Sagrada Família",
         content: [
-          "13:30 · Metro L3 (Liceu/Catalunya) hasta Mundet (~15-20 min)",
-          "14:00 · Parque del Laberinto de Horta (entrada 2,23 €)",
-          "15:45 · Transbordo a L5 en Diagonal hasta Sagrada Família",
-          "16:30 · Sagrada Familia por fuera (gratis): rodea las fachadas del Nacimiento y la Pasión",
+          "14:15 · OPCIONAL: paseo por el Born hasta el Parc de la Ciutadella (cascada monumental y el lago). Si se prefiere, tiempo libre o vuelta al alojamiento a descansar",
+          "15:45 · Metro hasta Sagrada Família; vuelta exterior por las fachadas del Nacimiento y la Pasión",
         ],
       },
       {
         title: "🌇 Atardecer · Bunkers del Carmel",
         content: [
-          "17:45 · Bus V21 o metro L5 hasta Alfons X y subida al Turó de la Rovira",
-          "18:30-19:30 · Bunkers del Carmel (gratis) · panorámica 360° de Barcelona al atardecer (~19:35 h)",
-          "Importante: el recinto cierra puntualmente a las 19:30 h en horario de verano/septiembre",
+          "17:45 · Traslado al Turó de la Rovira",
+          "18:30 · Bunkers del Carmel y panorámica 360°. Cierre previsto del recinto: 19:30",
           "⚠️ Aviso logístico: el último tramo a la cima es una subida peatonal empinada con escaleras. Si se prefieren paseos llanos, cambiar Bunkers por una terraza con vistas en la parte alta de la ciudad",
-          "19:40 · Bus V17 de bajada directa hasta Gràcia, prácticamente en la puerta del apartamento",
+          "19:40 · Regreso a Gràcia en bus V17",
+        ],
+      },
+      {
+        title: "✅ Comprobar",
+        content: [
+          "Las entradas, cierres y obras pueden cambiar. Revisar el horario del Turó de la Rovira la víspera.",
         ],
       },
     ],
     tip: "💡 Reservad la Sagrada Familia con 3-4 semanas de antelación para asegurar horario y entrada con torres. La parada Fontana (L3) está al lado del apartamento — moveros siempre por metro.",
 
-    closingImage: "/images/barcelona2.png",
-    closingAlt: "Atardecer en el Parque Güell con vistas a la Sagrada Familia y al mar",
+    closingImage: parcCiutadella.url,
+    closingAlt: "Cascada monumental del Parc de la Ciutadella de Barcelona",
     audioButtons: [AUDIO.mytoursBcn],
 
   },
