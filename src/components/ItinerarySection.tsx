@@ -9,6 +9,7 @@ import audioLogo6 from "../assets/audio-logo-6.png.asset.json";
 import einsteinLogo from "../assets/einstein.jpg.asset.json";
 import spanishMapPdf from "../assets/spanish.pdf.asset.json";
 import parcCiutadella from "../assets/parc-ciutadella.jpg.asset.json";
+import MouettesGenevoises from "./MouettesGenevoises";
 
 const AUDIO = {
   mytoursBcn: { img: audioLogo1.url, label: "AUDIOGUÍA", url: "https://mytours.city/es-barcelona/", alt: "mytours.city" },
@@ -940,6 +941,8 @@ export default function ItinerarySection() {
                           </div>
                         </div>
                       )}
+
+                      {d.mouettes && <MouettesGenevoises />}
 
                       {d.tip && (
                         <div className="rounded-xl border border-accent/30 bg-accent/5 p-4">
