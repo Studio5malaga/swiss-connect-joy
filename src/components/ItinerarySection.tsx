@@ -9,6 +9,7 @@ import audioLogo6 from "../assets/audio-logo-6.png.asset.json";
 import einsteinLogo from "../assets/einstein.jpg.asset.json";
 import spanishMapPdf from "../assets/spanish.pdf.asset.json";
 import parcCiutadella from "../assets/parc-ciutadella.jpg.asset.json";
+import MouettesGenevoises from "./MouettesGenevoises";
 
 const AUDIO = {
   mytoursBcn: { img: audioLogo1.url, label: "AUDIOGUÍA", url: "https://mytours.city/es-barcelona/", alt: "mytours.city" },
@@ -270,7 +271,7 @@ const planBPrefix: any[] = [
           "16:30 · Bajada por Rue du Mont-Blanc hasta el Lago Lemán (~10 min)",
           "🔗 17:00 · Jet d'Eau (140 m): https://www.myswitzerland.com/es-es/descubrir-suiza/jet-deau-chorro-de-agua/",
           "🔗 Reloj de Flores (Jardin Anglais): https://www.geneva.info/flower-clock/",
-          "🔗 18:15 · Crucero Mouettes Genevoises (gratis con la tarjeta): https://www.mouettesgenevoises.com/",
+          "🔗 18:15 · Crucero Mouettes Genevoises (gratis con la tarjeta): https://www.mouettesgenevoises.ch",
           "🔗 Barrio de Les Grottes / «Edificios Pitufo» detrás del hotel: https://www.enelmundoperdido.com/les-grottes-el-barrio-pitufo-de-ginebra/",
           "🔗 Opcional · Bains des Pâquis (~2 CHF): https://www.myswitzerland.com/es-es/descubrir-suiza/bains-des-paquis-1/ — espigón sobre el lago, cantina barata",
           "🔗 Opcional · Catedral de Saint-Pierre (entrada libre, torres 5 CHF): https://www.cathedrale-geneve.ch/en/visit/",
@@ -288,7 +289,9 @@ const planBPrefix: any[] = [
       },
     ],
     tip: "💡 La Geneva Transport Card te llegará por email 3 días antes de la llegada con un formulario online. Una vez rellenado, recibes la tarjeta digital al instante. ¡No pagues cruceros turísticos cuando las Mouettes son gratis!",
+    mouettes: true,
     audioButtons: [AUDIO.mytoursGva],
+
 
   },
 
@@ -938,6 +941,8 @@ export default function ItinerarySection() {
                           </div>
                         </div>
                       )}
+
+                      {d.mouettes && <MouettesGenevoises />}
 
                       {d.tip && (
                         <div className="rounded-xl border border-accent/30 bg-accent/5 p-4">
