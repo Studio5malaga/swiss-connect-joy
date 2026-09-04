@@ -288,7 +288,9 @@ const planBPrefix: any[] = [
       },
     ],
     tip: "💡 La Geneva Transport Card te llegará por email 3 días antes de la llegada con un formulario online. Una vez rellenado, recibes la tarjeta digital al instante. ¡No pagues cruceros turísticos cuando las Mouettes son gratis!",
+    mouettes: true,
     audioButtons: [AUDIO.mytoursGva],
+
 
   },
 
