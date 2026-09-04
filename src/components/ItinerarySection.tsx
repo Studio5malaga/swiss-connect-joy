@@ -270,7 +270,7 @@ const planBPrefix: any[] = [
           "16:30 · Bajada por Rue du Mont-Blanc hasta el Lago Lemán (~10 min)",
           "🔗 17:00 · Jet d'Eau (140 m): https://www.myswitzerland.com/es-es/descubrir-suiza/jet-deau-chorro-de-agua/",
           "🔗 Reloj de Flores (Jardin Anglais): https://www.geneva.info/flower-clock/",
-          "🔗 18:15 · Crucero Mouettes Genevoises (gratis con la tarjeta): https://www.mouettesgenevoises.com/",
+          "🔗 18:15 · Crucero Mouettes Genevoises (gratis con la tarjeta): https://www.mouettesgenevoises.ch",
           "🔗 Barrio de Les Grottes / «Edificios Pitufo» detrás del hotel: https://www.enelmundoperdido.com/les-grottes-el-barrio-pitufo-de-ginebra/",
           "🔗 Opcional · Bains des Pâquis (~2 CHF): https://www.myswitzerland.com/es-es/descubrir-suiza/bains-des-paquis-1/ — espigón sobre el lago, cantina barata",
           "🔗 Opcional · Catedral de Saint-Pierre (entrada libre, torres 5 CHF): https://www.cathedrale-geneve.ch/en/visit/",
