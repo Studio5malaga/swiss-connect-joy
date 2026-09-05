@@ -385,6 +385,10 @@ const days: any[] = [
     ],
     savings: { label: "Ahorro Total Día 2", amount: "~90 €", detail: "Transporte y entradas cubiertos; reserva de asiento opcional" },
     audioButtons: [AUDIO.suiza2026],
+    guideButton: {
+      label: "Guía en español",
+      url: "https://www.chillon.ch/wp-content/uploads/2020/05/espagnol.pdf",
+    },
   },
   {
     day: 3,
@@ -862,6 +866,20 @@ export default function ItinerarySection() {
                           <span className="text-sm font-bold text-foreground tracking-wide">{btn.label}</span>
                         </a>
                       ))}
+                    </div>
+                  )}
+
+                  {d.guideButton && (
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      <a
+                        href={d.guideButton.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2 shadow-sm hover:shadow-md hover:border-accent transition-all"
+                      >
+                        <span className="text-lg" aria-hidden="true">📄</span>
+                        <span className="text-sm font-bold text-foreground tracking-wide">{d.guideButton.label}</span>
+                      </a>
                     </div>
                   )}
 
