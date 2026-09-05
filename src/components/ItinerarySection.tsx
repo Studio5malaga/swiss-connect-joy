@@ -385,6 +385,10 @@ const days: any[] = [
     ],
     savings: { label: "Ahorro Total Día 2", amount: "~90 €", detail: "Transporte y entradas cubiertos; reserva de asiento opcional" },
     audioButtons: [AUDIO.suiza2026],
+    guideButton: {
+      label: "Guía en español",
+      url: "https://www.chillon.ch/wp-content/uploads/2020/05/espagnol.pdf",
+    },
   },
   {
     day: 3,
