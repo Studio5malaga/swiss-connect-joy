@@ -869,6 +869,20 @@ export default function ItinerarySection() {
                     </div>
                   )}
 
+                  {d.guideButton && (
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      <a
+                        href={d.guideButton.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2 shadow-sm hover:shadow-md hover:border-accent transition-all"
+                      >
+                        <span className="text-lg" aria-hidden="true">📄</span>
+                        <span className="text-sm font-bold text-foreground tracking-wide">{d.guideButton.label}</span>
+                      </a>
+                    </div>
+                  )}
+
                   {d.savings && (
                     <div className="mt-3 inline-flex items-center gap-2 rounded-lg bg-secondary px-3 py-1.5 text-sm font-semibold text-secondary-foreground">
                       💰 {d.savings.label}: {d.savings.amount} — {d.savings.detail}
