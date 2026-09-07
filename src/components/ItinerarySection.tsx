@@ -10,6 +10,7 @@ import einsteinLogo from "../assets/einstein.jpg.asset.json";
 import spanishMapPdf from "../assets/spanish.pdf.asset.json";
 import parcCiutadella from "../assets/parc-ciutadella.jpg.asset.json";
 import MouettesGenevoises from "./MouettesGenevoises";
+import Day13ReturnModule from "./Day13ReturnModule";
 
 const AUDIO = {
   mytoursBcn: { img: audioLogo1.url, label: "AUDIOGUÍA", url: "https://mytours.city/es-barcelona/", alt: "mytours.city" },
@@ -686,6 +687,7 @@ const days: any[] = [
         ],
       },
     ],
+    custom: <Day13ReturnModule />,
     tip: "⚠️ Cuidado con la estación en Basilea: al venir de Alemania, algunos regionales paran primero en Basel Bad Bf. Para coger el bus 50 al aeropuerto más fácilmente, aseguraos de llegar hasta Basel SBB (o haced transbordo S-Bahn/regional válido, no ICE/IC). Haced el check-in online el día anterior para evitar colas.",
   },
 ];
@@ -966,6 +968,8 @@ export default function ItinerarySection() {
                       )}
 
                       {d.mouettes && <MouettesGenevoises />}
+
+                      {d.custom}
 
                       {d.tip && (
                         <div className="rounded-xl border border-accent/30 bg-accent/5 p-4">
