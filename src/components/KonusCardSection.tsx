@@ -37,6 +37,15 @@ export default function KonusCardSection() {
               💡 <strong>Ahorro estimado:</strong> La tarjeta KONUS nos ahorra entre 40-60€ por persona en transporte 
               durante los 3 días en la Selva Negra. ¡Solo por estar alojados en Villa Beckmann!
             </div>
+
+            <a
+              href="https://selvanegraturismo.com/konus-card-selva-negra/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-sm transition-all hover:shadow-md hover:opacity-90"
+            >
+              Más información sobre la KONUS
+            </a>
           </div>
 
           <div className="order-1 md:order-2 overflow-hidden rounded-2xl shadow-md">
