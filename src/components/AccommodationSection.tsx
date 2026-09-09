@@ -1,4 +1,5 @@
 import { usePlan } from "../context/PlanContext";
+import { Button } from "@/components/ui/button";
 import airbnbBarcelona from "../assets/airbnb-barcelona.jpg.asset.json";
 
 type Lodging = {
