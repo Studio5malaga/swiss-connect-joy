@@ -182,6 +182,7 @@ const planBPrefix: any[] = [
       },
     ],
     audioButtons: [AUDIO.mytoursLyon],
+    tclCard: true,
   },
   {
     day: 4,
@@ -246,7 +247,7 @@ const planBPrefix: any[] = [
     tip: "💡 Huye de los menús masivos en diez idiomas de la calle Saint-Jean — postureo para turistas. Los bouchons auténticos son familiares, ruidosos y con manteles de cuadros rojos.",
     closingImage: "/images/lyon2.png",
     closingAlt: "Cena en un Bouchon Lyonnais tradicional del Vieux Lyon con Fourvière al fondo",
-
+    tclCard: true,
   },
   {
     day: 5,
@@ -916,6 +917,7 @@ export default function ItinerarySection() {
                           <p className="text-sm font-semibold text-foreground leading-relaxed">⚠️ {d.warning}</p>
                         </div>
                       )}
+                      {d.tclCard && <TclTransportCard />}
                       {d.sections?.map((sec: any, i: number) => (
                         <div key={i} className="rounded-xl bg-surface/80 p-4">
                           <h4 className="text-sm font-bold text-foreground mb-2">{sec.title}</h4>
