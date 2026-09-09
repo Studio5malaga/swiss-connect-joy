@@ -1,4 +1,5 @@
 import { usePlan } from "../context/PlanContext";
+import { Button } from "@/components/ui/button";
 import airbnbBarcelona from "../assets/airbnb-barcelona.jpg.asset.json";
 
 type Lodging = {
@@ -10,6 +11,7 @@ type Lodging = {
   features: string[];
   plans: Array<"A" | "B">;
   emoji?: string;
+  rulesUrl?: string;
 };
 
 const accommodations: Lodging[] = [
@@ -28,6 +30,7 @@ const accommodations: Lodging[] = [
     ],
     plans: ["B"],
     emoji: "🏙️",
+    rulesUrl: "https://claude.ai/public/artifacts/620387e8-7552-4959-95e8-4ad9b24a8299",
   },
   {
     name: "Appartement Vieux Lyon Terrasse",
@@ -153,6 +156,13 @@ export default function AccommodationSection() {
                     </li>
                   ))}
                 </ul>
+                {a.rulesUrl && (
+                  <Button asChild className="mt-4 w-full" variant="outline">
+                    <a href={a.rulesUrl} target="_blank" rel="noopener noreferrer">
+                      📋 Normas del alojamiento
+                    </a>
+                  </Button>
+                )}
               </div>
             </div>
           ))}

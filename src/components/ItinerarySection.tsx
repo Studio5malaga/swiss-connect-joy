@@ -92,6 +92,10 @@ const planBPrefix: any[] = [
       },
     ],
     tip: "💡 Comprad los billetes del AVE con 2 meses de antelación: a esos precios se agotan rápido. Al llegar a las 23:00, dejad decidido de antemano si bajáis en metro o pedís Uber.",
+    guideButton: {
+      label: "Normas del alojamiento",
+      url: "https://claude.ai/public/artifacts/620387e8-7552-4959-95e8-4ad9b24a8299",
+    },
 
   },
 
