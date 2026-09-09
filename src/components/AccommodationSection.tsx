@@ -156,6 +156,13 @@ export default function AccommodationSection() {
                     </li>
                   ))}
                 </ul>
+                {a.rulesUrl && (
+                  <Button asChild className="mt-4 w-full" variant="outline">
+                    <a href={a.rulesUrl} target="_blank" rel="noopener noreferrer">
+                      📋 Normas del alojamiento
+                    </a>
+                  </Button>
+                )}
               </div>
             </div>
           ))}
