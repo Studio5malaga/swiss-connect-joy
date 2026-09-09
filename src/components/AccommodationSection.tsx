@@ -11,6 +11,7 @@ type Lodging = {
   features: string[];
   plans: Array<"A" | "B">;
   emoji?: string;
+  rulesUrl?: string;
 };
 
 const accommodations: Lodging[] = [
