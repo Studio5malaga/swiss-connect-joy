@@ -11,6 +11,7 @@ import spanishMapPdf from "../assets/spanish.pdf.asset.json";
 import parcCiutadella from "../assets/parc-ciutadella.jpg.asset.json";
 import MouettesGenevoises from "./MouettesGenevoises";
 import Day13ReturnModule from "./Day13ReturnModule";
+import TclTransportCard from "./TclTransportCard";
 
 const AUDIO = {
   mytoursBcn: { img: audioLogo1.url, label: "AUDIOGUÍA", url: "https://mytours.city/es-barcelona/", alt: "mytours.city" },
