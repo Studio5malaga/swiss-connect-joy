@@ -29,6 +29,7 @@ const accommodations: Lodging[] = [
     ],
     plans: ["B"],
     emoji: "🏙️",
+    rulesUrl: "https://claude.ai/public/artifacts/620387e8-7552-4959-95e8-4ad9b24a8299",
   },
   {
     name: "Appartement Vieux Lyon Terrasse",
