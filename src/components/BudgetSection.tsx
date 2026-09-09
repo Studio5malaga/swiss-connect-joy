@@ -11,7 +11,7 @@ function buildBreakdown(profile: "senior" | "junior"): {
     { concept: "Tren AVE Internacional Barcelona → Lyon (08:14 → 13:20)", amount: 55, note: "Maleta 23 kg incluida" },
     { concept: "Tren TER Lyon → Ginebra (12:38 → 14:40)", amount: 25 },
     { concept: "T-familiar (transporte urbano Barcelona)", amount: 2 },
-    { concept: "Carnets TCL ×3 (transporte urbano Lyon)", amount: 7 },
+    { concept: "Carnets TCL ×3 (transporte urbano Lyon)", amount: 10, note: "Precio oficial TCL 2026: carnet 10 viajes zonas 1-2 = 20 €. 3 carnets × 20 € = 60 € grupo ÷ 6 personas = 10 €/persona. Fuente: tcl.fr" },
     { concept: "Geneva Transport Card", amount: 0, note: "Gratuita con el hotel" },
     { concept: "Tarjeta KONUS (Selva Negra)", amount: 0, note: "Gratuita con alojamiento en Gengenbach" },
     { concept: "Bus Selva Negra → EuroAirport", amount: 7, note: "Basel SBB + bus 50 (~7,15 €) o Haltingen + bus 220 (5,80 €)" },
