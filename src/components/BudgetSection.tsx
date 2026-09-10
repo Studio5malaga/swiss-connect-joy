@@ -1,5 +1,5 @@
 import { usePlan } from "../context/PlanContext";
-import { Apple, Play, Smartphone } from "lucide-react";
+import { Apple, Play } from "lucide-react";
 
 type Row = {
   concept?: string;
