@@ -259,16 +259,25 @@ export default function BudgetSection() {
                 </tr>
               </thead>
               <tbody>
-                {rows.map((r) => (
-                  <tr key={r.concept} className="border-b border-border/40">
-                    <td className="py-2.5">
-                      <p className="text-foreground">{r.concept}</p>
-                      {r.note && <p className="text-xs text-muted-foreground mt-0.5">{r.note}</p>}
-                    </td>
-                    <td className="py-2.5 text-right font-mono font-semibold text-foreground whitespace-nowrap">
-                      {r.amount.toFixed(2)} €
-                    </td>
-                  </tr>
+                {rows.map((r, idx) => (
+                  <>
+                    <tr key={`${r.concept ?? idx}-row`} className="border-b border-border/40">
+                      <td className="py-2.5">
+                        <p className="text-foreground">{r.concept}</p>
+                        {r.note && <p className="text-xs text-muted-foreground mt-0.5">{r.note}</p>}
+                      </td>
+                      <td className="py-2.5 text-right font-mono font-semibold text-foreground whitespace-nowrap">
+                        {r.amount?.toFixed(2)} €
+                      </td>
+                    </tr>
+                    {r.custom && (
+                      <tr key={`${r.concept ?? idx}-custom`} className="border-b border-border/40">
+                        <td colSpan={2} className="py-2.5 bg-muted/20">
+                          {r.custom}
+                        </td>
+                      </tr>
+                    )}
+                  </>
                 ))}
                 <tr>
                   <td className="py-3 font-bold text-foreground">Subtotal por persona</td>
