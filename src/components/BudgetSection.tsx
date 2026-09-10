@@ -227,7 +227,7 @@ function buildBreakdown(profile: "senior" | "junior"): {
   ];
 
   const rows = [...transport, insurance, stpRow, ...lodging];
-  const total = rows.reduce((s, r) => s + r.amount, 0);
+  const total = rows.reduce((s, r) => s + (r.amount ?? 0), 0);
   return { rows, total };
 }
 
