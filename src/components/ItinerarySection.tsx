@@ -12,6 +12,7 @@ import parcCiutadella from "../assets/parc-ciutadella.jpg.asset.json";
 import MouettesGenevoises from "./MouettesGenevoises";
 import Day13ReturnModule from "./Day13ReturnModule";
 import TclTransportCard from "./TclTransportCard";
+import BarcelonaTransportDetail from "./BarcelonaTransportDetail";
 
 const AUDIO = {
   mytoursBcn: { img: audioLogo1.url, label: "AUDIOGUÍA", url: "https://mytours.city/es-barcelona/", alt: "mytours.city" },
@@ -62,11 +63,9 @@ const planBPrefix: any[] = [
       {
         title: "🚇 Transporte en Barcelona · Tarjeta T-familiar",
         content: [
-          "🔗 TMB: https://www.tmb.cat/es/tarifas-metro-bus-barcelona/t-familiar",
-          "La ganadora: T-familiar (multipersonal). Se pasa la misma tarjeta hasta 6 veces seguidas por el torno para que fiche todo el grupo",
-          "Cada T-familiar incluye 8 viajes. Para los 36 viajes totales del grupo: 5 tarjetas (5×8 = 40 viajes)",
-          "Coste total grupo: 5 × 10,70 € = 53,50 € (~9,58 €/persona) — sobran 4 viajes de recuerdo",
+          "Cálculo detallado del transporte urbano en Barcelona con la T-familiar. Opción A es la base oficial del presupuesto; Opción B queda como alternativa opcional.",
         ],
+        custom: <BarcelonaTransportDetail />,
       },
       {
         title: "🚆 Coche + Cercanías Málaga (recomendado)",
@@ -929,6 +928,7 @@ export default function ItinerarySection() {
                               </li>
                             ))}
                           </ul>
+                          {sec.custom && <div className="mt-3">{sec.custom}</div>}
                         </div>
                       ))}
 
