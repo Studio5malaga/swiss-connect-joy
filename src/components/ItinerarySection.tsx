@@ -13,6 +13,16 @@ import MouettesGenevoises from "./MouettesGenevoises";
 import Day13ReturnModule from "./Day13ReturnModule";
 import TclTransportCard from "./TclTransportCard";
 import BarcelonaTransportDetail from "./BarcelonaTransportDetail";
+import routeMap1 from "../assets/route-map-1-2.png.asset.json";
+import routeMap2 from "../assets/route-map-2-2.png.asset.json";
+import routeMap3 from "../assets/route-map-3-2.png.asset.json";
+import routeMap4 from "../assets/route-map-4.webp.asset.json";
+import routeMap5 from "../assets/route-map-5-2.png.asset.json";
+import routeMap6 from "../assets/route-map-6.webp.asset.json";
+import routeMap7 from "../assets/route-map-7.png.asset.json";
+import routeMap8 from "../assets/route-map-8.png.asset.json";
+import routeMap9 from "../assets/route-map-9.png.asset.json";
+import routeMap10 from "../assets/route-map-10.png.asset.json";
 
 const AUDIO = {
   mytoursBcn: { img: audioLogo1.url, label: "AUDIOGUÍA", url: "https://mytours.city/es-barcelona/", alt: "mytours.city" },
@@ -25,6 +35,22 @@ const AUDIO = {
   maptour: { img: audioLogo6.url, label: "AUDIOGUÍA", url: "https://maptour.info/strasbourg.php?lang=es", alt: "Maptour Strasbourg" },
   einstein: { img: einsteinLogo.url, label: "MUSEO EINSTEIN", url: "https://bhm.guide4.it/#/home/contentcompilation/OpDQVHeFUIMYFoJ9xgoV?t=eyAiaWQiOiAiUDF4UVhJS0Y1elV6UzRxS2ZzaUciLCAicHVycG9zZSI6ICJHZW5lcmFsIiwgInR5cGUiOiAiRW50aXR5IiwgInByZXNlbnRhdGlvbiI6ICJBdXRvIiwgImVudGl0eUlkIjogIk9wRFFWSGVGVUlNWUZvSjl4Z29WIiwgImVudGl0eUhpbnQiOiAiQ29udGVudENvbXBpbGF0aW9uIiB9", alt: "Museo Einstein Bern" },
   planoTriberg: { img: audioLogo6.url, label: "🗺️ PLANO PDF", url: spanishMapPdf.url, alt: "Plano de la ruta Triberg (PDF)" },
+};
+
+const DAY_COVER_IMAGES: Record<number, Array<{ src: string; alt: string }>> = {
+  1: [{ src: routeMap1.url, alt: "Mapa de la ruta de Málaga a Barcelona" }],
+  2: [{ src: routeMap2.url, alt: "Mapa ilustrado de la ruta por Barcelona" }],
+  3: [{ src: routeMap3.url, alt: "Mapa de la ruta ferroviaria de Barcelona a Lyon" }],
+  4: [{ src: routeMap4.url, alt: "Mapa ilustrado de la visita por Lyon" }],
+  5: [
+    { src: routeMap5.url, alt: "Mapa de la ruta ferroviaria de Lyon a Ginebra" },
+    { src: routeMap6.url, alt: "Mapa ilustrado de la visita por Ginebra" },
+  ],
+  6: [{ src: routeMap7.url, alt: "Mapa de la ruta de Ginebra a Kandersteg" }],
+  7: [{ src: routeMap8.url, alt: "Mapa de la ruta del GoldenPass, Montreux y Chillon" }],
+  8: [{ src: routeMap9.url, alt: "Mapa de la excursión a Grindelwald First y Blausee" }],
+  9: [],
+  10: [{ src: routeMap10.url, alt: "Mapa del Lago de Brienz y la ruta hacia la Selva Negra" }],
 };
 
 
@@ -548,11 +574,12 @@ const days: any[] = [
         ],
       },
       {
-        title: "🍰 Tarta Selva Negra — Café Schäfer",
+        title: "🍰 Tarta Selva Negra — Café Birnbräuer (Gengenbach)",
         content: [
-          "Se guarda la receta original de 1915",
-          "Tarta con mucha nata, chocolate y cerezas al licor (Kirsch)",
-          "~5-7 € la porción — ¡Imprescindible!",
+          "Café Schäfer cerró definitivamente tras la jubilación de Claus Schäfer, custodio de las recetas manuscritas de Josef Keller. Se mantiene solo como contexto histórico; ya no es una opción de visita.",
+          "Alternativa recomendada: Café Birnbräuer, cafetería y pastelería tradicional en Gengenbach, con valoración de 4,4★ y precios orientativos de 1-10 €.",
+          "Especialidades de repostería, tartas y café en un ambiente local, práctico para combinar con el paseo por el casco histórico de Gengenbach.",
+          "Dirección: Leutkirchstr. 2, 77723 Gengenbach.",
         ],
       },
     ],
@@ -574,6 +601,10 @@ const days: any[] = [
       ],
     },
     audioButtons: [AUDIO.suiza2026, AUDIO.planoTriberg],
+    guideButton: {
+      label: "Web de Café Birnbräuer",
+      url: "https://www.cafe-birnbraeuer.de/",
+    },
   },
   {
     day: 6,
@@ -789,7 +820,15 @@ export default function ItinerarySection() {
   // Insertar módulo Bern (Plan B por lluvia) justo después del día del Lago de Brienz (base day index 2)
   planBDays.splice(3, 0, planBBernRainy);
 
-  const displayDays: any[] = [...planBPrefix, ...planBDays].map((d: any, i: number) => ({ ...d, day: i + 1 }));
+  const displayDays: any[] = [...planBPrefix, ...planBDays].map((d: any, i: number) => {
+    const day = i + 1;
+    const coverImages = DAY_COVER_IMAGES[day];
+    return {
+      ...d,
+      day,
+      ...(coverImages !== undefined ? { coverImages } : {}),
+    };
+  });
 
 
 
@@ -820,27 +859,38 @@ export default function ItinerarySection() {
                 className="group overflow-hidden rounded-2xl border border-border bg-card/90 backdrop-blur-sm shadow-sm transition-shadow hover:shadow-lg"
               >
                 {/* Image header */}
-                <div className="relative h-56 sm:h-72 overflow-hidden">
-                  <img
-                    src={d.image}
-                    alt={d.alt}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
-                    width={800}
-                    height={512}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                <div className="relative h-56 overflow-hidden bg-primary sm:h-72">
+                  {(d.coverImages ?? (d.image ? [{ src: d.image, alt: d.alt }] : [])).length > 0 && (
+                    <div
+                      className={`grid h-full ${(d.coverImages ?? []).length > 1 ? "grid-cols-2" : "grid-cols-1"}`}
+                    >
+                      {(d.coverImages ?? [{ src: d.image, alt: d.alt }]).map(
+                        (cover: { src: string; alt: string }) => (
+                          <img
+                            key={cover.src}
+                            src={cover.src}
+                            alt={cover.alt}
+                            className="h-full min-w-0 w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                            loading="lazy"
+                            width={800}
+                            height={512}
+                          />
+                        ),
+                      )}
+                    </div>
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/20 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-5">
                     <div className="flex items-center gap-3">
                       <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent text-accent-foreground font-bold text-lg shadow-lg">
                         {d.day}
                       </span>
                       <div>
-                        <p className="text-xs font-semibold text-white/80">{d.date}</p>
-                        <h3 className="text-lg font-bold text-white sm:text-xl">{d.title}</h3>
+                        <p className="text-xs font-semibold text-primary-foreground/80">{d.date}</p>
+                        <h3 className="text-lg font-bold text-primary-foreground sm:text-xl">{d.title}</h3>
                       </div>
                     </div>
-                    <p className="mt-1 text-xs text-white/70">📍 {d.route}</p>
+                    <p className="mt-1 text-xs text-primary-foreground/70">📍 {d.route}</p>
                   </div>
                 </div>
 

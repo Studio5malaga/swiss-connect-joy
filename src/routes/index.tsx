@@ -21,6 +21,7 @@ import GallerySection from "../components/GallerySection";
 import LinksSection from "../components/LinksSection";
 import DownloadSection from "../components/DownloadSection";
 import FooterSection from "../components/FooterSection";
+import RouteMapsSection from "../components/RouteMapsSection";
 import { PlanProvider } from "../context/PlanContext";
 
 
@@ -52,6 +53,7 @@ function Index() {
           <HeroSection />
           <PlanSelector />
           <ItinerarySection />
+          <RouteMapsSection />
           <RemindersSection />
           <SwissTravelPassSection />
           <KonusCardSection />
