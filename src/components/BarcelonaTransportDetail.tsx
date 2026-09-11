@@ -133,6 +133,7 @@ export default function BarcelonaTransportDetail() {
       </div>
 
       <div>
+        <h5 className="font-semibold text-foreground mb-2 text-sm">📱 Descargar TMB App (billete electrónico Barcelona)</h5>
         <p className="text-xs text-muted-foreground mb-2">Descarga la app oficial de TMB para comprar y validar billetes electrónicos:</p>
         <div className="flex flex-wrap gap-2">
           <a
